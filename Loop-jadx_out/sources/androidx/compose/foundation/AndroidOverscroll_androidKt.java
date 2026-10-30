@@ -1,0 +1,56 @@
+package androidx.compose.foundation;
+
+import android.content.Context;
+import androidx.compose.p001ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.compose.runtime.Composer;
+import androidx.compose.runtime.ComposerKt;
+import androidx.compose.runtime.ProvidableCompositionLocal;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: AndroidOverscroll.android.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m194d1 = {"\u0000\n\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\r\u0010\u0000\u001a\u00020\u0001H\u0001¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, m195d2 = {"rememberOverscrollEffect", "Landroidx/compose/foundation/OverscrollEffect;", "(Landroidx/compose/runtime/Composer;I)Landroidx/compose/foundation/OverscrollEffect;", "foundation_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class AndroidOverscroll_androidKt {
+    public static final OverscrollEffect rememberOverscrollEffect(Composer $composer, int $changed) {
+        NoOpOverscrollEffect noOpOverscrollEffect;
+        Object value$iv;
+        ComposerKt.sourceInformationMarkerStart($composer, -1476348564, "C(rememberOverscrollEffect)64@2834L7,65@2888L7:AndroidOverscroll.android.kt#71ulvw");
+        if (ComposerKt.isTraceInProgress()) {
+            ComposerKt.traceEventStart(-1476348564, $changed, -1, "androidx.compose.foundation.rememberOverscrollEffect (AndroidOverscroll.android.kt:63)");
+        }
+        ProvidableCompositionLocal<Context> localContext = AndroidCompositionLocals_androidKt.getLocalContext();
+        ComposerKt.sourceInformationMarkerStart($composer, 2023513938, "CC:CompositionLocal.kt#9igjgp");
+        Object objConsume = $composer.consume(localContext);
+        ComposerKt.sourceInformationMarkerEnd($composer);
+        Context context = (Context) objConsume;
+        ProvidableCompositionLocal<OverscrollConfiguration> localOverscrollConfiguration = OverscrollConfiguration_androidKt.getLocalOverscrollConfiguration();
+        ComposerKt.sourceInformationMarkerStart($composer, 2023513938, "CC:CompositionLocal.kt#9igjgp");
+        Object objConsume2 = $composer.consume(localOverscrollConfiguration);
+        ComposerKt.sourceInformationMarkerEnd($composer);
+        OverscrollConfiguration config = (OverscrollConfiguration) objConsume2;
+        $composer.startReplaceGroup(-1325722558);
+        ComposerKt.sourceInformation($composer, "67@2937L80");
+        if (config != null) {
+            ComposerKt.sourceInformationMarkerStart($composer, -1325722528, "CC(remember):AndroidOverscroll.android.kt#9igjgp");
+            boolean invalid$iv = $composer.changed(context) | $composer.changed(config);
+            Object it$iv = $composer.rememberedValue();
+            if (invalid$iv || it$iv == Composer.INSTANCE.getEmpty()) {
+                value$iv = new AndroidEdgeEffectOverscrollEffect(context, config);
+                $composer.updateRememberedValue(value$iv);
+            } else {
+                value$iv = it$iv;
+            }
+            ComposerKt.sourceInformationMarkerEnd($composer);
+            noOpOverscrollEffect = (AndroidEdgeEffectOverscrollEffect) value$iv;
+        } else {
+            noOpOverscrollEffect = NoOpOverscrollEffect.INSTANCE;
+        }
+        $composer.endReplaceGroup();
+        if (ComposerKt.isTraceInProgress()) {
+            ComposerKt.traceEventEnd();
+        }
+        ComposerKt.sourceInformationMarkerEnd($composer);
+        return noOpOverscrollEffect;
+    }
+}

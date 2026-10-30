@@ -1,0 +1,617 @@
+package com.videshkarmakar.loop.p006ui.page.creator;
+
+import androidx.compose.foundation.ScrollKt;
+import androidx.compose.foundation.layout.Arrangement;
+import androidx.compose.foundation.layout.ColumnKt;
+import androidx.compose.foundation.layout.ColumnScope;
+import androidx.compose.foundation.layout.ColumnScopeInstance;
+import androidx.compose.foundation.layout.PaddingKt;
+import androidx.compose.foundation.layout.RowKt;
+import androidx.compose.foundation.layout.RowScopeInstance;
+import androidx.compose.foundation.layout.SizeKt;
+import androidx.compose.foundation.layout.SpacerKt;
+import androidx.compose.foundation.shape.RoundedCornerShape;
+import androidx.compose.foundation.shape.RoundedCornerShapeKt;
+import androidx.compose.material.icons.Icons;
+import androidx.compose.material.icons.filled.CameraAltKt;
+import androidx.compose.material.icons.filled.FacebookKt;
+import androidx.compose.material.icons.filled.LanguageKt;
+import androidx.compose.material.icons.filled.MusicNoteKt;
+import androidx.compose.material.icons.filled.PlayArrowKt;
+import androidx.compose.material3.CardColors;
+import androidx.compose.material3.CardDefaults;
+import androidx.compose.material3.CardKt;
+import androidx.compose.material3.IconKt;
+import androidx.compose.material3.MaterialTheme;
+import androidx.compose.material3.SurfaceKt;
+import androidx.compose.material3.TextKt;
+import androidx.compose.p001ui.Alignment;
+import androidx.compose.p001ui.ComposedModifierKt;
+import androidx.compose.p001ui.Modifier;
+import androidx.compose.p001ui.draw.ClipKt;
+import androidx.compose.p001ui.graphics.Color;
+import androidx.compose.p001ui.graphics.vector.ImageVector;
+import androidx.compose.p001ui.layout.MeasurePolicy;
+import androidx.compose.p001ui.node.ComposeUiNode;
+import androidx.compose.p001ui.platform.CompositionLocalsKt;
+import androidx.compose.p001ui.platform.UriHandler;
+import androidx.compose.p001ui.text.TextLayoutResult;
+import androidx.compose.p001ui.text.font.FontFamily;
+import androidx.compose.p001ui.text.font.FontStyle;
+import androidx.compose.p001ui.text.font.FontWeight;
+import androidx.compose.p001ui.text.style.TextAlign;
+import androidx.compose.p001ui.text.style.TextDecoration;
+import androidx.compose.p001ui.unit.C1979Dp;
+import androidx.compose.runtime.Applier;
+import androidx.compose.runtime.ComposablesKt;
+import androidx.compose.runtime.Composer;
+import androidx.compose.runtime.ComposerKt;
+import androidx.compose.runtime.CompositionLocalMap;
+import androidx.compose.runtime.ProvidableCompositionLocal;
+import androidx.compose.runtime.RecomposeScopeImplKt;
+import androidx.compose.runtime.ScopeUpdateScope;
+import androidx.compose.runtime.Updater;
+import androidx.compose.runtime.internal.ComposableLambdaKt;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.PointerIconCompat;
+import androidx.profileinstaller.ProfileVerifier;
+import coil.compose.SingletonAsyncImageKt;
+import com.videshkarmakar.loop.util.DownloadUtil;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function3;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: CreatorPage.kt */
+/* JADX INFO: loaded from: classes10.dex */
+@Metadata(m194d1 = {"\u0000(\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\u001b\u0010\u0000\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0003H\u0007¢\u0006\u0002\u0010\u0004\u001a\u001d\u0010\u0005\u001a\u00020\u00012\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\u0007H\u0003¢\u0006\u0002\u0010\t\u001a9\u0010\n\u001a\u00020\u00012\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\r\u001a\u00020\u00072\u0012\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00010\u000fH\u0003¢\u0006\u0002\u0010\u0010¨\u0006\u0011"}, m195d2 = {"CreatorPage", "", "onNavigateBack", "Lkotlin/Function0;", "(Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;I)V", "CreditRow", "label", "", DownloadUtil.CookieScheme.VALUE, "(Ljava/lang/String;Ljava/lang/String;Landroidx/compose/runtime/Composer;I)V", "SocialLink", "icon", "Landroidx/compose/ui/graphics/vector/ImageVector;", "url", "onClick", "Lkotlin/Function1;", "(Landroidx/compose/ui/graphics/vector/ImageVector;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;I)V", "app_debug"}, m196k = 2, m197mv = {1, 9, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class CreatorPageKt {
+    public static final void CreatorPage(final Function0<Unit> onNavigateBack, Composer $composer, final int $changed) {
+        Composer $composer2;
+        Intrinsics.checkNotNullParameter(onNavigateBack, "onNavigateBack");
+        Composer $composer3 = $composer.startRestartGroup(58104391);
+        ComposerKt.sourceInformation($composer3, "C(CreatorPage)44@1921L7,48@2016L11,49@2045L5619,46@1934L5730:CreatorPage.kt#jb93qv");
+        if (($changed & 1) != 0 || !$composer3.getSkipping()) {
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventStart(58104391, $changed, -1, "com.videshkarmakar.loop.ui.page.creator.CreatorPage (CreatorPage.kt:43)");
+            }
+            ProvidableCompositionLocal<UriHandler> localUriHandler = CompositionLocalsKt.getLocalUriHandler();
+            ComposerKt.sourceInformationMarkerStart($composer3, 2023513938, "CC:CompositionLocal.kt#9igjgp");
+            Object objConsume = $composer3.consume(localUriHandler);
+            ComposerKt.sourceInformationMarkerEnd($composer3);
+            final UriHandler uriHandler = (UriHandler) objConsume;
+            $composer2 = $composer3;
+            SurfaceKt.m2666SurfaceT9BRK9s(SizeKt.fillMaxSize$default(Modifier.INSTANCE, 0.0f, 1, null), null, MaterialTheme.INSTANCE.getColorScheme($composer3, MaterialTheme.$stable).getBackground(), 0L, 0.0f, 0.0f, null, ComposableLambdaKt.rememberComposableLambda(-890811892, true, new Function2<Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt.CreatorPage.1
+                {
+                    super(2);
+                }
+
+                @Override // kotlin.jvm.functions.Function2
+                public /* bridge */ /* synthetic */ Unit invoke(Composer composer, Integer num) {
+                    invoke(composer, num.intValue());
+                    return Unit.INSTANCE;
+                }
+
+                public final void invoke(Composer $composer4, int $changed2) {
+                    Function0<ComposeUiNode> function0;
+                    ComposerKt.sourceInformation($composer4, "C53@2158L21,50@2055L5603:CreatorPage.kt#jb93qv");
+                    if (($changed2 & 11) != 2 || !$composer4.getSkipping()) {
+                        if (ComposerKt.isTraceInProgress()) {
+                            ComposerKt.traceEventStart(-890811892, $changed2, -1, "com.videshkarmakar.loop.ui.page.creator.CreatorPage.<anonymous> (CreatorPage.kt:50)");
+                        }
+                        Modifier modifier$iv = PaddingKt.m868padding3ABfNKs(ScrollKt.verticalScroll$default(SizeKt.fillMaxSize$default(Modifier.INSTANCE, 0.0f, 1, null), ScrollKt.rememberScrollState(0, $composer4, 0, 1), false, null, false, 14, null), C1979Dp.m6801constructorimpl(16));
+                        Alignment.Horizontal horizontalAlignment$iv = Alignment.INSTANCE.getCenterHorizontally();
+                        final UriHandler uriHandler2 = uriHandler;
+                        ComposerKt.sourceInformationMarkerStart($composer4, -483455358, "CC(Column)P(2,3,1)85@4251L61,86@4317L133:Column.kt#2w3rfo");
+                        Arrangement.Vertical verticalArrangement$iv = Arrangement.INSTANCE.getTop();
+                        MeasurePolicy measurePolicy$iv = ColumnKt.columnMeasurePolicy(verticalArrangement$iv, horizontalAlignment$iv, $composer4, ((384 >> 3) & 14) | ((384 >> 3) & 112));
+                        int $changed$iv$iv = (384 << 3) & 112;
+                        ComposerKt.sourceInformationMarkerStart($composer4, -1323940314, "CC(Layout)P(!1,2)78@3182L23,81@3333L411:Layout.kt#80mrfh");
+                        int compositeKeyHash$iv$iv = ComposablesKt.getCurrentCompositeKeyHash($composer4, 0);
+                        CompositionLocalMap localMap$iv$iv = $composer4.getCurrentCompositionLocalMap();
+                        Modifier materialized$iv$iv = ComposedModifierKt.materializeModifier($composer4, modifier$iv);
+                        Function0<ComposeUiNode> constructor = ComposeUiNode.INSTANCE.getConstructor();
+                        int $changed$iv$iv$iv = (($changed$iv$iv << 6) & 896) | 6;
+                        ComposerKt.sourceInformationMarkerStart($composer4, -692256719, "CC(ReusableComposeNode)P(1,2)376@14072L9:Composables.kt#9igjgp");
+                        if (!($composer4.getApplier() instanceof Applier)) {
+                            ComposablesKt.invalidApplier();
+                        }
+                        $composer4.startReusableNode();
+                        if ($composer4.getInserting()) {
+                            function0 = constructor;
+                            $composer4.createNode(function0);
+                        } else {
+                            function0 = constructor;
+                            $composer4.useNode();
+                        }
+                        Composer $this$Layout_u24lambda_u240$iv$iv = Updater.m3795constructorimpl($composer4);
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, measurePolicy$iv, ComposeUiNode.INSTANCE.getSetMeasurePolicy());
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, localMap$iv$iv, ComposeUiNode.INSTANCE.getSetResolvedCompositionLocals());
+                        Function2<ComposeUiNode, Integer, Unit> setCompositeKeyHash = ComposeUiNode.INSTANCE.getSetCompositeKeyHash();
+                        if ($this$Layout_u24lambda_u240$iv$iv.getInserting() || !Intrinsics.areEqual($this$Layout_u24lambda_u240$iv$iv.rememberedValue(), Integer.valueOf(compositeKeyHash$iv$iv))) {
+                            $this$Layout_u24lambda_u240$iv$iv.updateRememberedValue(Integer.valueOf(compositeKeyHash$iv$iv));
+                            $this$Layout_u24lambda_u240$iv$iv.apply(Integer.valueOf(compositeKeyHash$iv$iv), setCompositeKeyHash);
+                        }
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, materialized$iv$iv, ComposeUiNode.INSTANCE.getSetModifier());
+                        int i = ($changed$iv$iv$iv >> 6) & 14;
+                        ComposerKt.sourceInformationMarkerStart($composer4, 276694042, "C87@4365L9:Column.kt#2w3rfo");
+                        ColumnScopeInstance columnScopeInstance = ColumnScopeInstance.INSTANCE;
+                        int i2 = ((384 >> 6) & 112) | 6;
+                        ComposerKt.sourceInformationMarkerStart($composer4, -144883576, "C58@2332L297,66@2643L41,71@2814L10,73@2924L11,69@2728L234,76@2976L40,81@3155L10,82@3216L11,79@3050L254,86@3318L41,92@3570L11,91@3507L126,89@3411L998,112@4423L41,118@4672L11,117@4609L126,115@4513L1111,140@5638L41,146@5895L11,145@5832L126,149@6024L1185,143@5736L1473,168@7223L41,173@7405L10,175@7514L11,171@7308L285,179@7607L41:CreatorPage.kt#jb93qv");
+                        SingletonAsyncImageKt.m7151AsyncImage3HmZ8SU("https://cdn.phototourl.com/member/2026-09-11-84fc2df9-c2a9-4384-a9b8-25290f7a1a3d.png", "Developer", ClipKt.clip(SizeKt.m913size3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(100)), RoundedCornerShapeKt.getCircleShape()), null, null, null, null, 0.0f, null, 0, $composer4, 54, PointerIconCompat.TYPE_TOP_RIGHT_DIAGONAL_DOUBLE_ARROW);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(16)), $composer4, 6);
+                        TextKt.m2817Text4IGK_g("Videsh Karmakar", (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getOnBackground(), 0L, (FontStyle) null, FontWeight.INSTANCE.getBold(), (FontFamily) null, 0L, (TextDecoration) null, (TextAlign) null, 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer4, MaterialTheme.$stable).getHeadlineSmall(), $composer4, 196614, 0, 65498);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(8)), $composer4, 6);
+                        TextKt.m2817Text4IGK_g("An Independent Freestyle Developer", (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getOnSurfaceVariant(), 0L, (FontStyle) null, (FontWeight) null, (FontFamily) null, 0L, (TextDecoration) null, TextAlign.m6651boximpl(TextAlign.INSTANCE.m6658getCentere0LSkKk()), 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer4, MaterialTheme.$stable).getBodyMedium(), $composer4, 6, 0, 65018);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(24)), $composer4, 6);
+                        Modifier modifierFillMaxWidth$default = SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null);
+                        CardDefaults cardDefaults = CardDefaults.INSTANCE;
+                        long surfaceVariant = MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getSurfaceVariant();
+                        CardKt.Card(modifierFillMaxWidth$default, RoundedCornerShapeKt.m1146RoundedCornerShape0680j_4(C1979Dp.m6801constructorimpl(16)), cardDefaults.m1979cardColorsro_MJ88(Color.m4289copywmQWz5c(surfaceVariant, (14 & 1) != 0 ? Color.m4293getAlphaimpl(surfaceVariant) : 0.5f, (14 & 2) != 0 ? Color.m4297getRedimpl(surfaceVariant) : 0.0f, (14 & 4) != 0 ? Color.m4296getGreenimpl(surfaceVariant) : 0.0f, (14 & 8) != 0 ? Color.m4294getBlueimpl(surfaceVariant) : 0.0f), 0L, 0L, 0L, $composer4, CardDefaults.$stable << 12, 14), null, null, ComposableSingletons$CreatorPageKt.INSTANCE.m7334getLambda1$app_debug(), $composer4, 196614, 24);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(16)), $composer4, 6);
+                        Modifier modifierFillMaxWidth$default2 = SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null);
+                        CardDefaults cardDefaults2 = CardDefaults.INSTANCE;
+                        long surfaceVariant2 = MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getSurfaceVariant();
+                        CardKt.Card(modifierFillMaxWidth$default2, RoundedCornerShapeKt.m1146RoundedCornerShape0680j_4(C1979Dp.m6801constructorimpl(16)), cardDefaults2.m1979cardColorsro_MJ88(Color.m4289copywmQWz5c(surfaceVariant2, (14 & 1) != 0 ? Color.m4293getAlphaimpl(surfaceVariant2) : 0.5f, (14 & 2) != 0 ? Color.m4297getRedimpl(surfaceVariant2) : 0.0f, (14 & 4) != 0 ? Color.m4296getGreenimpl(surfaceVariant2) : 0.0f, (14 & 8) != 0 ? Color.m4294getBlueimpl(surfaceVariant2) : 0.0f), 0L, 0L, 0L, $composer4, CardDefaults.$stable << 12, 14), null, null, ComposableSingletons$CreatorPageKt.INSTANCE.m7335getLambda2$app_debug(), $composer4, 196614, 24);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(16)), $composer4, 6);
+                        Modifier modifierFillMaxWidth$default3 = SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null);
+                        CardDefaults cardDefaults3 = CardDefaults.INSTANCE;
+                        long surfaceVariant3 = MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getSurfaceVariant();
+                        CardKt.Card(modifierFillMaxWidth$default3, RoundedCornerShapeKt.m1146RoundedCornerShape0680j_4(C1979Dp.m6801constructorimpl(16)), cardDefaults3.m1979cardColorsro_MJ88(Color.m4289copywmQWz5c(surfaceVariant3, (14 & 1) != 0 ? Color.m4293getAlphaimpl(surfaceVariant3) : 0.5f, (14 & 2) != 0 ? Color.m4297getRedimpl(surfaceVariant3) : 0.0f, (14 & 4) != 0 ? Color.m4296getGreenimpl(surfaceVariant3) : 0.0f, (14 & 8) != 0 ? Color.m4294getBlueimpl(surfaceVariant3) : 0.0f), 0L, 0L, 0L, $composer4, CardDefaults.$stable << 12, 14), null, null, ComposableLambdaKt.rememberComposableLambda(-159636756, true, new Function3<ColumnScope, Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1
+                            {
+                                super(3);
+                            }
+
+                            @Override // kotlin.jvm.functions.Function3
+                            public /* bridge */ /* synthetic */ Unit invoke(ColumnScope columnScope, Composer composer, Integer num) {
+                                invoke(columnScope, composer, num.intValue());
+                                return Unit.INSTANCE;
+                            }
+
+                            public final void invoke(ColumnScope Card, Composer $composer5, int $changed3) {
+                                Function0<ComposeUiNode> function1;
+                                Intrinsics.checkNotNullParameter(Card, "$this$Card");
+                                ComposerKt.sourceInformation($composer5, "C150@6042L1153:CreatorPage.kt#jb93qv");
+                                if (($changed3 & 81) != 16 || !$composer5.getSkipping()) {
+                                    if (ComposerKt.isTraceInProgress()) {
+                                        ComposerKt.traceEventStart(-159636756, $changed3, -1, "com.videshkarmakar.loop.ui.page.creator.CreatorPage.<anonymous>.<anonymous>.<anonymous> (CreatorPage.kt:150)");
+                                    }
+                                    Modifier modifier$iv2 = PaddingKt.m868padding3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(16));
+                                    final UriHandler uriHandler3 = uriHandler2;
+                                    ComposerKt.sourceInformationMarkerStart($composer5, -483455358, "CC(Column)P(2,3,1)85@4251L61,86@4317L133:Column.kt#2w3rfo");
+                                    Arrangement.Vertical verticalArrangement$iv2 = Arrangement.INSTANCE.getTop();
+                                    Alignment.Horizontal horizontalAlignment$iv2 = Alignment.INSTANCE.getStart();
+                                    MeasurePolicy measurePolicy$iv2 = ColumnKt.columnMeasurePolicy(verticalArrangement$iv2, horizontalAlignment$iv2, $composer5, ((6 >> 3) & 14) | ((6 >> 3) & 112));
+                                    int $changed$iv$iv2 = (6 << 3) & 112;
+                                    ComposerKt.sourceInformationMarkerStart($composer5, -1323940314, "CC(Layout)P(!1,2)78@3182L23,81@3333L411:Layout.kt#80mrfh");
+                                    int compositeKeyHash$iv$iv2 = ComposablesKt.getCurrentCompositeKeyHash($composer5, 0);
+                                    CompositionLocalMap localMap$iv$iv2 = $composer5.getCurrentCompositionLocalMap();
+                                    Modifier materialized$iv$iv2 = ComposedModifierKt.materializeModifier($composer5, modifier$iv2);
+                                    Function0<ComposeUiNode> constructor2 = ComposeUiNode.INSTANCE.getConstructor();
+                                    int $changed$iv$iv$iv2 = (($changed$iv$iv2 << 6) & 896) | 6;
+                                    ComposerKt.sourceInformationMarkerStart($composer5, -692256719, "CC(ReusableComposeNode)P(1,2)376@14072L9:Composables.kt#9igjgp");
+                                    if (!($composer5.getApplier() instanceof Applier)) {
+                                        ComposablesKt.invalidApplier();
+                                    }
+                                    $composer5.startReusableNode();
+                                    if ($composer5.getInserting()) {
+                                        function1 = constructor2;
+                                        $composer5.createNode(function1);
+                                    } else {
+                                        function1 = constructor2;
+                                        $composer5.useNode();
+                                    }
+                                    Composer $this$Layout_u24lambda_u240$iv$iv2 = Updater.m3795constructorimpl($composer5);
+                                    Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv2, measurePolicy$iv2, ComposeUiNode.INSTANCE.getSetMeasurePolicy());
+                                    Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv2, localMap$iv$iv2, ComposeUiNode.INSTANCE.getSetResolvedCompositionLocals());
+                                    Function2<ComposeUiNode, Integer, Unit> setCompositeKeyHash2 = ComposeUiNode.INSTANCE.getSetCompositeKeyHash();
+                                    if ($this$Layout_u24lambda_u240$iv$iv2.getInserting() || !Intrinsics.areEqual($this$Layout_u24lambda_u240$iv$iv2.rememberedValue(), Integer.valueOf(compositeKeyHash$iv$iv2))) {
+                                        $this$Layout_u24lambda_u240$iv$iv2.updateRememberedValue(Integer.valueOf(compositeKeyHash$iv$iv2));
+                                        $this$Layout_u24lambda_u240$iv$iv2.apply(Integer.valueOf(compositeKeyHash$iv$iv2), setCompositeKeyHash2);
+                                    }
+                                    Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv2, materialized$iv$iv2, ComposeUiNode.INSTANCE.getSetModifier());
+                                    int i3 = ($changed$iv$iv$iv2 >> 6) & 14;
+                                    ComposerKt.sourceInformationMarkerStart($composer5, 276694042, "C87@4365L9:Column.kt#2w3rfo");
+                                    ColumnScopeInstance columnScopeInstance2 = ColumnScopeInstance.INSTANCE;
+                                    int i4 = ((6 >> 6) & 112) | 6;
+                                    ComposerKt.sourceInformationMarkerStart($composer5, -1851283921, "C155@6254L10,157@6382L11,153@6145L278,159@6444L41,160@6506L107,161@6634L130,162@6785L120,163@6926L119,164@7066L111:CreatorPage.kt#jb93qv");
+                                    TextKt.m2817Text4IGK_g("Connect With Developer", (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer5, MaterialTheme.$stable).getPrimary(), 0L, (FontStyle) null, FontWeight.INSTANCE.getSemiBold(), (FontFamily) null, 0L, (TextDecoration) null, (TextAlign) null, 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer5, MaterialTheme.$stable).getTitleMedium(), $composer5, 196614, 0, 65498);
+                                    SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(12)), $composer5, 6);
+                                    CreatorPageKt.SocialLink(LanguageKt.getLanguage(Icons.Filled.INSTANCE), "Website", "https://videshkarmakar.carrd.co/", new Function1<String, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1$1$1
+                                        {
+                                            super(1);
+                                        }
+
+                                        @Override // kotlin.jvm.functions.Function1
+                                        public /* bridge */ /* synthetic */ Unit invoke(String str) {
+                                            invoke2(str);
+                                            return Unit.INSTANCE;
+                                        }
+
+                                        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                                        public final void invoke2(String it) {
+                                            Intrinsics.checkNotNullParameter(it, "it");
+                                            uriHandler3.openUri(it);
+                                        }
+                                    }, $composer5, 432);
+                                    CreatorPageKt.SocialLink(MusicNoteKt.getMusicNote(Icons.Filled.INSTANCE), "Spotify", "https://open.spotify.com/artist/2eJEzi0mzJB60zVJf0OjWP", new Function1<String, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1$1$2
+                                        {
+                                            super(1);
+                                        }
+
+                                        @Override // kotlin.jvm.functions.Function1
+                                        public /* bridge */ /* synthetic */ Unit invoke(String str) {
+                                            invoke2(str);
+                                            return Unit.INSTANCE;
+                                        }
+
+                                        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                                        public final void invoke2(String it) {
+                                            Intrinsics.checkNotNullParameter(it, "it");
+                                            uriHandler3.openUri(it);
+                                        }
+                                    }, $composer5, 432);
+                                    CreatorPageKt.SocialLink(CameraAltKt.getCameraAlt(Icons.Filled.INSTANCE), "Instagram", "https://www.instagram.com/code.red_videsh/", new Function1<String, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1$1$3
+                                        {
+                                            super(1);
+                                        }
+
+                                        @Override // kotlin.jvm.functions.Function1
+                                        public /* bridge */ /* synthetic */ Unit invoke(String str) {
+                                            invoke2(str);
+                                            return Unit.INSTANCE;
+                                        }
+
+                                        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                                        public final void invoke2(String it) {
+                                            Intrinsics.checkNotNullParameter(it, "it");
+                                            uriHandler3.openUri(it);
+                                        }
+                                    }, $composer5, 432);
+                                    CreatorPageKt.SocialLink(PlayArrowKt.getPlayArrow(Icons.Filled.INSTANCE), "YouTube", "https://www.youtube.com/@videshkarmakar2000", new Function1<String, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1$1$4
+                                        {
+                                            super(1);
+                                        }
+
+                                        @Override // kotlin.jvm.functions.Function1
+                                        public /* bridge */ /* synthetic */ Unit invoke(String str) {
+                                            invoke2(str);
+                                            return Unit.INSTANCE;
+                                        }
+
+                                        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                                        public final void invoke2(String it) {
+                                            Intrinsics.checkNotNullParameter(it, "it");
+                                            uriHandler3.openUri(it);
+                                        }
+                                    }, $composer5, 432);
+                                    CreatorPageKt.SocialLink(FacebookKt.getFacebook(Icons.Filled.INSTANCE), "Facebook", "https://www.facebook.com/gfx.videsh", new Function1<String, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$CreatorPage$1$1$1$1$5
+                                        {
+                                            super(1);
+                                        }
+
+                                        @Override // kotlin.jvm.functions.Function1
+                                        public /* bridge */ /* synthetic */ Unit invoke(String str) {
+                                            invoke2(str);
+                                            return Unit.INSTANCE;
+                                        }
+
+                                        /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                                        public final void invoke2(String it) {
+                                            Intrinsics.checkNotNullParameter(it, "it");
+                                            uriHandler3.openUri(it);
+                                        }
+                                    }, $composer5, 432);
+                                    ComposerKt.sourceInformationMarkerEnd($composer5);
+                                    ComposerKt.sourceInformationMarkerEnd($composer5);
+                                    $composer5.endNode();
+                                    ComposerKt.sourceInformationMarkerEnd($composer5);
+                                    ComposerKt.sourceInformationMarkerEnd($composer5);
+                                    ComposerKt.sourceInformationMarkerEnd($composer5);
+                                    if (ComposerKt.isTraceInProgress()) {
+                                        ComposerKt.traceEventEnd();
+                                        return;
+                                    }
+                                    return;
+                                }
+                                $composer5.skipToGroupEnd();
+                            }
+                        }, $composer4, 54), $composer4, 196614, 24);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(24)), $composer4, 6);
+                        TextKt.m2817Text4IGK_g("Made with ❤️ in India 🇮🇳", (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer4, MaterialTheme.$stable).getPrimary(), 0L, (FontStyle) null, FontWeight.INSTANCE.getMedium(), (FontFamily) null, 0L, (TextDecoration) null, TextAlign.m6651boximpl(TextAlign.INSTANCE.m6658getCentere0LSkKk()), 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer4, MaterialTheme.$stable).getBodyMedium(), $composer4, 196614, 0, 64986);
+                        SpacerKt.Spacer(SizeKt.m899height3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(32)), $composer4, 6);
+                        ComposerKt.sourceInformationMarkerEnd($composer4);
+                        ComposerKt.sourceInformationMarkerEnd($composer4);
+                        $composer4.endNode();
+                        ComposerKt.sourceInformationMarkerEnd($composer4);
+                        ComposerKt.sourceInformationMarkerEnd($composer4);
+                        ComposerKt.sourceInformationMarkerEnd($composer4);
+                        if (ComposerKt.isTraceInProgress()) {
+                            ComposerKt.traceEventEnd();
+                            return;
+                        }
+                        return;
+                    }
+                    $composer4.skipToGroupEnd();
+                }
+            }, $composer3, 54), $composer3, 12582918, 122);
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventEnd();
+            }
+        } else {
+            $composer3.skipToGroupEnd();
+            $composer2 = $composer3;
+        }
+        ScopeUpdateScope scopeUpdateScopeEndRestartGroup = $composer2.endRestartGroup();
+        if (scopeUpdateScopeEndRestartGroup != null) {
+            scopeUpdateScopeEndRestartGroup.updateScope(new Function2<Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt.CreatorPage.2
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                {
+                    super(2);
+                }
+
+                @Override // kotlin.jvm.functions.Function2
+                public /* bridge */ /* synthetic */ Unit invoke(Composer composer, Integer num) {
+                    invoke(composer, num.intValue());
+                    return Unit.INSTANCE;
+                }
+
+                public final void invoke(Composer composer, int i) {
+                    CreatorPageKt.CreatorPage(onNavigateBack, composer, RecomposeScopeImplKt.updateChangedFlags($changed | 1));
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void CreditRow(final String label, final String value, Composer $composer, final int $changed) {
+        Composer $composer2;
+        Composer $composer3 = $composer.startRestartGroup(1852781805);
+        ComposerKt.sourceInformation($composer3, "C(CreditRow)186@7738L499:CreatorPage.kt#jb93qv");
+        int $dirty = $changed;
+        if (($changed & 14) == 0) {
+            $dirty |= $composer3.changed(label) ? 4 : 2;
+        }
+        if (($changed & 112) == 0) {
+            $dirty |= $composer3.changed(value) ? 32 : 16;
+        }
+        int $dirty2 = $dirty;
+        if (($dirty2 & 91) != 18 || !$composer3.getSkipping()) {
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventStart(1852781805, $dirty2, -1, "com.videshkarmakar.loop.ui.page.creator.CreditRow (CreatorPage.kt:185)");
+            }
+            Modifier modifier$iv = SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null);
+            Arrangement.Horizontal horizontalArrangement$iv = Arrangement.INSTANCE.getSpaceBetween();
+            ComposerKt.sourceInformationMarkerStart($composer3, 693286680, "CC(Row)P(2,1,3)98@4939L58,99@5002L130:Row.kt#2w3rfo");
+            Alignment.Vertical verticalAlignment$iv = Alignment.INSTANCE.getTop();
+            MeasurePolicy measurePolicy$iv = RowKt.rowMeasurePolicy(horizontalArrangement$iv, verticalAlignment$iv, $composer3, ((54 >> 3) & 14) | ((54 >> 3) & 112));
+            int $changed$iv$iv = (54 << 3) & 112;
+            ComposerKt.sourceInformationMarkerStart($composer3, -1323940314, "CC(Layout)P(!1,2)78@3182L23,81@3333L411:Layout.kt#80mrfh");
+            int compositeKeyHash$iv$iv = ComposablesKt.getCurrentCompositeKeyHash($composer3, 0);
+            CompositionLocalMap localMap$iv$iv = $composer3.getCurrentCompositionLocalMap();
+            Modifier materialized$iv$iv = ComposedModifierKt.materializeModifier($composer3, modifier$iv);
+            Function0<ComposeUiNode> constructor = ComposeUiNode.INSTANCE.getConstructor();
+            int $changed$iv$iv$iv = (($changed$iv$iv << 6) & 896) | 6;
+            ComposerKt.sourceInformationMarkerStart($composer3, -692256719, "CC(ReusableComposeNode)P(1,2)376@14072L9:Composables.kt#9igjgp");
+            if (!($composer3.getApplier() instanceof Applier)) {
+                ComposablesKt.invalidApplier();
+            }
+            $composer3.startReusableNode();
+            if ($composer3.getInserting()) {
+                $composer3.createNode(constructor);
+            } else {
+                $composer3.useNode();
+            }
+            Composer $this$Layout_u24lambda_u240$iv$iv = Updater.m3795constructorimpl($composer3);
+            Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, measurePolicy$iv, ComposeUiNode.INSTANCE.getSetMeasurePolicy());
+            Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, localMap$iv$iv, ComposeUiNode.INSTANCE.getSetResolvedCompositionLocals());
+            Function2<ComposeUiNode, Integer, Unit> setCompositeKeyHash = ComposeUiNode.INSTANCE.getSetCompositeKeyHash();
+            if ($this$Layout_u24lambda_u240$iv$iv.getInserting() || !Intrinsics.areEqual($this$Layout_u24lambda_u240$iv$iv.rememberedValue(), Integer.valueOf(compositeKeyHash$iv$iv))) {
+                $this$Layout_u24lambda_u240$iv$iv.updateRememberedValue(Integer.valueOf(compositeKeyHash$iv$iv));
+                $this$Layout_u24lambda_u240$iv$iv.apply(Integer.valueOf(compositeKeyHash$iv$iv), setCompositeKeyHash);
+            }
+            Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, materialized$iv$iv, ComposeUiNode.INSTANCE.getSetModifier());
+            int i = ($changed$iv$iv$iv >> 6) & 14;
+            ComposerKt.sourceInformationMarkerStart($composer3, -326681257, "C100@5047L9:Row.kt#2w3rfo");
+            RowScopeInstance rowScopeInstance = RowScopeInstance.INSTANCE;
+            int i2 = ((54 >> 6) & 112) | 6;
+            ComposerKt.sourceInformationMarkerStart($composer3, -449713095, "C192@7926L10,193@7983L11,190@7860L161,197@8096L10,199@8197L11,195@8030L201:CreatorPage.kt#jb93qv");
+            $composer2 = $composer3;
+            TextKt.m2817Text4IGK_g(label, (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer3, MaterialTheme.$stable).getOnSurfaceVariant(), 0L, (FontStyle) null, (FontWeight) null, (FontFamily) null, 0L, (TextDecoration) null, (TextAlign) null, 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer3, MaterialTheme.$stable).getBodyMedium(), $composer3, $dirty2 & 14, 0, 65530);
+            TextKt.m2817Text4IGK_g(value, (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer3, MaterialTheme.$stable).getOnBackground(), 0L, (FontStyle) null, FontWeight.INSTANCE.getMedium(), (FontFamily) null, 0L, (TextDecoration) null, (TextAlign) null, 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer3, MaterialTheme.$stable).getBodyMedium(), $composer3, (($dirty2 >> 3) & 14) | ProfileVerifier.CompilationStatus.f245xf2722a21, 0, 65498);
+            ComposerKt.sourceInformationMarkerEnd($composer3);
+            ComposerKt.sourceInformationMarkerEnd($composer3);
+            $composer2.endNode();
+            ComposerKt.sourceInformationMarkerEnd($composer2);
+            ComposerKt.sourceInformationMarkerEnd($composer2);
+            ComposerKt.sourceInformationMarkerEnd($composer2);
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventEnd();
+            }
+        } else {
+            $composer3.skipToGroupEnd();
+            $composer2 = $composer3;
+        }
+        ScopeUpdateScope scopeUpdateScopeEndRestartGroup = $composer2.endRestartGroup();
+        if (scopeUpdateScopeEndRestartGroup != null) {
+            scopeUpdateScopeEndRestartGroup.updateScope(new Function2<Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt.CreditRow.2
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                {
+                    super(2);
+                }
+
+                @Override // kotlin.jvm.functions.Function2
+                public /* bridge */ /* synthetic */ Unit invoke(Composer composer, Integer num) {
+                    invoke(composer, num.intValue());
+                    return Unit.INSTANCE;
+                }
+
+                public final void invoke(Composer composer, int i3) {
+                    CreatorPageKt.CreditRow(label, value, composer, RecomposeScopeImplKt.updateChangedFlags($changed | 1));
+                }
+            });
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static final void SocialLink(final ImageVector icon, final String label, final String url, final Function1<? super String, Unit> function1, Composer $composer, final int $changed) {
+        Object value$iv;
+        Composer $composer2 = $composer.startRestartGroup(-2005659764);
+        ComposerKt.sourceInformation($composer2, "C(SocialLink)P(!2,3)211@8542L11,210@8487L112,214@8661L16,215@8684L698,206@8356L1026:CreatorPage.kt#jb93qv");
+        int $dirty = $changed;
+        if (($changed & 14) == 0) {
+            $dirty |= $composer2.changed(icon) ? 4 : 2;
+        }
+        if (($changed & 112) == 0) {
+            $dirty |= $composer2.changed(label) ? 32 : 16;
+        }
+        if (($changed & 896) == 0) {
+            $dirty |= $composer2.changed(url) ? 256 : 128;
+        }
+        if (($changed & 7168) == 0) {
+            $dirty |= $composer2.changedInstance(function1) ? 2048 : 1024;
+        }
+        int $dirty2 = $dirty;
+        if (($dirty2 & 5851) != 1170 || !$composer2.getSkipping()) {
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventStart(-2005659764, $dirty2, -1, "com.videshkarmakar.loop.ui.page.creator.SocialLink (CreatorPage.kt:205)");
+            }
+            Modifier modifierM870paddingVpY3zN4$default = PaddingKt.m870paddingVpY3zN4$default(SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null), 0.0f, C1979Dp.m6801constructorimpl(4), 1, null);
+            CardDefaults cardDefaults = CardDefaults.INSTANCE;
+            long primaryContainer = MaterialTheme.INSTANCE.getColorScheme($composer2, MaterialTheme.$stable).getPrimaryContainer();
+            CardColors cardColorsM1979cardColorsro_MJ88 = cardDefaults.m1979cardColorsro_MJ88(Color.m4289copywmQWz5c(primaryContainer, (14 & 1) != 0 ? Color.m4293getAlphaimpl(primaryContainer) : 0.2f, (14 & 2) != 0 ? Color.m4297getRedimpl(primaryContainer) : 0.0f, (14 & 4) != 0 ? Color.m4296getGreenimpl(primaryContainer) : 0.0f, (14 & 8) != 0 ? Color.m4294getBlueimpl(primaryContainer) : 0.0f), 0L, 0L, 0L, $composer2, CardDefaults.$stable << 12, 14);
+            RoundedCornerShape roundedCornerShapeM1146RoundedCornerShape0680j_4 = RoundedCornerShapeKt.m1146RoundedCornerShape0680j_4(C1979Dp.m6801constructorimpl(8));
+            $composer2.startReplaceGroup(-1490129687);
+            ComposerKt.sourceInformation($composer2, "CC(remember):CreatorPage.kt#9igjgp");
+            boolean invalid$iv = (($dirty2 & 7168) == 2048) | (($dirty2 & 896) == 256);
+            Object it$iv = $composer2.rememberedValue();
+            if (invalid$iv || it$iv == Composer.INSTANCE.getEmpty()) {
+                value$iv = (Function0) new Function0<Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt$SocialLink$1$1
+                    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                    /* JADX WARN: Multi-variable type inference failed */
+                    {
+                        super(0);
+                    }
+
+                    @Override // kotlin.jvm.functions.Function0
+                    public /* bridge */ /* synthetic */ Unit invoke() {
+                        invoke2();
+                        return Unit.INSTANCE;
+                    }
+
+                    /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+                    public final void invoke2() {
+                        function1.invoke(url);
+                    }
+                };
+                $composer2.updateRememberedValue(value$iv);
+            } else {
+                value$iv = it$iv;
+            }
+            $composer2.endReplaceGroup();
+            CardKt.Card((Function0) value$iv, modifierM870paddingVpY3zN4$default, false, roundedCornerShapeM1146RoundedCornerShape0680j_4, cardColorsM1979cardColorsro_MJ88, null, null, null, ComposableLambdaKt.rememberComposableLambda(1783048897, true, new Function3<ColumnScope, Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt.SocialLink.2
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                {
+                    super(3);
+                }
+
+                @Override // kotlin.jvm.functions.Function3
+                public /* bridge */ /* synthetic */ Unit invoke(ColumnScope columnScope, Composer composer, Integer num) {
+                    invoke(columnScope, composer, num.intValue());
+                    return Unit.INSTANCE;
+                }
+
+                public final void invoke(ColumnScope Card, Composer $composer3, int $changed2) {
+                    Intrinsics.checkNotNullParameter(Card, "$this$Card");
+                    ComposerKt.sourceInformation($composer3, "C216@8694L682:CreatorPage.kt#jb93qv");
+                    if (($changed2 & 81) != 16 || !$composer3.getSkipping()) {
+                        if (ComposerKt.isTraceInProgress()) {
+                            ComposerKt.traceEventStart(1783048897, $changed2, -1, "com.videshkarmakar.loop.ui.page.creator.SocialLink.<anonymous> (CreatorPage.kt:216)");
+                        }
+                        Modifier modifier$iv = PaddingKt.m868padding3ABfNKs(SizeKt.fillMaxWidth$default(Modifier.INSTANCE, 0.0f, 1, null), C1979Dp.m6801constructorimpl(12));
+                        Alignment.Vertical verticalAlignment$iv = Alignment.INSTANCE.getCenterVertically();
+                        ImageVector imageVector = icon;
+                        String str = label;
+                        ComposerKt.sourceInformationMarkerStart($composer3, 693286680, "CC(Row)P(2,1,3)98@4939L58,99@5002L130:Row.kt#2w3rfo");
+                        Arrangement.Horizontal horizontalArrangement$iv = Arrangement.INSTANCE.getStart();
+                        MeasurePolicy measurePolicy$iv = RowKt.rowMeasurePolicy(horizontalArrangement$iv, verticalAlignment$iv, $composer3, ((390 >> 3) & 14) | ((390 >> 3) & 112));
+                        int $changed$iv$iv = (390 << 3) & 112;
+                        ComposerKt.sourceInformationMarkerStart($composer3, -1323940314, "CC(Layout)P(!1,2)78@3182L23,81@3333L411:Layout.kt#80mrfh");
+                        int compositeKeyHash$iv$iv = ComposablesKt.getCurrentCompositeKeyHash($composer3, 0);
+                        CompositionLocalMap localMap$iv$iv = $composer3.getCurrentCompositionLocalMap();
+                        Modifier materialized$iv$iv = ComposedModifierKt.materializeModifier($composer3, modifier$iv);
+                        Function0<ComposeUiNode> constructor = ComposeUiNode.INSTANCE.getConstructor();
+                        int $changed$iv$iv$iv = (($changed$iv$iv << 6) & 896) | 6;
+                        ComposerKt.sourceInformationMarkerStart($composer3, -692256719, "CC(ReusableComposeNode)P(1,2)376@14072L9:Composables.kt#9igjgp");
+                        if (!($composer3.getApplier() instanceof Applier)) {
+                            ComposablesKt.invalidApplier();
+                        }
+                        $composer3.startReusableNode();
+                        if ($composer3.getInserting()) {
+                            $composer3.createNode(constructor);
+                        } else {
+                            $composer3.useNode();
+                        }
+                        Composer $this$Layout_u24lambda_u240$iv$iv = Updater.m3795constructorimpl($composer3);
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, measurePolicy$iv, ComposeUiNode.INSTANCE.getSetMeasurePolicy());
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, localMap$iv$iv, ComposeUiNode.INSTANCE.getSetResolvedCompositionLocals());
+                        Function2<ComposeUiNode, Integer, Unit> setCompositeKeyHash = ComposeUiNode.INSTANCE.getSetCompositeKeyHash();
+                        if ($this$Layout_u24lambda_u240$iv$iv.getInserting() || !Intrinsics.areEqual($this$Layout_u24lambda_u240$iv$iv.rememberedValue(), Integer.valueOf(compositeKeyHash$iv$iv))) {
+                            $this$Layout_u24lambda_u240$iv$iv.updateRememberedValue(Integer.valueOf(compositeKeyHash$iv$iv));
+                            $this$Layout_u24lambda_u240$iv$iv.apply(Integer.valueOf(compositeKeyHash$iv$iv), setCompositeKeyHash);
+                        }
+                        Updater.m3802setimpl($this$Layout_u24lambda_u240$iv$iv, materialized$iv$iv, ComposeUiNode.INSTANCE.getSetModifier());
+                        int i = ($changed$iv$iv$iv >> 6) & 14;
+                        ComposerKt.sourceInformationMarkerStart($composer3, -326681257, "C100@5047L9:Row.kt#2w3rfo");
+                        RowScopeInstance rowScopeInstance = RowScopeInstance.INSTANCE;
+                        int i2 = ((390 >> 6) & 112) | 6;
+                        ComposerKt.sourceInformationMarkerStart($composer3, 1944210565, "C225@9002L11,222@8879L205,228@9097L40,231@9224L10,233@9333L11,229@9150L216:CreatorPage.kt#jb93qv");
+                        IconKt.m2292Iconww6aTOc(imageVector, str, SizeKt.m913size3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(20)), MaterialTheme.INSTANCE.getColorScheme($composer3, MaterialTheme.$stable).getPrimary(), $composer3, 384, 0);
+                        SpacerKt.Spacer(SizeKt.m918width3ABfNKs(Modifier.INSTANCE, C1979Dp.m6801constructorimpl(12)), $composer3, 6);
+                        TextKt.m2817Text4IGK_g(str, (Modifier) null, MaterialTheme.INSTANCE.getColorScheme($composer3, MaterialTheme.$stable).getPrimary(), 0L, (FontStyle) null, FontWeight.INSTANCE.getMedium(), (FontFamily) null, 0L, (TextDecoration) null, (TextAlign) null, 0L, 0, false, 0, 0, (Function1<? super TextLayoutResult, Unit>) null, MaterialTheme.INSTANCE.getTypography($composer3, MaterialTheme.$stable).getBodyMedium(), $composer3, ProfileVerifier.CompilationStatus.f245xf2722a21, 0, 65498);
+                        ComposerKt.sourceInformationMarkerEnd($composer3);
+                        ComposerKt.sourceInformationMarkerEnd($composer3);
+                        $composer3.endNode();
+                        ComposerKt.sourceInformationMarkerEnd($composer3);
+                        ComposerKt.sourceInformationMarkerEnd($composer3);
+                        ComposerKt.sourceInformationMarkerEnd($composer3);
+                        if (ComposerKt.isTraceInProgress()) {
+                            ComposerKt.traceEventEnd();
+                            return;
+                        }
+                        return;
+                    }
+                    $composer3.skipToGroupEnd();
+                }
+            }, $composer2, 54), $composer2, 100663344, 228);
+            if (ComposerKt.isTraceInProgress()) {
+                ComposerKt.traceEventEnd();
+            }
+        } else {
+            $composer2.skipToGroupEnd();
+        }
+        ScopeUpdateScope scopeUpdateScopeEndRestartGroup = $composer2.endRestartGroup();
+        if (scopeUpdateScopeEndRestartGroup != null) {
+            scopeUpdateScopeEndRestartGroup.updateScope(new Function2<Composer, Integer, Unit>() { // from class: com.videshkarmakar.loop.ui.page.creator.CreatorPageKt.SocialLink.3
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+                /* JADX WARN: Multi-variable type inference failed */
+                {
+                    super(2);
+                }
+
+                @Override // kotlin.jvm.functions.Function2
+                public /* bridge */ /* synthetic */ Unit invoke(Composer composer, Integer num) {
+                    invoke(composer, num.intValue());
+                    return Unit.INSTANCE;
+                }
+
+                public final void invoke(Composer composer, int i) {
+                    CreatorPageKt.SocialLink(icon, label, url, function1, composer, RecomposeScopeImplKt.updateChangedFlags($changed | 1));
+                }
+            });
+        }
+    }
+}

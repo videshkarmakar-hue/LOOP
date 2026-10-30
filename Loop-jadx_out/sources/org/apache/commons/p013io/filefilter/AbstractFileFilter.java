@@ -1,0 +1,20 @@
+package org.apache.commons.p013io.filefilter;
+
+import java.io.File;
+
+/* JADX INFO: loaded from: classes18.dex */
+public abstract class AbstractFileFilter implements IOFileFilter {
+    @Override // org.apache.commons.p013io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File file) {
+        return accept(file.getParentFile(), file.getName());
+    }
+
+    @Override // org.apache.commons.p013io.filefilter.IOFileFilter, java.io.FilenameFilter
+    public boolean accept(File dir, String name) {
+        return accept(new File(dir, name));
+    }
+
+    public String toString() {
+        return getClass().getSimpleName();
+    }
+}

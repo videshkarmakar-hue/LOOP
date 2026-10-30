@@ -1,0 +1,27 @@
+package androidx.compose.p001ui.window;
+
+import android.graphics.Rect;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: AndroidPopup.android.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0012\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0018\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bH\u0016J \u0010\t\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bH\u0016J \u0010\r\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u0011\u001a\u00020\u0012H\u0016¨\u0006\u0013"}, m195d2 = {"Landroidx/compose/ui/window/PopupLayoutHelperImpl;", "Landroidx/compose/ui/window/PopupLayoutHelper;", "()V", "getWindowVisibleDisplayFrame", "", "composeView", "Landroid/view/View;", "outRect", "Landroid/graphics/Rect;", "setGestureExclusionRects", "width", "", "height", "updateViewLayout", "windowManager", "Landroid/view/WindowManager;", "popupView", "params", "Landroid/view/ViewGroup$LayoutParams;", "ui_release"}, m196k = 1, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+class PopupLayoutHelperImpl implements PopupLayoutHelper {
+    @Override // androidx.compose.p001ui.window.PopupLayoutHelper
+    public void getWindowVisibleDisplayFrame(View composeView, Rect outRect) {
+        composeView.getWindowVisibleDisplayFrame(outRect);
+    }
+
+    @Override // androidx.compose.p001ui.window.PopupLayoutHelper
+    public void setGestureExclusionRects(View composeView, int width, int height) {
+    }
+
+    @Override // androidx.compose.p001ui.window.PopupLayoutHelper
+    public void updateViewLayout(WindowManager windowManager, View popupView, ViewGroup.LayoutParams params) {
+        windowManager.updateViewLayout(popupView, params);
+    }
+}

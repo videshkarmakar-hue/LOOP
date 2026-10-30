@@ -1,0 +1,32 @@
+package androidx.compose.p001ui.contentcapture;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: compiled from: AndroidContentCaptureManager.android.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m196k = 3, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+@DebugMetadata(m209c = "androidx.compose.ui.contentcapture.AndroidContentCaptureManager", m210f = "AndroidContentCaptureManager.android.kt", m211i = {0, 1}, m212l = {186, 196}, m213m = "boundsUpdatesEventLoop$ui_release", m214n = {"this", "this"}, m215s = {"L$0", "L$0"})
+final class AndroidContentCaptureManager$boundsUpdatesEventLoop$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    int label;
+    /* synthetic */ Object result;
+    final /* synthetic */ AndroidContentCaptureManager this$0;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    AndroidContentCaptureManager$boundsUpdatesEventLoop$1(AndroidContentCaptureManager androidContentCaptureManager, Continuation<? super AndroidContentCaptureManager$boundsUpdatesEventLoop$1> continuation) {
+        super(continuation);
+        this.this$0 = androidContentCaptureManager;
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        this.result = obj;
+        this.label |= Integer.MIN_VALUE;
+        return this.this$0.boundsUpdatesEventLoop$ui_release(this);
+    }
+}

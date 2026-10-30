@@ -1,0 +1,12 @@
+package androidx.compose.p001ui.node;
+
+import androidx.compose.p001ui.layout.MeasureScope;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: MeasureScopeWithLayoutNode.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b`\u0018\u00002\u00020\u0001R\u0012\u0010\u0002\u001a\u00020\u0003X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0004\u0010\u0005ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0006À\u0006\u0001"}, m195d2 = {"Landroidx/compose/ui/node/MeasureScopeWithLayoutNode;", "Landroidx/compose/ui/layout/MeasureScope;", "layoutNode", "Landroidx/compose/ui/node/LayoutNode;", "getLayoutNode", "()Landroidx/compose/ui/node/LayoutNode;", "ui_release"}, m196k = 1, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public interface MeasureScopeWithLayoutNode extends MeasureScope {
+    LayoutNode getLayoutNode();
+}

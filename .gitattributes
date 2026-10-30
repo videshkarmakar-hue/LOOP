@@ -1,0 +1,28 @@
+# Git LFS is NOT used for the source tree (to keep the repo self-contained and fast to clone).
+# The jadx output tree is source code + resources only; no binary assets beyond text resources.
+# Do not run git-lfs for this repository.
+
+# Skip Gradle caches and build dirs that may be added later
+.gradle
+build
+out
+bin
+*.iml
+.idea
+*.ipa
+*.apk
+*.aab
+local.properties
+.externalNativeBuild
+.gradle
+**/build
+**/out
+**/.idea
+**/*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# git-lfs
+.gitattributes

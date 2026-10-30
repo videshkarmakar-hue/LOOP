@@ -1,0 +1,32 @@
+package androidx.compose.foundation;
+
+import android.content.res.Configuration;
+import androidx.compose.p001ui.platform.AndroidCompositionLocals_androidKt;
+import androidx.compose.runtime.Composer;
+import androidx.compose.runtime.ComposerKt;
+import androidx.compose.runtime.ProvidableCompositionLocal;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: DarkTheme.android.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m194d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\u001a\r\u0010\u0000\u001a\u00020\u0001H\u0001¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, m195d2 = {"_isSystemInDarkTheme", "", "(Landroidx/compose/runtime/Composer;I)Z", "foundation_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class DarkTheme_androidKt {
+    public static final boolean _isSystemInDarkTheme(Composer $composer, int $changed) {
+        ComposerKt.sourceInformationMarkerStart($composer, -882615028, "C(_isSystemInDarkTheme)47@2141L7:DarkTheme.android.kt#71ulvw");
+        if (ComposerKt.isTraceInProgress()) {
+            ComposerKt.traceEventStart(-882615028, $changed, -1, "androidx.compose.foundation._isSystemInDarkTheme (DarkTheme.android.kt:46)");
+        }
+        ProvidableCompositionLocal<Configuration> localConfiguration = AndroidCompositionLocals_androidKt.getLocalConfiguration();
+        ComposerKt.sourceInformationMarkerStart($composer, 2023513938, "CC:CompositionLocal.kt#9igjgp");
+        Object objConsume = $composer.consume(localConfiguration);
+        ComposerKt.sourceInformationMarkerEnd($composer);
+        int uiMode = ((Configuration) objConsume).uiMode;
+        boolean z = (uiMode & 48) == 32;
+        if (ComposerKt.isTraceInProgress()) {
+            ComposerKt.traceEventEnd();
+        }
+        ComposerKt.sourceInformationMarkerEnd($composer);
+        return z;
+    }
+}

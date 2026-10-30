@@ -1,0 +1,73 @@
+package org.apache.commons.compress.archivers.zip;
+
+import java.io.Serializable;
+import kotlin.UByte;
+
+/* JADX INFO: loaded from: classes18.dex */
+public final class ZipShort implements Cloneable, Serializable {
+    private static final int BYTE_1_MASK = 65280;
+    private static final int BYTE_1_SHIFT = 8;
+    private static final long serialVersionUID = 1;
+    private final int value;
+
+    public ZipShort(int value) {
+        this.value = value;
+    }
+
+    public ZipShort(byte[] bytes) {
+        this(bytes, 0);
+    }
+
+    public ZipShort(byte[] bytes, int offset) {
+        this.value = getValue(bytes, offset);
+    }
+
+    public byte[] getBytes() {
+        byte[] result = {(byte) (this.value & 255), (byte) ((this.value & 65280) >> 8)};
+        return result;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    public static byte[] getBytes(int value) {
+        byte[] result = new byte[2];
+        putShort(value, result, 0);
+        return result;
+    }
+
+    public static void putShort(int value, byte[] buf, int offset) {
+        buf[offset] = (byte) (value & 255);
+        buf[offset + 1] = (byte) ((65280 & value) >> 8);
+    }
+
+    public static int getValue(byte[] bytes, int offset) {
+        int value = (bytes[offset + 1] << 8) & 65280;
+        return value + (bytes[offset] & UByte.MAX_VALUE);
+    }
+
+    public static int getValue(byte[] bytes) {
+        return getValue(bytes, 0);
+    }
+
+    public boolean equals(Object o) {
+        return o != null && (o instanceof ZipShort) && this.value == ((ZipShort) o).getValue();
+    }
+
+    public int hashCode() {
+        return this.value;
+    }
+
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException cnfe) {
+            throw new RuntimeException(cnfe);
+        }
+    }
+
+    public String toString() {
+        return "ZipShort value: " + this.value;
+    }
+}

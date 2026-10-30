@@ -1,0 +1,17 @@
+package androidx.compose.foundation;
+
+import androidx.compose.p001ui.Modifier;
+import androidx.compose.p001ui.layout.LayoutCoordinates;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: compiled from: FocusedBounds.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m194d1 = {"\u0000\u0016\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\u001a\"\u0010\u0000\u001a\u00020\u0001*\u00020\u00012\u0014\u0010\u0002\u001a\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u0004\u0012\u0004\u0012\u00020\u00050\u0003H\u0007¨\u0006\u0006"}, m195d2 = {"onFocusedBoundsChanged", "Landroidx/compose/ui/Modifier;", "onPositioned", "Lkotlin/Function1;", "Landroidx/compose/ui/layout/LayoutCoordinates;", "", "foundation_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class FocusedBoundsKt {
+    public static final Modifier onFocusedBoundsChanged(Modifier $this$onFocusedBoundsChanged, Function1<? super LayoutCoordinates, Unit> function1) {
+        return $this$onFocusedBoundsChanged.then(new FocusedBoundsObserverElement(function1));
+    }
+}

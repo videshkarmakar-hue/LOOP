@@ -1,0 +1,13 @@
+package androidx.compose.foundation.text;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: UndoManager.jvm.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m194d1 = {"\u0000\b\n\u0000\n\u0002\u0010\t\n\u0000\u001a\b\u0010\u0000\u001a\u00020\u0001H\u0000¨\u0006\u0002"}, m195d2 = {"timeNowMillis", "", "foundation_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class UndoManager_jvmKt {
+    public static final long timeNowMillis() {
+        return System.currentTimeMillis();
+    }
+}

@@ -1,0 +1,12 @@
+package kotlin.p007io.encoding;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: Base64IOStream.kt */
+/* JADX INFO: loaded from: classes18.dex */
+@Metadata(m194d1 = {"kotlin/io/encoding/StreamEncodingKt__Base64IOStreamKt"}, m196k = 4, m197mv = {1, 9, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_EDITOR_ABSOLUTEX)
+public final class StreamEncodingKt extends StreamEncodingKt__Base64IOStreamKt {
+    private StreamEncodingKt() {
+    }
+}

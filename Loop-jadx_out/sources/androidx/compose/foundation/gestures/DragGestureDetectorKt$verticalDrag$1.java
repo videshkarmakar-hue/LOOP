@@ -1,0 +1,31 @@
+package androidx.compose.foundation.gestures;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.jvm.internal.ContinuationImpl;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+
+/* JADX INFO: compiled from: DragGestureDetector.kt */
+/* JADX INFO: loaded from: classes.dex */
+@Metadata(m196k = 3, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+@DebugMetadata(m209c = "androidx.compose.foundation.gestures.DragGestureDetectorKt", m210f = "DragGestureDetector.kt", m211i = {0, 0, 0, 0}, m212l = {884}, m213m = "verticalDrag-jO51t88", m214n = {"onDrag", "$this$drag_u2dVnAYq1g$iv", "$this$awaitDragOrUp_u2djO51t88$iv$iv", "pointer$iv$iv"}, m215s = {"L$0", "L$1", "L$2", "L$3"})
+final class DragGestureDetectorKt$verticalDrag$1 extends ContinuationImpl {
+    Object L$0;
+    Object L$1;
+    Object L$2;
+    Object L$3;
+    int label;
+    /* synthetic */ Object result;
+
+    DragGestureDetectorKt$verticalDrag$1(Continuation<? super DragGestureDetectorKt$verticalDrag$1> continuation) {
+        super(continuation);
+    }
+
+    @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
+    public final Object invokeSuspend(Object obj) {
+        this.result = obj;
+        this.label |= Integer.MIN_VALUE;
+        return DragGestureDetectorKt.m617verticalDragjO51t88(null, 0L, null, this);
+    }
+}

@@ -1,0 +1,15 @@
+package androidx.compose.p001ui.modifier;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.exifinterface.media.ExifInterface;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function0;
+
+/* JADX INFO: compiled from: ModifierLocal.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u0010\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\u001a \u0010\u0000\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0001\"\u0004\b\u0000\u0010\u00022\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0004¨\u0006\u0005"}, m195d2 = {"modifierLocalOf", "Landroidx/compose/ui/modifier/ProvidableModifierLocal;", ExifInterface.GPS_DIRECTION_TRUE, "defaultFactory", "Lkotlin/Function0;", "ui_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class ModifierLocalKt {
+    public static final <T> ProvidableModifierLocal<T> modifierLocalOf(Function0<? extends T> function0) {
+        return new ProvidableModifierLocal<>(function0);
+    }
+}

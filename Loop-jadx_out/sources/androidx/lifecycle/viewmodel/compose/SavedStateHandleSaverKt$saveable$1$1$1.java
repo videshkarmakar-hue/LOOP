@@ -1,0 +1,42 @@
+package androidx.lifecycle.viewmodel.compose;
+
+import androidx.compose.runtime.saveable.SaverScope;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.lifecycle.SavedStateHandle;
+import kotlin.Function;
+import kotlin.Metadata;
+import kotlin.jvm.internal.FunctionAdapter;
+import kotlin.jvm.internal.FunctionReferenceImpl;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: SavedStateHandleSaver.android.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m196k = 3, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+/* synthetic */ class SavedStateHandleSaverKt$saveable$1$1$1 implements SaverScope, FunctionAdapter {
+    final /* synthetic */ SavedStateHandle.Companion $tmp0;
+
+    SavedStateHandleSaverKt$saveable$1$1$1(SavedStateHandle.Companion companion) {
+        this.$tmp0 = companion;
+    }
+
+    public final boolean equals(Object obj) {
+        if ((obj instanceof SaverScope) && (obj instanceof FunctionAdapter)) {
+            return Intrinsics.areEqual(getFunctionDelegate(), ((FunctionAdapter) obj).getFunctionDelegate());
+        }
+        return false;
+    }
+
+    @Override // kotlin.jvm.internal.FunctionAdapter
+    public final Function<?> getFunctionDelegate() {
+        return new FunctionReferenceImpl(1, this.$tmp0, SavedStateHandle.Companion.class, "validateValue", "validateValue(Ljava/lang/Object;)Z", 0);
+    }
+
+    public final int hashCode() {
+        return getFunctionDelegate().hashCode();
+    }
+
+    @Override // androidx.compose.runtime.saveable.SaverScope
+    public final boolean canBeSaved(Object p0) {
+        return this.$tmp0.validateValue(p0);
+    }
+}

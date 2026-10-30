@@ -1,0 +1,20 @@
+package androidx.compose.p001ui.focus;
+
+import androidx.compose.p001ui.node.DelegatableNode;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: FocusTargetModifierNode.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001R\u001a\u0010\u0002\u001a\u00020\u00038&X§\u0004¢\u0006\f\u0012\u0004\b\u0004\u0010\u0005\u001a\u0004\b\u0006\u0010\u0007\u0082\u0001\u0001\bø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\tÀ\u0006\u0001"}, m195d2 = {"Landroidx/compose/ui/focus/FocusTargetModifierNode;", "Landroidx/compose/ui/node/DelegatableNode;", "focusState", "Landroidx/compose/ui/focus/FocusState;", "getFocusState$annotations", "()V", "getFocusState", "()Landroidx/compose/ui/focus/FocusState;", "Landroidx/compose/ui/focus/FocusTargetNode;", "ui_release"}, m196k = 1, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public interface FocusTargetModifierNode extends DelegatableNode {
+
+    /* JADX INFO: renamed from: androidx.compose.ui.focus.FocusTargetModifierNode$-CC, reason: invalid class name */
+    /* JADX INFO: compiled from: FocusTargetModifierNode.kt */
+    public final /* synthetic */ class CC {
+        public static /* synthetic */ void getFocusState$annotations() {
+        }
+    }
+
+    FocusState getFocusState();
+}

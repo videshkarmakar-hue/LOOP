@@ -1,0 +1,20 @@
+package androidx.compose.p001ui.graphics;
+
+import android.graphics.Shader;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: Brush.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u001a\u0012\u0010\u0000\u001a\u00020\u00012\n\u0010\u0002\u001a\u00060\u0003j\u0002`\u0004¨\u0006\u0005"}, m195d2 = {"ShaderBrush", "Landroidx/compose/ui/graphics/ShaderBrush;", "shader", "Landroid/graphics/Shader;", "Landroidx/compose/ui/graphics/Shader;", "ui-graphics_release"}, m196k = 2, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public final class BrushKt {
+    public static final ShaderBrush ShaderBrush(final Shader shader) {
+        return new ShaderBrush() { // from class: androidx.compose.ui.graphics.BrushKt.ShaderBrush.1
+            @Override // androidx.compose.p001ui.graphics.ShaderBrush
+            /* JADX INFO: renamed from: createShader-uvyYCjk, reason: not valid java name */
+            public Shader mo4260createShaderuvyYCjk(long size) {
+                return shader;
+            }
+        };
+    }
+}

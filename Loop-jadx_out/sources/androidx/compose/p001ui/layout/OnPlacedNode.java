@@ -1,0 +1,38 @@
+package androidx.compose.p001ui.layout;
+
+import androidx.compose.p001ui.Modifier;
+import androidx.compose.p001ui.node.LayoutAwareModifierNode;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+
+/* JADX INFO: compiled from: OnPlacedModifier.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0007\b\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\u0019\u0012\u0012\u0010\u0003\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0004¢\u0006\u0002\u0010\u0007J\u0010\u0010\u000b\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\u0005H\u0016R&\u0010\u0003\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u0007¨\u0006\r"}, m195d2 = {"Landroidx/compose/ui/layout/OnPlacedNode;", "Landroidx/compose/ui/node/LayoutAwareModifierNode;", "Landroidx/compose/ui/Modifier$Node;", "callback", "Lkotlin/Function1;", "Landroidx/compose/ui/layout/LayoutCoordinates;", "", "(Lkotlin/jvm/functions/Function1;)V", "getCallback", "()Lkotlin/jvm/functions/Function1;", "setCallback", "onPlaced", "coordinates", "ui_release"}, m196k = 1, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+final class OnPlacedNode extends Modifier.Node implements LayoutAwareModifierNode {
+    private Function1<? super LayoutCoordinates, Unit> callback;
+
+    @Override // androidx.compose.p001ui.node.LayoutAwareModifierNode
+    /* JADX INFO: renamed from: onRemeasured-ozmzZPI */
+    public /* synthetic */ void mo557onRemeasuredozmzZPI(long j) {
+        LayoutAwareModifierNode.CC.m5787$default$onRemeasuredozmzZPI(this, j);
+    }
+
+    public final Function1<LayoutCoordinates, Unit> getCallback() {
+        return this.callback;
+    }
+
+    public final void setCallback(Function1<? super LayoutCoordinates, Unit> function1) {
+        this.callback = function1;
+    }
+
+    public OnPlacedNode(Function1<? super LayoutCoordinates, Unit> function1) {
+        this.callback = function1;
+    }
+
+    @Override // androidx.compose.p001ui.node.LayoutAwareModifierNode
+    public void onPlaced(LayoutCoordinates coordinates) {
+        this.callback.invoke(coordinates);
+    }
+}

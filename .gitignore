@@ -1,0 +1,32 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.iab
+
+# Compiled classes
+*.class
+*.dex
+
+# Gradle files
+.gradle/
+build/
+local.properties
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Operating files
+.DS_Store
+Thumbs.db
+*.log
+
+# Test results
+/coverage/
+/test-results/

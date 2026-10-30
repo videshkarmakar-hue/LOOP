@@ -1,0 +1,49 @@
+package androidx.compose.p001ui.draw;
+
+import androidx.compose.p001ui.Modifier;
+import androidx.compose.p001ui.graphics.drawscope.ContentDrawScope;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
+
+/* JADX INFO: compiled from: DrawModifier.kt */
+/* JADX INFO: loaded from: classes17.dex */
+@Metadata(m194d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J\f\u0010\u0002\u001a\u00020\u0003*\u00020\u0004H&ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0005À\u0006\u0003"}, m195d2 = {"Landroidx/compose/ui/draw/DrawModifier;", "Landroidx/compose/ui/Modifier$Element;", "draw", "", "Landroidx/compose/ui/graphics/drawscope/ContentDrawScope;", "ui_release"}, m196k = 1, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+public interface DrawModifier extends Modifier.Element {
+    void draw(ContentDrawScope contentDrawScope);
+
+    /* JADX INFO: renamed from: androidx.compose.ui.draw.DrawModifier$-CC, reason: invalid class name */
+    /* JADX INFO: compiled from: DrawModifier.kt */
+    public final /* synthetic */ class CC {
+    }
+
+    /* JADX INFO: compiled from: DrawModifier.kt */
+    @Metadata(m196k = 3, m197mv = {1, 8, 0}, m199xi = ConstraintLayout.LayoutParams.Table.LAYOUT_CONSTRAINT_VERTICAL_CHAINSTYLE)
+    public static final class DefaultImpls {
+        @Deprecated
+        public static boolean all(DrawModifier $this, Function1<? super Modifier.Element, Boolean> function1) {
+            return Modifier.Element.CC.$default$all($this, function1);
+        }
+
+        @Deprecated
+        public static boolean any(DrawModifier $this, Function1<? super Modifier.Element, Boolean> function1) {
+            return Modifier.Element.CC.$default$any($this, function1);
+        }
+
+        @Deprecated
+        public static <R> R foldIn(DrawModifier drawModifier, R r, Function2<? super R, ? super Modifier.Element, ? extends R> function2) {
+            return (R) Modifier.Element.CC.$default$foldIn(drawModifier, r, function2);
+        }
+
+        @Deprecated
+        public static <R> R foldOut(DrawModifier drawModifier, R r, Function2<? super Modifier.Element, ? super R, ? extends R> function2) {
+            return (R) Modifier.Element.CC.$default$foldOut(drawModifier, r, function2);
+        }
+
+        @Deprecated
+        public static Modifier then(DrawModifier $this, Modifier other) {
+            return Modifier.CC.$default$then($this, other);
+        }
+    }
+}
