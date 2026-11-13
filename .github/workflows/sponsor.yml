@@ -1,13 +1,14 @@
 name: Generate Sponsors README
+
 on:
   workflow_dispatch:
   schedule:
     - cron: 30 15 * * 1
-  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'JunkFood02/Seal' }}
+    if: ${{ github.repository == 'videshkarmakar-hue/LOOP' }}
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
