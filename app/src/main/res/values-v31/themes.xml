@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.Loop.Splashscreen" parent="Theme.SplashScreen">
+        <item name="postSplashScreenTheme">@style/Theme.Loop</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+    </style>
+</resources>

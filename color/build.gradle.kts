@@ -1,0 +1,47 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+kotlin {
+    jvmToolchain(8)
+}
+android {
+    compileSdk = 34
+    defaultConfig {
+        minSdk = 21
+    }
+    namespace = "com.junkfood.seal.color"
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.androidxComposeCompiler.get()
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        compose = true
+    }
+    buildTypes {
+        // Was `all { isMinifyEnabled = true }`, which flagged the debuggable buildType on
+        // every build. Library modules are not minified anyway.
+        release {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            )
+        }
+    }
+}
+dependencies {
+    api(platform(libs.androidx.compose.bom))
+    api(libs.androidx.compose.ui)
+    api(libs.androidx.compose.runtime)
+    api(libs.androidx.core.ktx)
+    api(libs.androidx.compose.foundation)
+    api(libs.androidx.compose.material3)
+
+}

@@ -1,0 +1,3 @@
+$content = Get-Content 'D:\Android App\Source Code\Seal-1.13.1 - Copy\Seal-1.13.1\app\src\main\java\com\videshkarmakar\loop\ui\page\download\DownloadPage.kt' -Raw
+$newContent = $content -replace 'fontSize = if \(isCentered\) 18\.sp else 14\.sp', 'fontSize = if (isCentered) 13.sp else 12.sp' -replace 'modifier = Modifier\.padding\(top = if \(isCentered\) 16\.dp else 8\.dp\)', 'modifier = Modifier.padding(top = if (isCentered) 12.dp else 6.dp)'
+Set-Content 'D:\Android App\Source Code\Seal-1.13.1 - Copy\Seal-1.13.1\app\src\main\java\com\videshkarmakar\loop\ui\page\download\DownloadPage.kt' -Value $newContent
