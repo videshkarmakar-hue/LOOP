@@ -54,8 +54,8 @@ sealed class Version(
 val currentVersion: Version = Version.Stable(
     versionMajor = 1,
     versionMinor = 2,
-    versionPatch = 1,
-    versionBuild = 5,
+    versionPatch = 2,
+    versionBuild = 0,
 )
 
 val keystorePropertiesFile: File = rootProject.file("keystore.properties")
@@ -114,7 +114,7 @@ android {
         applicationId = "com.videshkarmakar.loop"
         minSdk = 21
         targetSdk = 34
-        versionCode = 10218
+        versionCode = 10219
 
         if (splitApks) {
             splits {
