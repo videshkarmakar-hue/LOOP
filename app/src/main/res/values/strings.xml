@@ -133,7 +133,7 @@
     <string name="permission_issue_desc">Directories outside Download/ and Documents/ are not supported</string>
     <string name="battery_configuration">Battery configuration</string>
     <string name="battery_configuration_desc">Ignore battery optimization for this app to download in the background</string>
-    <string name="service_title">LOOP is downloading…</string>
+    <string name="service_title"> LOOP is downloading… </string>
     <string name="unknown_error">Unknown error</string>
     <string name="translate">Translate</string>
     <string name="translate_desc">Help translate this app on Hosted Weblate</string>
@@ -217,9 +217,82 @@
     <string name="sponsorblock_categories">SponsorBlock categories</string>
     <string name="check_for_updates">Check for updates</string>
     <string name="check_for_updates_desc">Automatically check for the latest version on GitHub</string>
+    <string name="update_section">Update</string>
+    <string name="update_section_desc">Check for and install the latest version</string>
     <string name="app_up_to_date">The current version is up to date</string>
     <string name="app_update_failed">Failed to update to the latest version</string>
+    <string name="force_update_title"> Loop Update Required </string>
+    <string name="force_update_message">A new version ${version} is available. This update is required to continue using the app.</string>
+    <string name="force_update_button">Update Now</string>
+    <string name="force_update_later">Snooze 15min</string>
     <string name="update">Update</string>
+    <string name="update_gate_title">A New Update Is Available!</string>
+    <string name="update_gate_subtitle">Install the latest version to keep using LOOP.</string>
+    <string name="update_gate_current_version">Installed</string>
+    <string name="update_gate_latest_version">Latest</string>
+    <string name="update_gate_preparing">Preparing the download…</string>
+    <string name="update_gate_downloading">Downloading the update…</string>
+    <string name="update_gate_verifying">Verifying the package…</string>
+    <string name="update_gate_installing">Installing the update…</string>
+    <string name="update_gate_step_download">Download</string>
+    <string name="update_gate_step_verify">Verify</string>
+    <string name="update_gate_step_install">Install</string>
+    <string name="update_gate_required">This update is required to continue. It cannot be skipped, postponed or dismissed.</string>
+    <string name="update_gate_release_notes">What is new</string>
+    <string name="update_gate_failed">The update could not be completed.</string>
+    <string name="update_gate_failed_hint">Check your connection and try again. LOOP stays locked until the update is installed.</string>
+    <string name="update_gate_retry">Retry update</string>
+    <string name="update_gate_allow_installs">Allow app installs</string>
+    <string name="update_gate_allow_installs_hint">Android needs your permission to install the downloaded update.</string>
+    <string name="update_gate_downloaded">Downloaded %1$d%%</string>
+    <string name="update_gate_install_cancelled">Installation was not completed. The update is still required.</string>
+    <string name="update_gate_checking">Checking for updates…</string>
+    <string name="update_modal_required_badge">Required update</string>
+    <string name="update_modal_optional_badge">Update available</string>
+    <string name="update_modal_installed">Installed</string>
+    <string name="update_modal_latest">Latest</string>
+    <string name="update_modal_whats_new">What is new</string>
+    <string name="update_modal_update_now">Update now</string>
+    <string name="update_modal_not_now">Not now</string>
+    <string name="update_modal_install">Install update</string>
+    <string name="update_modal_retry">Retry</string>
+    <string name="update_modal_open_release">Open release page</string>
+    <string name="update_modal_downloading">Downloading %1$d%%</string>
+    <string name="update_modal_installing">Installing…</string>
+    <string name="update_modal_preparing">Preparing the update…</string>
+    <string name="update_modal_error_generic">The update could not be completed. Check your connection and try again.</string>
+    <string name="update_modal_error_install">Installation was not completed. The update is still required.</string>
+    <string name="update_modal_error_release">The new version is not downloadable yet. Open the release page to continue.</string>
+    <string name="update_modal_error_offline">Could not verify the latest version. Check your connection and try again.</string>
+    <string name="update_modal_footer_required">This update is required. You cannot skip or postpone it.</string>
+    <string name="update_modal_footer_optional">You can update later, but the latest version is recommended.</string>
+    <string name="update_page_title">Software Update</string>
+    <string name="update_page_title_available">Loop v%1$s Available</string>
+    <string name="update_page_title_up_to_date">Loop v%1$s is up to date</string>
+    <string name="update_page_title_checking">Checking for updates</string>
+    <string name="update_page_title_failed">Couldn\'t check for updates</string>
+    <string name="update_page_pill_ready">Package verified &amp; ready to install</string>
+    <string name="update_page_pill_signed">Signed release · SHA-256 verified on download</string>
+    <string name="update_page_pill_downloading">Downloading update package</string>
+    <string name="update_page_pill_installing">Verified · Installing</string>
+    <string name="update_page_pill_up_to_date">You\'re on the latest version</string>
+    <string name="update_page_pill_failed">Couldn\'t reach the update server</string>
+    <string name="update_page_pill_required">Required update · Cannot be skipped</string>
+    <string name="update_page_cta">Download &amp; Install Update</string>
+    <string name="update_page_cta_downloading">Downloading %1$d%%</string>
+    <string name="update_page_cta_installing">Installing update…</string>
+    <string name="update_page_cta_retry">Retry</string>
+    <string name="update_page_cta_up_to_date">Up to date</string>
+    <string name="update_page_changelog">What\'s new in v%1$s</string>
+    <string name="update_page_preferences">Automation &amp; Channel</string>
+    <string name="update_page_auto_download">Auto-download over Wi-Fi</string>
+    <string name="update_page_auto_download_desc">Fetches the update when you\'re on an unmetered network</string>
+    <string name="update_page_channel">Update channel</string>
+    <string name="update_page_channel_stable">Stable release (Recommended)</string>
+    <string name="update_page_channel_beta">Pre-release builds</string>
+    <string name="update_page_signature">Crafted by Videsh Karmakar</string>
+    <string name="update_page_view_release">View release on GitHub</string>
+    <string name="update_page_installed">Installed %1$s</string>
     <string name="aria2" translatable="false">Aria2</string>
     <string name="aria2_desc">Use aria2c as the external downloader</string>
     <string name="cookies">Cookies</string>
@@ -271,7 +344,7 @@
     <string name="custom_command_enabled_hint">Some options are unavailable when using custom command</string>
     <string name="how_does_it_work">How does it work?</string>
     <string name="cookies_usage_msg">Downloading from some sites requires account authentication information. Click \"Generate new cookies\", enter the URL of the website and then log in with your account in the browser page, the app will generate it for you.</string>
-    <string name="custom_command_usage_msg">yt-dlp is a powerful command-line tool for downloading videos. LOOP makes it easier to use yt-dlp by providing an intuitive GUI, presets for common commands, and other additional features.\n\nFor advanced usage of yt-dlp, LOOP allows you to create, save and execute custom command templates directly, just like in a terminal.\n\nWhen using custom commands, most of the GUI options and features would be disabled.</string>
+    <string name="custom_command_usage_msg"> yt-dlp: a powerful command-line downloader.  LOOP provides an intuitive GUI, preset commands, and extra features for easier usage.\n\n Advanced yt-dlp usage: create, save &amp; execute custom command templates directly, just like in a terminal.\n\n When using custom commands, most GUI options &amp; features become disabled.</string>
     <string name="telegram_channel">Telegram channel</string>
     <string name="matrix_space">Matrix space</string>
     <string name="sdcard_directory">SD card folder</string>
@@ -327,7 +400,7 @@
     <string name="temporary_directory_desc">Store temporary files in the internal directory</string>
     <string name="sponsor">Sponsor</string>
     <string name="sponsor_desc">Support this app by sponsoring on GitHub</string>
-    <string name="sponsor_msg">LOOP will be always free and open source for everyone. If you like it, please consider sponsoring me on GitHub!</string>
+    <string name="sponsor_msg"> LOOP will remain free &amp; open source forever. If you appreciate it, consider sponsoring the project ⟣⟤</string>
     <string name="feedback">Feedback</string>
     <string name="sponsors">Sponsors</string>
     <string name="audio_format">Audio format</string>
@@ -338,7 +411,7 @@
     <string name="clip_video_desc">Make video clips in the format selection page</string>
     <string name="embed_thumbnail" translatable="false">Embed thumbnail</string>
     <string name="embed_thumbnail_desc" translatable="false">Embed thumbnails into videos</string>
-    <string name="auto_update_disabled_msg">Auto-update is not available for %1$s builds. If you don\'t have %1$s installed on your device, or would like to preview upcoming new features in LOOP, please consider %2$s.</string>
+    <string name="auto_update_disabled_msg"> Auto-update unavailable for %1$s. Preview upcoming features in ⟣ LOOP  by visiting %2$s</string>
     <string name="switch_to_github_builds">switching to GitHub builds</string>
     <string name="okay">Okay</string>
     <string name="got_it">Got it</string>
@@ -463,6 +536,14 @@
     <string name="settings_badge_metered">Metered</string>
     <string name="settings_about_desc">Version, credits and licences</string>
     <string name="settings_developer_name">Videsh Karmakar</string>
+
+    <!-- App update notifications -->
+    <string name="update_notification_channel_name">App updates</string>
+    <string name="update_notification_channel_desc">Notifies you when a new version of LOOP is available</string>
+    <string name="update_notification_title">New version available: v%1$s</string>
+    <string name="update_notification_title_required">Update required: v%1$s</string>
+    <string name="update_notification_text">Tap to update and install the latest version.</string>
+    <string name="update_notification_text_required">This update is required to continue using LOOP. Tap to install.</string>
 
     <!-- Other projects section -->
     <string name="other_projects_title">Other Projects From Videsh K.</string>

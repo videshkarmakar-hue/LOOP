@@ -243,5 +243,51 @@ object NotificationUtil {
     fun areNotificationsEnabled(): Boolean {
         return if (Build.VERSION.SDK_INT <= 24) true else notificationManager.areNotificationsEnabled()
     }
+
+    private const val UPDATE_NOTIFICATION_CHANNEL_ID = "app_update_notification"
+    const val UPDATE_NOTIFICATION_ID = 9001
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun ensureUpdateChannel() {
+        val channel = NotificationChannel(
+            UPDATE_NOTIFICATION_CHANNEL_ID,
+            context.getString(R.string.update_notification_channel_name),
+            NotificationManager.IMPORTANCE_DEFAULT
+        ).apply {
+            description = context.getString(R.string.update_notification_channel_desc)
+        }
+        notificationManager.createNotificationChannel(channel)
+    }
+
+    fun notifyAppUpdate(context: Context, version: String, required: Boolean): Boolean {
+        if (!areNotificationsEnabled()) return false
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) ensureUpdateChannel()
+        val titleRes = if (required) R.string.update_notification_title_required else R.string.update_notification_title
+        val textRes = if (required) R.string.update_notification_text_required else R.string.update_notification_text
+        val title = context.getString(titleRes, version)
+        val text = context.getString(textRes)
+        val launchIntent = context.packageManager.getLaunchIntentForPackage(context.packageName)
+            ?: Intent(context, Class.forName("com.videshkarmakar.loop.MainActivity")).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            }
+        launchIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+        val pendingIntent = PendingIntent.getActivity(
+            context,
+            UPDATE_NOTIFICATION_ID,
+            launchIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        val channelId = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) UPDATE_NOTIFICATION_CHANNEL_ID else CHANNEL_ID
+        val notification = NotificationCompat.Builder(context, channelId)
+            .setSmallIcon(R.drawable.ic_stat_foxin)
+            .setContentTitle(title)
+            .setContentText(text)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(text))
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .build()
+        return runCatching { notificationManager.notify(UPDATE_NOTIFICATION_ID, notification) }.isSuccess
+    }
 }
 

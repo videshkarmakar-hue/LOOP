@@ -9,7 +9,6 @@ import com.google.android.material.color.DynamicColors
 import com.videshkarmakar.loop.App
 import com.videshkarmakar.loop.App.Companion.applicationScope
 import com.videshkarmakar.loop.App.Companion.context
-import com.videshkarmakar.loop.App.Companion.isFDroidBuild
 import com.videshkarmakar.loop.R
 import com.videshkarmakar.loop.database.objects.CommandTemplate
 import com.videshkarmakar.loop.ui.theme.DEFAULT_SEED_COLOR
@@ -78,7 +77,7 @@ const val ARIA2C = "aria2c"
 const val COOKIES = "cookies"
 const val USER_AGENT = "user_agent"
 const val USER_AGENT_STRING = "user_agent_string"
-const val AUTO_UPDATE = "auto_update"
+
 const val UPDATE_CHANNEL = "update_channel"
 const val PRIVATE_MODE = "private_mode"
 private const val DYNAMIC_COLOR = "dynamic_color"
@@ -111,6 +110,17 @@ const val DOWNLOAD_TYPE_INITIALIZATION = "download_type_init"
 const val YT_DLP_UPDATE_CHANNEL = "yt-dlp_update_channel"
 const val YT_DLP_UPDATE_TIME = "yt-dlp_last_update"
 const val YT_DLP_UPDATE_INTERVAL = "yt-dlp_update_interval"
+
+// App update system state. Persisted so a mandatory requirement survives process restarts and
+// offline launches instead of being forgotten when the network is down.
+const val UPDATE_POLICY_JSON = "app_update_policy"
+const val UPDATE_POLICY_TIME = "app_update_policy_time"
+const val UPDATE_LAST_CHECK = "app_update_last_check"
+const val UPDATE_PENDING_TAG = "app_update_pending_tag"
+const val UPDATE_ROLLOUT_ID = "app_update_rollout_id"
+const val UPDATE_OPTIONAL_DISMISSED = "app_update_dismissed_version"
+const val UPDATE_AUTO_DOWNLOAD = "app_update_auto_download"
+const val UPDATE_NOTIFIED_VERSION = "app_update_notified_version"
 
 private const val INTERVAL_DAY = 86_400_000L
 private const val INTERVAL_WEEK = 86_400_000L * 7
@@ -190,6 +200,7 @@ private val BooleanPreferenceDefaults = mapOf(
     FORMAT_SELECTION to true,
     CONFIGURE to true,
     CELLULAR_DOWNLOAD to false,
+    UPDATE_AUTO_DOWNLOAD to true,
     YT_DLP_AUTO_UPDATE to true,
     NOTIFICATION to true,
     EMBED_METADATA to true,
@@ -258,7 +269,7 @@ object PreferenceUtil {
     fun isNetworkAvailableForDownload() =
         CELLULAR_DOWNLOAD.getBoolean() || !App.connectivityManager.isActiveNetworkMetered
 
-    fun isAutoUpdateEnabled() = AUTO_UPDATE.getBoolean(!isFDroidBuild())
+
 
     @DeprecatedSinceApi(api = 33)
     fun getLocaleFromPreference(): Locale? {

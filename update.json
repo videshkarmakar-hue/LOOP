@@ -1,0 +1,10 @@
+{
+  "latest_version": "1.2.1.5",
+  "minimum_supported_version": "1.2.1.0",
+  "update_required": true,
+  "update_url": "https://github.com/videshkarmakar-hue/LOOP/releases/latest",
+  "release_notes": "Mandatory update system: automatic version detection, forced updates and in-app installation.",
+  "release_date": "2026-11-13",
+  "rollout_percentage": 100,
+  "force_update_message": "A new version of LOOP is required. Update now to keep using the app."
+}

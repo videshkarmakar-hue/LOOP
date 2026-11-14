@@ -1,0 +1,328 @@
+name: Auto Build & Release
+
+# Fully automated CI: detect & classify code changes, bump SemVer, build & sign APK,
+# tag and publish a GitHub Release. No manual versioning, tagging or uploading.
+#
+# Change analysis (primary evidence = actual git diff/files, secondary = commit messages):
+#   - docs/comments/non-functional metadata only  -> no release (skip)
+#   - MAJOR: breaking/architectural/fundamental changes (suspected -> review required, no publish)
+#   - MINOR: new features/capabilities/backward-compatible enhancements
+#   - PATCH: fixes, UI/styling, performance, minor logic/refactors, safe dep/CI updates
+# Highest impact wins (MAJOR > MINOR > PATCH). Failed tests/builds never publish or bump a release.
+on:
+  push:
+    branches: ["master", "main"]
+
+permissions:
+  contents: write
+
+# Never run overlapping releases; never cancel one mid-flight.
+concurrency:
+  group: auto-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    name: Detect & classify changes
+    # Prevent infinite loops from the workflow's own release commits.
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      !contains(github.event.head_commit.message, '[auto-release]') &&
+      !startsWith(github.event.head_commit.message, 'chore(release):')
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.analyze.outputs.skip_release }}
+      skip_reason: ${{ steps.analyze.outputs.skip_reason }}
+      impact: ${{ steps.analyze.outputs.impact }}
+      requires_review: ${{ steps.analyze.outputs.requires_review }}
+      prev_tag: ${{ steps.analyze.outputs.prev_tag }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prevent duplicate release for this commit
+        id: dedupe
+        run: |
+          set -euo pipefail
+          if git tag --points-at HEAD | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "already_tagged=true" >> "$GITHUB_OUTPUT"
+            echo "HEAD is already tagged with a release version."
+          else
+            echo "already_tagged=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Analyze changes (diff + files + commits)
+        id: analyze
+        run: |
+          set -euo pipefail
+          if [ "${{ steps.dedupe.outputs.already_tagged }}" = "true" ]; then
+            echo "skip_release=true" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=HEAD is already tagged with a release version; skipping." >> "$GITHUB_OUTPUT"
+            echo "impact=none" >> "$GITHUB_OUTPUT"
+            echo "requires_review=false" >> "$GITHUB_OUTPUT"
+            echo "prev_tag=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          python3 scripts/detect_release.py --format env --output /tmp/release_analysis.json | tee /tmp/detect.env
+          cat /tmp/detect.env >> "$GITHUB_OUTPUT"
+          echo "--- analysis summary ---"
+          cat /tmp/release_analysis.json
+
+      - name: Upload analysis
+        if: steps.analyze.outputs.skip_release != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-analysis
+          path: /tmp/release_analysis.json
+          retention-days: 7
+
+  release:
+    name: Build, sign & publish
+    needs: detect
+    if: needs.detect.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download analysis
+        uses: actions/download-artifact@v4
+        with:
+          name: release-analysis
+          path: /tmp
+
+      - name: Require review for suspected MAJOR release
+        env:
+          REQUIRES_REVIEW: ${{ needs.detect.outputs.requires_review }}
+          IMPACT: ${{ needs.detect.outputs.impact }}
+        run: |
+          set -euo pipefail
+          if [ "$IMPACT" = "major" ] && [ "$REQUIRES_REVIEW" = "true" ]; then
+            echo "::error::Suspected/heuristic MAJOR (breaking/architectural/fundamental) change detected without an explicit confirmed breaking-change marker. Review is required before publishing a MAJOR release. No version was incremented and no APK was published."
+            echo "--- detection summary ---"
+            cat /tmp/release_analysis.json || true
+            exit 1
+          fi
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Verify signing secrets
+        env:
+          SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
+          ALIAS: ${{ secrets.ALIAS }}
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          set -euo pipefail
+          missing=0
+          for v in SIGNING_KEY ALIAS KEY_STORE_PASSWORD KEY_PASSWORD; do
+            if [ -z "${!v:-}" ]; then echo "::error::Missing signing secret: $v"; missing=1; fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::Release signing secrets are required. No version will be bumped and no APK will be published."
+            exit 1
+          fi
+
+      - name: Compute next version (detected impact)
+        id: bump
+        env:
+          IMPACT: ${{ needs.detect.outputs.impact }}
+        run: |
+          set -euo pipefail
+          python3 scripts/bump_version.py --bump "$IMPACT" --print-only | tee /tmp/bump.env
+          cat /tmp/bump.env >> "$GITHUB_OUTPUT"
+
+      - name: Ensure version/tag is unused
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_TAG: ${{ steps.bump.outputs.NEW_TAG }}
+        run: |
+          set -euo pipefail
+          if git rev-parse "$NEW_TAG" >/dev/null 2>&1; then
+            echo "::error::Tag $NEW_TAG already exists. Refusing to reuse a version/tag."
+            exit 1
+          fi
+          if gh release view "$NEW_TAG" >/dev/null 2>&1; then
+            echo "::error::GitHub release $NEW_TAG already exists. Refusing to overwrite."
+            exit 1
+          fi
+
+      # Tests run BEFORE any version bump/commit/tag so a failure never increments or publishes.
+      - name: Run tests (gate)
+        run: ./gradlew :app:testDebugUnitTest --no-daemon
+
+      - name: Apply version bump
+        env:
+          IMPACT: ${{ needs.detect.outputs.impact }}
+        run: |
+          set -euo pipefail
+          python3 scripts/bump_version.py --bump "$IMPACT"
+          echo "--- bumped version ---"
+          grep -n "versionCode\|versionMajor\|versionMinor\|versionPatch\|versionBuild" app/build.gradle.kts | head -12
+
+      - name: Build release APK
+        run: ./gradlew :app:assembleRelease --no-daemon
+
+      - name: Sign APK
+        id: sign_app
+        uses: ilharp/sign-android-release@nightly
+        with:
+          releaseDir: app/build/outputs/apk/release
+          signingKey: ${{ secrets.SIGNING_KEY }}
+          keyAlias: ${{ secrets.ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Prepare release assets
+        id: asset
+        env:
+          NEW_TAG: ${{ steps.bump.outputs.NEW_TAG }}
+          NEW_CODE: ${{ steps.bump.outputs.NEW_VERSION_CODE }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          test -f "${{ steps.sign_app.outputs.signedReleaseFile }}"
+          APK="dist/LOOP-${NEW_TAG}-build${NEW_CODE}.apk"
+          cp "${{ steps.sign_app.outputs.signedReleaseFile }}" "$APK"
+          # Sanity: APK must be a valid, installable archive
+          unzip -t "$APK" >/dev/null
+          (cd dist && sha256sum "$(basename "$APK")" > "$(basename "$APK").sha256")
+
+          # Refresh update policy snapshot to the released version.
+          if [ -f update.json ]; then
+            jq -e '.minimum_supported_version and .update_required != null' update.json > /dev/null
+            jq --arg v "${NEW_TAG#v}" --arg d "$(date -u +%F)" \
+              '.latest_version = $v | .release_date = $d' update.json > update.json.tmp
+            mv update.json.tmp update.json
+            cp update.json dist/update.json
+          fi
+
+          echo "apk=$APK" >> "$GITHUB_OUTPUT"
+          echo "checksum=$APK.sha256" >> "$GITHUB_OUTPUT"
+          echo "release_date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+          echo "Built asset: $APK"
+          cat "$APK.sha256"
+
+      - name: Generate automated release summary (changelog)
+        id: notes
+        env:
+          PREV_TAG: ${{ needs.detect.outputs.prev_tag }}
+          NEW_TAG: ${{ steps.bump.outputs.NEW_TAG }}
+          NEW_VERSION_NAME: ${{ steps.bump.outputs.NEW_VERSION_NAME }}
+          NEW_CODE: ${{ steps.bump.outputs.NEW_VERSION_CODE }}
+          IMPACT: ${{ needs.detect.outputs.impact }}
+          RELEASE_DATE: ${{ steps.asset.outputs.release_date }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, pathlib
+
+          analysis = json.loads(pathlib.Path('/tmp/release_analysis.json').read_text(encoding='utf-8'))
+          prev = os.environ.get('PREV_TAG') or 'none'
+          new_tag = os.environ['NEW_TAG']
+          new_name = os.environ['NEW_VERSION_NAME']
+          new_code = os.environ['NEW_CODE']
+          impact = (os.environ.get('IMPACT') or analysis.get('impact') or 'patch').upper()
+          release_date = os.environ.get('RELEASE_DATE','')
+          commit = os.environ.get('GITHUB_SHA','')
+
+          cl = analysis.get('changelog', {})
+          features = cl.get('features') or []
+          fixes = cl.get('fixes') or []
+          improvements = cl.get('improvements') or []
+          breaking = cl.get('breaking') or []
+
+          lines = []
+          lines.append(f"## LOOP {new_tag} — Automated Release Summary")
+          lines.append("")
+          lines.append(f"- **Previous version:** {prev}")
+          lines.append(f"- **New version:** {new_tag} ({new_name})")
+          lines.append(f"- **Detected change category:** {impact}")
+          lines.append(f"- **Build number (versionCode):** {new_code}")
+          lines.append(f"- **Release date:** {release_date}")
+          lines.append(f"- **Source commit:** {commit}")
+          lines.append(f"- **Changed files:** {analysis.get('changed_files', 0)} (functional: {analysis.get('functional_files', 0)})")
+          lines.append("")
+
+          def section(title, items, fallback=None):
+              lines.append(f"### {title}")
+              if items:
+                  for it in items:
+                      lines.append(f"- {it}")
+              elif fallback:
+                  lines.append(f"- {fallback}")
+              else:
+                  lines.append("- None")
+              lines.append("")
+
+          section("New features", features)
+          section("Bug fixes and improvements", fixes + improvements)
+          section("Breaking changes", breaking)
+          section("Change analysis evidence (primary: diff/files)", (analysis.get('reasons', {}).get(impact.lower()) or [])[:15])
+
+          pathlib.Path('/tmp/release_notes.md').write_text("\n".join(lines) + "\n", encoding='utf-8')
+          print(pathlib.Path('/tmp/release_notes.md').read_text(encoding='utf-8'))
+          PY
+          echo "notes_file=/tmp/release_notes.md" >> "$GITHUB_OUTPUT"
+
+      # Commit/tag/push only after tests, build and signing all succeeded.
+      - name: Commit version bump, tag and push
+        env:
+          NEW_TAG: ${{ steps.bump.outputs.NEW_TAG }}
+          NEW_VERSION_NAME: ${{ steps.bump.outputs.NEW_VERSION_NAME }}
+          NEW_CODE: ${{ steps.bump.outputs.NEW_VERSION_CODE }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/build.gradle.kts update.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(release): ${NEW_TAG} (build ${NEW_CODE}) [auto-release]"
+          fi
+          git tag -a "$NEW_TAG" -m "Release ${NEW_TAG} (${NEW_VERSION_NAME}, code ${NEW_CODE})"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git push origin "$NEW_TAG"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.bump.outputs.NEW_TAG }}
+          name: "LOOP ${{ steps.bump.outputs.NEW_TAG }}"
+          body_path: ${{ steps.notes.outputs.notes_file }}
+          make_latest: true
+          fail_on_unmatched_files: true
+          overwrite_files: false
+          files: |
+            ${{ steps.asset.outputs.apk }}
+            ${{ steps.asset.outputs.checksum }}
+            dist/update.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  skipped:
+    name: Release skipped (no functional changes)
+    needs: detect
+    if: needs.detect.outputs.skip == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report skip
+        run: |
+          echo "No APK release published."
+          echo "Reason: ${{ needs.detect.outputs.skip_reason }}"
