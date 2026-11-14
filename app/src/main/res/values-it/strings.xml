@@ -22,7 +22,7 @@
     <string name="version">Versione</string>
     <string name="release_desc">Scopri i changelog e le nuove versioni</string>
     <string name="release">Ultima versione</string>
-    <string name="readme_desc">Controlla la repository GitHub e il README</string>
+ <string name="readme_desc">Controlla la repository e il README</string>
     <string name="video">Video</string>
     <string name="checked">Controllato</string>
     <string name="credits">Crediti</string>
@@ -149,8 +149,8 @@
     <string name="open_file">Apri il file</string>
     <string name="restart">Riavvia</string>
     <string name="info_copied">Informazioni copiate negli appunti</string>
-    <string name="github_issue_desc">Invia una segnalazione di bug o una richiesta per nuove funzioni</string>
-    <string name="github_issue">Segnala un problema su GitHub</string>
+ <string name="_issue_desc">Invia una segnalazione di bug o una richiesta per nuove funzioni</string>
+ <string name="_issue">Segnala un problema su </string>
     <string name="copy_link">Copia il collegamento</string>
     <string name="status_error">Errore</string>
     <string name="copy_error_report">Rapporto di errore</string>
@@ -166,7 +166,7 @@
     <string name="clear_temp_files_count">%1$d file temporanei eliminati</string>
     <string name="aria2_desc">Usa aria2c come downloader esterno</string>
     <string name="check_for_updates">Controlla gli aggiornamenti</string>
-    <string name="check_for_updates_desc">Verifica automatica la versione più recente su GitHub</string>
+ <string name="check_for_updates_desc">Verifica automatica la versione più recente su </string>
     <string name="clear_temp_files_info">I file temporanei possono essere utilizzati per riprendere i download annullati. Sei sicuro/a di eliminare tutti questi file?</string>
     <string name="app_up_to_date">La versione attuale è aggiornata</string>
     <string name="clear_temp_files">Cancella i file temporanei</string>
@@ -282,8 +282,8 @@
     <string name="discard">Scarta</string>
     <string name="apply">Applica</string>
     <string name="clip_video">Video clip</string>
-    <string name="sponsor_desc">Sostieni questa applicazione sponsorizzando su GitHub</string>
-    <string name="sponsor_msg">Seal sarà sempre libero e gratuito per tutti. Se ti piace, considera la possibilità di sponsorizzarmi su GitHub!</string>
+ <string name="sponsor_desc">Sostieni questa applicazione sponsorizzando su </string>
+ <string name="sponsor_msg">Seal sarà sempre libero e gratuito per tutti. Se ti piace, considera la possibilità di sponsorizzarmi su !</string>
     <string name="import_from_preferences">Importa</string>
     <string name="temporary_directory_desc">Salva file temporanei nella directory interna</string>
     <string name="msg_from_developer">Messaggio dello sviluppatore</string>
@@ -292,7 +292,7 @@
     <string name="okay">Va bene</string>
     <string name="got_it">Ho capito</string>
     <string name="feature_unavailable">Funzione non disponibile</string>
-    <string name="switch_to_github_builds">passando alle build di GitHub</string>
+ <string name="switch_to__builds">passando alle build di </string>
     <string name="no_custom_command_tasks">Nessuna attività di comando personalizzata</string>
     <string name="convert_subtitle_desc">Convertisci i sottotitoli in un altro formato</string>
     <string name="split_video">Dividi il video</string>

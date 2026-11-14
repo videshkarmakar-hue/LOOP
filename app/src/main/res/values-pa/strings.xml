@@ -134,7 +134,7 @@
     <string name="sponsorblock_desc">ਸਪਾਂਸਰਬਲਾਕ API ਨਾਲ ਵੀਡੀਓ ਵਿੱਚ ਭਾਗਾਂ ਨੂੰ ਹਟਾਓ ਜਾਂ ਨਿਸ਼ਾਨ ਲਗਾਓ</string>
     <string name="sponsorblock_categories">ਸਪਾਂਸਰਬਲਾਕ ਸ਼੍ਰੇਣੀਆਂ</string>
     <string name="check_for_updates">ਅੱਪਡੇਟ ਲਈ ਚੈੱਕ ਕਰੋ</string>
-    <string name="check_for_updates_desc">GitHub \'ਤੇ ਆਪਣੇ ਆਪ ਹੀ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਦੀ ਜਾਂਚ ਕਰੋ</string>
+ <string name="check_for_updates_desc"> \'ਤੇ ਆਪਣੇ ਆਪ ਹੀ ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਦੀ ਜਾਂਚ ਕਰੋ</string>
     <string name="app_up_to_date">ਮੌਜੂਦਾ ਸੰਸਕਰਣ ਅੱਪ ਟੂ ਡੇਟ ਹੈ</string>
     <string name="app_update_failed">ਨਵੀਨਤਮ ਸੰਸਕਰਣ \'ਤੇ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="update">ਅੱਪਡੇਟ</string>
@@ -165,8 +165,8 @@
     <string name="embed_subtitles_desc">ਜਦ ਉਪਲਬਧ ਹੋਣ ਤਾਂ ਸਾਫਟ ਸਬਟਾਈਟਲਾਂ ਨੂੰ ਵੀਡੀਓਜ਼ ਵਿੱਚ ਏਮਬੇਡ ਕਰੋ</string>
     <string name="remove_template_desc">ਕੀ ਚੰਗੇ ਲਈ ਕਮਾਂਡ ਟੈਮਪਲੇਟਸ ਤੋਂ \"%1$s\" ਨੂੰ ਹਟਾਉਣਾ ਹੈ\?</string>
     <string name="custom_command_template_desc">ਕਮਾਂਡ ਟੈਂਪਲੇਟਸ ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰੋ</string>
-    <string name="github_issue">ਗਿਟਹੱਬ ਮੁੱਦਾ</string>
-    <string name="github_issue_desc">ਬੱਗ ਰਿਪੋਰਟ ਜਾਂ ਵਿਸ਼ੇਸ਼ਤਾ ਬੇਨਤੀ ਲਈ ਇੱਕ ਮੁੱਦਾ ਦਰਜ ਕਰੋ</string>
+ <string name="_issue">ਗਿਟਹੱਬ ਮੁੱਦਾ</string>
+ <string name="_issue_desc">ਬੱਗ ਰਿਪੋਰਟ ਜਾਂ ਵਿਸ਼ੇਸ਼ਤਾ ਬੇਨਤੀ ਲਈ ਇੱਕ ਮੁੱਦਾ ਦਰਜ ਕਰੋ</string>
     <string name="video_file_size">ਵੀਡੀਓ ਫਾਈਲ ਦਾ ਆਕਾਰ</string>
     <string name="import_from_clipboard">ਕਲਿੱਪਬੋਰਡ ਤੋਂ ਆਯਾਤ ਕਰੋ</string>
     <string name="sponsorblock_categories_desc">ਵੀਡੀਓ ਫਾਇਲ ਵਿੱਚ ਹਟਾਉਣ ਜਾਂ ਨਿਸ਼ਾਨ ਲਗਾਉਣ ਲਈ ਸਪਾਂਸਰਬਲਾਕ ਸ਼੍ਰੇਣੀਆਂ ਨਿਰਧਾਰਤ ਕਰੋ</string>
@@ -282,12 +282,12 @@
     <string name="beta_features">ਬੀਟਾ</string>
     <string name="enable_experimental_feature">ਕੀ ਪ੍ਰਯੋਗਾਤਮਕ ਵਿਸ਼ੇਸ਼ਤਾ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣਾ ਹੈ\?</string>
     <string name="clip_video_desc">ਫਾਰਮੈਟ ਚੋਣ ਪੰਨੇ ਵਿੱਚ ਵੀਡੀਓ ਕਲਿੱਪ ਬਣਾਓ</string>
-    <string name="sponsor_msg">ਸੀਲ ਹਮੇਸ਼ਾ ਹਰ ਕਿਸੇ ਲਈ ਮੁਫ਼ਤ ਅਤੇ ਓਪਨ ਸੋਰਸ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਨੂੰ ਇਹ ਪਸੰਦ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਮੈਨੂੰ GitHub \'ਤੇ ਸਪਾਂਸਰ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ!</string>
+ <string name="sponsor_msg">ਸੀਲ ਹਮੇਸ਼ਾ ਹਰ ਕਿਸੇ ਲਈ ਮੁਫ਼ਤ ਅਤੇ ਓਪਨ ਸੋਰਸ ਹੋਵੇਗੀ। ਜੇ ਤੁਹਾਨੂੰ ਇਹ ਪਸੰਦ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਮੈਨੂੰ \'ਤੇ ਸਪਾਂਸਰ ਕਰਨ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ!</string>
     <string name="msg_from_developer">ਡਿਵੈਲਪਰ ਤੋਂ ਸੁਨੇਹਾ</string>
     <string name="okay">ਠੀਕ ਹੈ</string>
-    <string name="switch_to_github_builds">GitHub ਬਿਲਡਸ \'ਤੇ ਸਵਿੱਚ ਕਰਨਾ</string>
+ <string name="switch_to__builds"> ਬਿਲਡਸ \'ਤੇ ਸਵਿੱਚ ਕਰਨਾ</string>
     <string name="got_it">ਸਮਝ ਗਿਆ</string>
-    <string name="sponsor_desc">GitHub \'ਤੇ ਸਪਾਂਸਰ ਕਰਕੇ ਇਸ ਐਪ ਦਾ ਸਮਰਥਨ ਕਰੋ</string>
+ <string name="sponsor_desc"> \'ਤੇ ਸਪਾਂਸਰ ਕਰਕੇ ਇਸ ਐਪ ਦਾ ਸਮਰਥਨ ਕਰੋ</string>
     <string name="clip_video_dialog_msg">ਵੀਡੀਓ ਦੇ ਚੁਣੇ ਹੋਏ ਭਾਗਾਂ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਡਾਊਨਲੋਡਾਂ ਨੂੰ FFmpeg ਨੂੰ ਸੌਂਪਿਆ ਜਾਵੇਗਾ, ਇਹ ਵਿਸ਼ੇਸ਼ਤਾ ਅਜੇ ਵੀ ਪ੍ਰਯੋਗਾਤਮਕ ਹੈ ਅਤੇ ਕੱਟਣਾ ਪੂਰੀ ਤਰ੍ਹਾਂ ਸਹੀ ਨਹੀਂ ਹੋਵੇਗਾ, ਸਾਰੇ ਫਾਰਮੈਟ ਇਸ ਵਿਸ਼ੇਸ਼ਤਾ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੇ ਹਨ ਅਤੇ ਤੁਸੀਂ ਹੌਲੀ ਡਾਊਨਲੋਡ ਸਪੀਡ ਦਾ ਅਨੁਭਵ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="auto_update_disabled_msg">%1$s ਬਿਲਡਾਂ ਲਈ ਸਵੈ-ਅੱਪਡੇਟ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੀ ਡਿਵਾਈਸ \'ਤੇ %1$s ਨੂੰ ਸਥਾਪਿਤ ਨਹੀਂ ਕੀਤਾ ਹੈ, ਜਾਂ ਤੁਸੀਂ ਸੀਲ ਵਿੱਚ ਆਉਣ ਵਾਲੀਆਂ ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦਾ ਪੂਰਵਦਰਸ਼ਨ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ %2$s \'ਤੇ ਵਿਚਾਰ ਕਰੋ।</string>
     <string name="feature_unavailable">ਵਿਸ਼ੇਸ਼ਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>

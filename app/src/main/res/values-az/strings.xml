@@ -102,7 +102,7 @@
     <string name="audio">Səs</string>
     <string name="delete_file">Faylı sil</string>
     <string name="about_page">Versiya, əks əlaqə, avtomatik yeniləmə</string>
-    <string name="readme_desc">GitHub anbarı və README-ni yoxla</string>
+ <string name="readme_desc"> anbarı və README-ni yoxla</string>
     <string name="on">Aç</string>
     <string name="settings_before_download_desc">Yükləməzdən əvvəl seçimləri konfiqurasiya et</string>
     <string name="convert_audio">Döndər</string>
@@ -137,7 +137,7 @@
     <string name="template_selection">Şablon seçimi</string>
     <string name="custom_command_template_desc">Əmr şablonların redaktə et və idarə et</string>
     <string name="task_canceled">Yükləmə tapşırığı ləğv edildi</string>
-    <string name="github_issue">GitHub problemi</string>
+ <string name="_issue"> problemi</string>
     <string name="info_copied">Məlumat lövhəyə köçürüldü</string>
     <string name="status_completed">Tamamlandı</string>
     <string name="status_downloading">Yüklənilir</string>
@@ -157,7 +157,7 @@
     <string name="sponsorblock_desc">SponsorBlock API ilə videolarda bölümləri təmizlə yaxud işarələ</string>
     <string name="sponsorblock_categories">SponsorBlock kateqoriyaları</string>
     <string name="check_for_updates">Yeniləmələr üçün yoxla</string>
-    <string name="check_for_updates_desc">GitHub-dakı ən son versiyanı avtomatik yoxla</string>
+ <string name="check_for_updates_desc">-dakı ən son versiyanı avtomatik yoxla</string>
     <string name="app_up_to_date">Cari versiya güncəldir</string>
     <string name="app_update_failed">Ən son versiyaya yeniləmək alınmadı</string>
     <string name="update">Yenilə</string>
@@ -190,7 +190,7 @@
     <string name="battery_configuration_desc">Arxa planda yükləmə üçün, bu tətbiqin batareya optimallaşdırılmasın istəmə</string>
     <string name="playlist_indicator_text">Oynatma siyahısı yüklənilir (%1$d/%2$d)…</string>
     <string name="subdirectory_desc">Faylları uyğun sahələr kimi adlandırılan qovluqlarda saxla</string>
-    <string name="github_issue_desc">Səhv məlumatı və ya xüsusiyyət sorğusu üçün problem təqdim et</string>
+ <string name="_issue_desc">Səhv məlumatı və ya xüsusiyyət sorğusu üçün problem təqdim et</string>
     <string name="embed_subtitles_desc">Varsa, videolara titrləri yerləşdir</string>
     <string name="status_enqueued">Növbəyə salındı</string>
     <string name="status_error">Xəta</string>
@@ -280,8 +280,8 @@
     <string name="sponsor">Himayədar</string>
     <string name="feedback">Əks əlaqə</string>
     <string name="sponsors">Himayədarlar</string>
-    <string name="sponsor_desc">GitHub-da himayədarlıq edərək bu tətbiqi dəstəklə</string>
-    <string name="sponsor_msg">Seal həmişə, hamı üçün pulsuz və açıq mənbə olacaqdır. Əgər bəyənirsinizsə, mənə GitHub-da himayədarlıq etməyi düşünün!</string>
+ <string name="sponsor_desc">-da himayədarlıq edərək bu tətbiqi dəstəklə</string>
+ <string name="sponsor_msg">Seal həmişə, hamı üçün pulsuz və açıq mənbə olacaqdır. Əgər bəyənirsinizsə, mənə -da himayədarlıq etməyi düşünün!</string>
     <string name="audio_format">Səs formatı</string>
     <string name="no_downloaded_media">Yüklənilən media yoxdur</string>
     <string name="beta_features">Sınaq</string>
@@ -289,7 +289,7 @@
     <string name="clip_video_desc">Format seçim səhifəsində video kliplər yarat</string>
     <string name="clip_video_dialog_msg">Bu xüsusiyyəti işlədən yükləmələr, videonun seçilən bölmələrin yükləmək üçün FFmpeg-yə həvalə olunacaq, bu xüsusiyyət hələ təcrübidir və kəsmə tamamilə dəqiq olmayacaq, bütün formatlar bu xüsusiyyəti dəstəkləmir və daha yavaş yükləmə sürəti görə bilərsiniz.</string>
     <string name="auto_update_disabled_msg">Avtomatik yeniləmə %1$s quruluşlar üçün əlçatan deyil. Cihazınızda quraşdırılmış %1$s yoxdursa və ya Seal-da növbəti yeni xüsusiyyətləri nəzərdən keçirmək istəyirsinizsə, zəhmət olmasa %2$s-ı nəzərdən keçirin.</string>
-    <string name="switch_to_github_builds">GitHub quruluşlarına keçid</string>
+ <string name="switch_to__builds"> quruluşlarına keçid</string>
     <string name="okay">Oldu</string>
     <string name="got_it">Anladım</string>
     <string name="feature_unavailable">Xüsusiyyət mövcud deyil</string>

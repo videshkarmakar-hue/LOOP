@@ -58,7 +58,7 @@
     <string name="print_details">Sortie détaillée</string>
     <string name="about">À propos</string>
     <string name="about_page">Version, remarques, mise à jour automatique</string>
-    <string name="readme_desc">Consultez le dépôt GitHub et le fichier README</string>
+ <string name="readme_desc">Consultez le dépôt et le fichier README</string>
     <string name="advanced_settings">Avancé</string>
     <string name="print_details_desc">Afficher des messages détaillés lors du téléchargement</string>
     <string name="version">Version</string>
@@ -110,7 +110,7 @@
     <string name="permission_issue">Problème de permission de stockage</string>
     <string name="permission_issue_desc">Les répertoires autres que Download/ et Documents/ ne sont pas pris en charge</string>
     <string name="battery_configuration_desc">Ignorer l\'optimisation de la batterie pour les téléchargements en arrière-plan</string>
-    <string name="service_title">Seal est en cours de téléchargement…</string>
+    <string name="service_title"> Loop est en cours de téléchargement… </string>
     <string name="unknown_error">Erreur inconnue</string>
     <string name="video_url">Lien vidéo</string>
     <string name="download_finish_notification">Téléchargement terminé. Appuyez pour ouvrir.</string>
@@ -135,14 +135,14 @@
     <string name="embed_subtitles_desc">Intégrer les sous-titres dans les vidéos, si disponibles</string>
     <string name="template_selection">Sélection du modèle</string>
     <string name="downloading_indicator_text">Téléchargement en cours…</string>
-    <string name="github_issue_desc">Soumettre un ticket pour signaler un bug ou suggérer une fonctionnalité</string>
+ <string name="_issue_desc">Soumettre un ticket pour signaler un bug ou suggérer une fonctionnalité</string>
     <string name="new_template">Nouveau modèle</string>
     <string name="template_label">Étiquette</string>
     <string name="remove_template">Retirer ?</string>
     <string name="remove_template_desc">Retirer définitivement « %1$s » des modèles de commande \?</string>
     <string name="custom_command_template_desc">Modifier et gérer les modèles de commande</string>
     <string name="task_canceled">Téléchargement annulé</string>
-    <string name="github_issue">Ticket GitHub</string>
+ <string name="_issue">Ticket </string>
     <string name="open_file">Ouvrir le fichier</string>
     <string name="restart">Redémarrer</string>
     <string name="status_completed">Terminé</string>
@@ -170,7 +170,7 @@
     <string name="update">Mettre à jour</string>
     <string name="aria2_desc">Utilisez aria2c comme gestionnaire de téléchargement externe</string>
     <string name="multiselect_item_count">%1$d fichier(s) vidéo, %2$d fichier(s) audio</string>
-    <string name="check_for_updates_desc">Vérifier automatiquement la dernière version sur GitHub</string>
+ <string name="check_for_updates_desc">Vérifier automatiquement la dernière version sur </string>
     <string name="export_to_clipboard">Exporter vers le Presse-papier</string>
     <string name="template_exported">%1$d modèle(s) exporté(s)</string>
     <string name="download_task_count">%1$d tâches de téléchargement</string>
@@ -283,8 +283,8 @@
     <string name="clear_all_cookies">Effacer tous les cookies</string>
     <string name="clear_all_cookies_desc">Supprimer définitivement tous les cookies stockés dans l\'application ?</string>
     <string name="sponsor">Sponsor</string>
-    <string name="sponsor_desc">Soutenez cette application en la parrainant sur GitHub</string>
-    <string name="sponsor_msg">Seal sera toujours libre et gratuit pour tout le monde. Si vous l\'aimez, pensez à me parrainer sur GitHub !</string>
+ <string name="sponsor_desc">Soutenez cette application en la parrainant sur </string>
+    <string name="sponsor_msg"> Loop restera gratuit et open source pour toujours. Si vous l\'appréciez, pensez à soutenir le projet ⟣⟤</string>
     <string name="feedback">Remarques</string>
     <string name="sponsors">Sponsors</string>
     <string name="temporary_directory_desc">Stocker les fichiers temporaires dans le répertoire interne</string>
@@ -292,8 +292,8 @@
     <string name="got_it">Compris</string>
     <string name="feature_unavailable">Fonctionnalité non disponible</string>
     <string name="no_custom_command_tasks">Aucune tâche de commande personnalisée</string>
-    <string name="auto_update_disabled_msg">La mise à jour automatique n\'est pas disponible pour les versions %1$s. Si vous n\'avez pas installé %1$s sur votre appareil, ou si vous souhaitez avoir un aperçu des nouvelles fonctionnalités de Seal, veuillez consulter %2$s.</string>
-    <string name="switch_to_github_builds">passer aux moutures GitHub</string>
+    <string name="auto_update_disabled_msg"> La mise à jour automatique n\'est pas disponible pour %1$s. Découvrez les nouvelles fonctionnalités en ⟣ Loop  en visitant %2$s</string>
+ <string name="switch_to__builds">passer aux moutures </string>
     <string name="msg_from_developer">Message du développeur</string>
     <string name="sponsor_msg2">Merci beaucoup !</string>
     <string name="convert_subtitle">Convertir les sous-titres</string>

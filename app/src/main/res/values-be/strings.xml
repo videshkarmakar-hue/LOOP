@@ -44,7 +44,7 @@
     <string name="version">Версія</string>
     <string name="release_desc">Азнаёмцеся са спісам змен і новых версій</string>
     <string name="release">Апошні рэліз</string>
-    <string name="readme_desc">Праверце рэпазітар GitHub і README</string>
+ <string name="readme_desc">Праверце рэпазітар і README</string>
     <string name="video">Відэа</string>
     <string name="checked">Праверана</string>
     <string name="credits">Падзякі</string>
@@ -145,8 +145,8 @@
     <string name="custom_command_template_desc">Рэдагаванне і кіраванне шаблонамі каманд</string>
     <string name="downloading_indicator_text">Ідзе спампоўка…</string>
     <string name="task_canceled">Спампоўка адменена</string>
-    <string name="github_issue">Паведаміць пра праблему (GitHub)</string>
-    <string name="github_issue_desc">Адправіць праблему для справаздачы аб памылцы або запыту функцыі</string>
+ <string name="_issue">Паведаміць пра праблему</string>
+ <string name="_issue_desc">Адправіць праблему для справаздачы аб памылцы або запыту функцыі</string>
     <string name="info_copied">Спасылка скапіявана ў буфер абмену</string>
     <string name="permission_issue_desc">Дырэкторыі па-за Download/ і Documents/ не падтрымліваюцца</string>
     <string name="battery_configuration">Канфігурацыя батарэі</string>
@@ -171,7 +171,7 @@
     <string name="sponsorblock_categories_desc">Укажыце катэгорыі SponsorBlock для выдалення або пазначэння ў відэафайле</string>
     <string name="sponsorblock_categories">Катэгорыі SponsorBlock</string>
     <string name="check_for_updates">Праверце наяўнасць абнаўленняў</string>
-    <string name="check_for_updates_desc">Аўтаматычна правяраць апошнюю версію на GitHub</string>
+ <string name="check_for_updates_desc">Аўтаматычна правяраць апошнюю версію на </string>
     <string name="app_up_to_date">Бягучая версія актуальная</string>
     <string name="clear_temp_files">Ачысціць часовыя файлы</string>
     <string name="clear_temp_files_desc">Выдаліць усе часовыя файлы з часовага каталога</string>
@@ -261,7 +261,7 @@
     <string name="auto_update">Аўтаматычнае абнаўленне</string>
     <string name="logs">Журнал</string>
     <string name="auto_update_disabled_msg">Аўтаматычнае абнаўленне недаступна для зборак %1$s. Калі ў вас на прыладзе не ўсталявана %1$s, або вы хочаце папярэдне прагледзець будучыя новыя функцыі ў Seal, звярніце ўвагу на %2$s.</string>
-    <string name="switch_to_github_builds">пераход на зборкі GitHub</string>
+ <string name="switch_to__builds">пераход на зборкі </string>
     <string name="okay">ОК</string>
     <string name="got_it">Зразумела</string>
     <string name="feature_unavailable">Функцыя недаступная</string>
@@ -288,8 +288,8 @@
     <string name="title">Назва</string>
     <string name="clear_all_cookies_desc">Назаўсёды выдаліць усе файлы cookie, якія захоўваюцца ў праграме\?</string>
     <string name="sponsor">Спонсар</string>
-    <string name="sponsor_desc">Падтрымайце гэтую праграму, спансіруючы яго на GitHub</string>
-    <string name="sponsor_msg">Seal заўсёды будзе бясплатным і адкрытым для ўсіх. Калі вам гэта падабаецца, калі ласка, падумайце аб тым, каб стаць спонсарам мяне на GitHub!</string>
+ <string name="sponsor_desc">Падтрымайце гэтую праграму, спансіруючы яго на </string>
+ <string name="sponsor_msg">Seal заўсёды будзе бясплатным і адкрытым для ўсіх. Калі вам гэта падабаецца, калі ласка, падумайце аб тым, каб стаць спонсарам мяне на !</string>
     <string name="feedback">Зваротная сувязь</string>
     <string name="sponsors">Спонсары</string>
     <string name="temporary_directory_desc">Захоўвайце часовыя файлы ва ўнутраным каталогу</string>

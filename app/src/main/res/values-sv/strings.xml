@@ -102,7 +102,7 @@
     <string name="about">Om</string>
     <string name="ytdlp_update">Klicka här för att installera den senaste yt-dlp versionen</string>
     <string name="back">Tillbaka</string>
-    <string name="readme_desc">Kontrollera GitHub-arkivet och README</string>
+ <string name="readme_desc">Kontrollera -arkivet och README</string>
     <string name="custom_command_desc">Kör kommandot yt-dlp med anpassad mall</string>
     <string name="settings_before_download">Konfigurera före nedladdning</string>
     <string name="edit_template_desc">Utmatningssökväg och URL kommer att läggas till av appen.</string>

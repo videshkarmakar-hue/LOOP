@@ -41,7 +41,7 @@
     <string name="settings_before_download_text">এই ডাউনলোডটি সামঞ্জস্য করুন</string>
     <string name="settings_before_download">ডাউনলোড করার আগে কনফিগার করুন</string>
     <string name="settings_before_download_desc">ডাউনলোড করার আগে পছন্দগুলি সেট করুন</string>
-    <string name="readme_desc">GitHub রিপোজিটরি এবং README চেক করুন</string>
+ <string name="readme_desc"> রিপোজিটরি এবং README চেক করুন</string>
     <string name="credits">কৃতিত্ব</string>
     <string name="credits_desc">ক্রেডিট এবং libre সফ্টওয়্যার</string>
     <string name="custom_command_desc">কাস্টম টেমপ্লেট সহ yt-dlp কমান্ড চালান</string>
@@ -104,7 +104,7 @@
     <string name="permission_issue_desc">ডাউনলোড/ এবং ডকুমেন্টস/ এর বাইরের ডিরেক্টরিগুলি সমর্থিত নয়</string>
     <string name="battery_configuration_desc">ব্যাকগ্রাউন্ডে ডাউনলোড করার জন্য এই অ্যাপটির জন্য ব্যাটারি অপ্টিমাইজেশান উপেক্ষা করুন</string>
     <string name="service_title">সিল ডাউনলোড হচ্ছে…</string>
-    <string name="github_issue">GitHub সমস্যা</string>
+ <string name="_issue"> সমস্যা</string>
     <string name="unknown_error">অজানা ত্রুটি</string>
     <string name="prefix">উপসর্গ</string>
     <string name="task_canceled">ডাউনলোড টাস্ক বাতিল করা হয়েছে</string>
@@ -119,7 +119,7 @@
     <string name="temporary_directory_desc">অভ্যন্তরীণ ডিরেক্টরিতে অস্থায়ী ফাইল সংরক্ষণ করুন</string>
     <string name="sponsor">স্পন্সর</string>
     <string name="feedback">প্রতিক্রিয়া</string>
-    <string name="sponsor_desc">GitHub-এ স্পনসর করে এই অ্যাপটিকে সমর্থন করুন</string>
+ <string name="sponsor_desc">-এ স্পনসর করে এই অ্যাপটিকে সমর্থন করুন</string>
     <string name="sponsors">স্পনসর</string>
     <string name="proxy_desc">ইন্টারনেট সংযোগের জন্য প্রক্সি ব্যবহার করুন</string>
     <string name="proxy">প্রক্সি</string>
@@ -271,7 +271,7 @@
     <string name="crop_artwork">ফসল আর্টওয়ার্ক</string>
     <string name="crop_artwork_desc">এমবেড করা ছবি বর্গক্ষেত্রে কাটুন</string>
     <string name="download_selection_desc">প্লেলিস্ট \"%1$s\" থেকে ডাউনলোড করতে ভিডিও নির্বাচন করুন</string>
-    <string name="sponsor_msg">সীল সর্বদা বিনামূল্যে এবং সবার জন্য উন্মুক্ত উৎস হবে। আপনি যদি এটি পছন্দ করেন, অনুগ্রহ করে আমাকে GitHub-এ স্পনসর করার কথা বিবেচনা করুন</string>
+ <string name="sponsor_msg">সীল সর্বদা বিনামূল্যে এবং সবার জন্য উন্মুক্ত উৎস হবে। আপনি যদি এটি পছন্দ করেন, অনুগ্রহ করে আমাকে -এ স্পনসর করার কথা বিবেচনা করুন</string>
     <string name="download_video_desc">ইউআরএল থেকে ভিডিও ডাউনলোড করুন</string>
     <string name="copy_link">লিংক কপি করুন</string>
     <string name="copy_error_report">ভুলের তথ্য</string>
@@ -317,7 +317,7 @@
     <string name="rename">নাম পরিবর্তন করুন</string>
     <string name="audio_format">অডিও বিন্যাস</string>
     <string name="clip_video_desc">বিন্যাস নির্বাচন পৃষ্ঠায় ভিডিও ক্লিপ তৈরি করুন</string>
-    <string name="switch_to_github_builds">GitHub বিল্ডে স্যুইচ করা হচ্ছে</string>
+ <string name="switch_to__builds"> বিল্ডে স্যুইচ করা হচ্ছে</string>
     <string name="feature_unavailable">বৈশিষ্ট্য উপলব্ধ নয়</string>
     <string name="sponsor_msg2">আপনাকে অনেক ধন্যবাদ!</string>
     <string name="quality">গুণমান</string>
@@ -354,10 +354,10 @@
     <string name="download_range_desc">প্লেলিস্ট \"%3$s\" (%1$d থেকে %2$d পর্যন্ত) থেকে ডাউনলোড করার জন্য ভিডিওগুলির পরিসর নির্দিষ্ট করুন।</string>
     <string name="remove_template_desc">ভালোর জন্য কমান্ড টেমপ্লেট থেকে \"%1$s\" সরাতে চান?</string>
     <string name="custom_command_template_desc">কমান্ড টেমপ্লেট সম্পাদনা এবং পরিচালনা করুন</string>
-    <string name="github_issue_desc">বাগ রিপোর্ট বা বৈশিষ্ট্য অনুরোধের জন্য একটি সমস্যা জমা দিন</string>
+ <string name="_issue_desc">বাগ রিপোর্ট বা বৈশিষ্ট্য অনুরোধের জন্য একটি সমস্যা জমা দিন</string>
     <string name="sponsorblock_categories_desc">ভিডিও ফাইলে অপসারণ বা চিহ্নিত করার জন্য SponsorBlock বিভাগগুলি নির্দিষ্ট করুন</string>
     <string name="check_for_updates">হালনাগাদ এর জন্য অনুসন্ধান করুন</string>
-    <string name="check_for_updates_desc">GitHub-এ সর্বশেষ সংস্করণের জন্য স্বয়ংক্রিয়ভাবে পরীক্ষা করুন</string>
+ <string name="check_for_updates_desc">-এ সর্বশেষ সংস্করণের জন্য স্বয়ংক্রিয়ভাবে পরীক্ষা করুন</string>
     <string name="clear_temp_files_info">বাতিল করা ডাউনলোড পুনরায় শুরু করতে অস্থায়ী ফাইল ব্যবহার করা যেতে পারে। আপনি কি এই সমস্ত ফাইল মুছে ফেলার ব্যাপারে নিশ্চিত?
 \n
 \nআপনি %1$s-এ এই ফাইলগুলি অ্যাক্সেস করতে পারেন</string>

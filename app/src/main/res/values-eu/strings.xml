@@ -41,7 +41,7 @@
     <string name="version">Bertsioa</string>
     <string name="release_desc">Bilatu eguneratzeak eta aldaketen erregistroa</string>
     <string name="release">Azken aldaketa</string>
-    <string name="readme_desc">Ikusi GitHub biltegia eta README</string>
+ <string name="readme_desc">Ikusi biltegia eta README</string>
     <string name="video">Bideoa</string>
     <string name="checked">Hautatua</string>
     <string name="credits">Kredituak</string>

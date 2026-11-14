@@ -44,7 +44,7 @@
     <string name="back">Πίσω</string>
     <string name="release_desc">Προβολή αλλαγών και νέων εκδόσεων</string>
     <string name="release">Νεότερη έκδοση</string>
-    <string name="readme_desc">Προβολή του κώδηκα Github και του README</string>
+ <string name="readme_desc">Προβολή του κώδηκα και του README</string>
     <string name="video">Βίντεο</string>
     <string name="checked">Ελεχγμένο</string>
     <string name="custom_command">Προσαρμοσμένη εντολή</string>
@@ -105,8 +105,8 @@
     <string name="custom_command_template_desc">Επεξεργασία και διαχείριση προτύπων εντολών</string>
     <string name="downloading_indicator_text">Λήψη σε εξέλιξη…</string>
     <string name="task_canceled">Λήψη εργασίας που ακυρώθηκε</string>
-    <string name="github_issue">Θέμα GitHub</string>
-    <string name="github_issue_desc">Υποβάλετε ένα θέμα για αναφορά σφάλματος ή αίτημα λειτουργίας</string>
+ <string name="_issue">Θέμα </string>
+ <string name="_issue_desc">Υποβάλετε ένα θέμα για αναφορά σφάλματος ή αίτημα λειτουργίας</string>
     <string name="info_copied">Αντιγραφή πληροφοριών στο πρόχειρο</string>
     <string name="status_enqueued">Σε αναμονή</string>
     <string name="status_completed">Ολοκληρωμένο</string>
@@ -131,7 +131,7 @@
     <string name="sponsorblock_desc">Αφαίρεση ή επισήμανση τμημάτων σε βίντεο με το API του SponsorBlock</string>
     <string name="sponsorblock_categories_desc">Καθορίστε τις κατηγορίες SponsorBlock που θα αφαιρεθούν ή θα επισημανθούν στο αρχείο βίντεο</string>
     <string name="sponsorblock_categories">Κατηγορίες SponsorBlock</string>
-    <string name="check_for_updates_desc">Αυτόματος έλεγχος για την τελευταία έκδοση στο GitHub</string>
+ <string name="check_for_updates_desc">Αυτόματος έλεγχος για την τελευταία έκδοση στο </string>
     <string name="app_up_to_date">Η τρέχουσα έκδοση είναι ενημερωμένη</string>
     <string name="app_update_failed">Απέτυχε η ενημέρωση στην τελευταία έκδοση</string>
     <string name="update">Ενημέρωση</string>
@@ -213,13 +213,13 @@
     <string name="minute">λεπτό</string>
     <string name="temporary_directory_desc">Αποθήκευση προσωρινών αρχείων στον εσωτερικό κατάλογο</string>
     <string name="sponsor">Χορηγός</string>
-    <string name="sponsor_desc">Υποστηρίξτε αυτή την εφαρμογή με χορηγία στο GitHub</string>
-    <string name="sponsor_msg">Η Seal θα είναι πάντα δωρεάν και ανοιχτού κώδικα για όλους. Αν σας αρέσει, παρακαλώ σκεφτείτε να με χρηματοδοτήσετε στο GitHub!</string>
+ <string name="sponsor_desc">Υποστηρίξτε αυτή την εφαρμογή με χορηγία στο </string>
+ <string name="sponsor_msg">Η Seal θα είναι πάντα δωρεάν και ανοιχτού κώδικα για όλους. Αν σας αρέσει, παρακαλώ σκεφτείτε να με χρηματοδοτήσετε στο !</string>
     <string name="feedback">Ανατροφοδότηση</string>
     <string name="audio_format">Μορφή ήχου</string>
     <string name="beta_features">Beta</string>
     <string name="clip_video_desc">Δημιουργήστε βίντεο κλιπ στη σελίδα επιλογής μορφής</string>
-    <string name="switch_to_github_builds">μετάβαση σε GitHub builds</string>
+ <string name="switch_to__builds">μετάβαση σε builds</string>
     <string name="okay">Εντάξει</string>
     <string name="got_it">Το πήρα</string>
     <string name="msg_from_developer">Μήνυμα από τον προγραμματιστή</string>

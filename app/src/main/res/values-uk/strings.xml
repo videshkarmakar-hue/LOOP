@@ -41,7 +41,7 @@
     <string name="version">Версiя</string>
     <string name="release_desc">Перегляньте історію змін та нові версії</string>
     <string name="release">Остання версія</string>
-    <string name="readme_desc">Перевірте репозиторій на GitHub та README</string>
+ <string name="readme_desc">Перевірте репозиторій на та README</string>
     <string name="video">Вiдео</string>
     <string name="checked">Перевірено</string>
     <string name="credits">Подяки</string>
@@ -141,8 +141,8 @@
     <string name="custom_command_template_desc">Керувати шаблонами команд</string>
     <string name="downloading_indicator_text">Завантаження в процесі…</string>
     <string name="task_canceled">Завантаження скасовано</string>
-    <string name="github_issue">Повідомити про проблему (GitHub)</string>
-    <string name="github_issue_desc">Надіслати звіт про помилку або запропонувати нову функцію</string>
+ <string name="_issue">Повідомити про проблему</string>
+ <string name="_issue_desc">Надіслати звіт про помилку або запропонувати нову функцію</string>
     <string name="info_copied">Інформація скопійована в буфер обміну</string>
     <string name="open_file">Відкрити файл</string>
     <string name="status_enqueued">Поставлено в чергу</string>
@@ -163,7 +163,7 @@
     <string name="app_up_to_date">Поточна версія актуальна</string>
     <string name="update">Оновлення</string>
     <string name="cookies_desc">Використовувати файли cookies у Netscape форматі для завантажень</string>
-    <string name="check_for_updates_desc">Автоматично перевіряти GitHub на нові версії</string>
+ <string name="check_for_updates_desc">Автоматично перевіряти на нові версії</string>
     <string name="aria2_desc">Використовувати aria2c в якості зовнішнього завантажувача</string>
     <string name="clear_temp_files_info">Тимчасові файли можна використовувати для відновлення скасованих завантажень. Ви впевнені, що хочете видалити всі ці файли\?
 \n
@@ -280,8 +280,8 @@
     <string name="sponsor">Спонсорувати</string>
     <string name="feedback">Зворотний зв\'язок</string>
     <string name="sponsors">Спонсори</string>
-    <string name="sponsor_desc">Підтримайте цей застосунок, спонсоруючи нас на GitHub</string>
-    <string name="sponsor_msg">Seal завжди буде безплатним і відкритим для всіх. Якщо вам це подобається, подумайте про те, щоб стати моїм спонсором на GitHub!</string>
+ <string name="sponsor_desc">Підтримайте цей застосунок, спонсоруючи нас на </string>
+ <string name="sponsor_msg">Seal завжди буде безплатним і відкритим для всіх. Якщо вам це подобається, подумайте про те, щоб стати моїм спонсором на !</string>
     <string name="no_downloaded_media">Немає завантажених медіа</string>
     <string name="beta_features">Бета</string>
     <string name="clip_video_desc">Створюйте відеокліпи на сторінці вибору формату</string>
@@ -289,7 +289,7 @@
     <string name="enable_experimental_feature">Увімкнути експериментальну функцію\?</string>
     <string name="clip_video_dialog_msg">Завантаження за допомогою цієї функції буде делеговано FFmpeg для завантаження вибраних фрагментів відео, ця функція все ще експериментальна і розрізання не буде повністю точним, не всі формати підтримують цю функцію, і ви можете відчути повільну швидкість завантаження.</string>
     <string name="auto_update_disabled_msg">Автоматичне оновлення недоступне для %1$s збірок. Якщо на вашому пристрої не встановлено %1$s або ви хочете переглянути майбутні нові функції в Seal, розгляньте %2$s.</string>
-    <string name="switch_to_github_builds">перехід на збірки GitHub</string>
+ <string name="switch_to__builds">перехід на збірки </string>
     <string name="okay">Ок</string>
     <string name="got_it">Зрозумів</string>
     <string name="feature_unavailable">Функція недоступна</string>

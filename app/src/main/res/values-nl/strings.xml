@@ -29,7 +29,7 @@
     <string name="about">Over</string>
     <string name="release_desc">Zoek naar wijzigingslogs en nieuwe versies</string>
     <string name="release">Nieuwste versie</string>
-    <string name="readme_desc">Check de GitHub repository en de README</string>
+ <string name="readme_desc">Check de repository en de README</string>
     <string name="video">Video</string>
     <string name="credits">Credits</string>
     <string name="credits_desc">Credits en libre software</string>
@@ -176,13 +176,13 @@
     <string name="restart">Begin opnieuw</string>
     <string name="status_enqueued">In de wachtrij geplaatst</string>
     <string name="cookies_desc">Gebruik Netscape geformatteerde cookies voor downloads</string>
-    <string name="check_for_updates_desc">Controleer voor de laatste versie up GitHub automatisch</string>
+ <string name="check_for_updates_desc">Controleer voor de laatste versie up automatisch</string>
     <string name="clear_temp_files_desc">Verwijder alle tijdelijke bestanden van het interne map</string>
     <string name="clear_temp_files_count">%1$d tijdelijke bestand(en) verwijderd</string>
     <string name="info_copied">Info gekopieerd naar klembord</string>
     <string name="task_canceled">Download taak beïndigt</string>
-    <string name="github_issue_desc">Dien een probleem in voor bug report of functie verzoek</string>
-    <string name="github_issue">GitHub probleem</string>
+ <string name="_issue_desc">Dien een probleem in voor bug report of functie verzoek</string>
+ <string name="_issue"> probleem</string>
     <string name="ytdlp_update_action">Update yt-dlp</string>
     <string name="status_canceled">Onderbroken</string>
     <string name="status_fetching_video_info">Informatie aan het ophalen</string>

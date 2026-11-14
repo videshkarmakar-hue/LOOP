@@ -119,7 +119,7 @@
     <string name="yt_dlp_update_fail">Klarte ikke å installere den nyeste yt-dlp-versjonen. Sørg for at du er tilkoblet til Internett.</string>
     <string name="release">Nyeste utgave</string>
     <string name="permission_denied">Tilgang nektet</string>
-    <string name="readme_desc">Sjekk GitHub-kodelageret og LESMEG-filen</string>
+ <string name="readme_desc">Sjekk -kodelageret og LESMEG-filen</string>
     <string name="paste_fail_msg">Kunne ikke jamføre med nettadressen i utklippstavlen</string>
     <string name="start_download">Last ned</string>
     <string name="convert_audio">Konverter</string>
@@ -141,8 +141,8 @@
     <string name="custom_command_template_desc">Rediger og håndter kommandomaler</string>
     <string name="task_canceled">Nedlastingsoppgave avbrutt</string>
     <string name="downloading_indicator_text">Laster ned … Klikk for å avbryte.</string>
-    <string name="github_issue">GitHub-feilrapport</string>
-    <string name="github_issue_desc">Send inn en feilrapport om problemer eller ønskede funksjoner</string>
+ <string name="_issue">-feilrapport</string>
+ <string name="_issue_desc">Send inn en feilrapport om problemer eller ønskede funksjoner</string>
     <string name="info_copied">Info kopiert til utklippstavle</string>
     <string name="check_for_updates">Se etter nye versjoner</string>
     <string name="aria2_desc">Bruk aria2c som ekstern nedlaster</string>
@@ -158,7 +158,7 @@
     <string name="import_from_clipboard">Importer fra utklippstavlen</string>
     <string name="download_task_count">%1$d nedlastede gjøremål</string>
     <string name="app_up_to_date">Du kjører nyeste versjon</string>
-    <string name="check_for_updates_desc">Installer nyeste versjon fra GitHub</string>
+ <string name="check_for_updates_desc">Installer nyeste versjon fra </string>
     <string name="clear_temp_files_count">Slettet %1$d midlertidig(e) fil(er)</string>
     <string name="clear_temp_files_info">Midlertidige filer kan brukes til å gjenoppta avbrutte nedlastinger. Vil du fjerne alle disse filene\?</string>
     <string name="open_file">Åpne fil</string>

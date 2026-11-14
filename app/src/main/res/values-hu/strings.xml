@@ -25,7 +25,7 @@
     <string name="about_page">Verzió, visszajelzés, automatikus frissítés</string>
     <string name="release">Legújabb kiadása</string>
     <string name="release_desc">Keresd a változásnaplókat és az új verziókat</string>
-    <string name="readme_desc">Keresd a GitHubon és olvasd a README-t</string>
+ <string name="readme_desc">Keresd a on és olvasd a README-t</string>
     <string name="video">Videó</string>
     <string name="checked">Ellenőrizve</string>
     <string name="credits">Stáb</string>
@@ -153,8 +153,8 @@
     <string name="custom_command_template_desc">Parancssablonok szerkesztése és kezelése</string>
     <string name="downloading_indicator_text">Letöltés folyamatban…</string>
     <string name="task_canceled">Letöltési feladat megszakítva</string>
-    <string name="github_issue">GitHub probléma</string>
-    <string name="github_issue_desc">Hibajelentés vagy új funkció kérése</string>
+ <string name="_issue"> probléma</string>
+ <string name="_issue_desc">Hibajelentés vagy új funkció kérése</string>
     <string name="info_copied">Adatok a vágólapra másolva</string>
     <string name="export_to_clipboard">Exportálás a vágólapra</string>
     <string name="import_from_clipboard">Importálás vágólapról</string>
@@ -166,7 +166,7 @@
     <string name="sponsorblock_desc">Szekciók eltávolítása vagy jelölése videókban a SponsorBlock API használatával</string>
     <string name="sponsorblock_categories_desc">A vidóból eltávolítandó Sponsorblock szekciók megadása vagy eltávolítása</string>
     <string name="sponsorblock_categories">SponsorBlock kategóriák</string>
-    <string name="check_for_updates_desc">Frissítések automatikus keresése GitHubon</string>
+ <string name="check_for_updates_desc">Frissítések automatikus keresése</string>
     <string name="app_up_to_date">A jelenlegi verzió a legfrissebb</string>
     <string name="update">Frissítés</string>
     <string name="aria2_desc">Aria2c használata külső letöltőként</string>

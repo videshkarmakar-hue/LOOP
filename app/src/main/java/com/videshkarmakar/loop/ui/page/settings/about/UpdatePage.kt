@@ -117,13 +117,6 @@ fun UpdatePage(onNavigateBack: () -> Unit) {
                     onPrimary = {
                         if (status.failed || status.checking) checkNow()
                         else UpdateCoordinator.startUpdate(context)
-                    },
-                    onOpenRelease = {
-                        status.updateUrl.takeIf { it.isNotBlank() }?.let { url ->
-                            runCatching {
-                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                            }
-                        }
                     }
                 )
 
@@ -222,7 +215,7 @@ private fun CircleIconButton(
 }
 
 @Composable
-private fun HeroCard(status: UpdateCoordinator.Status, onPrimary: () -> Unit, onOpenRelease: () -> Unit) {
+private fun HeroCard(status: UpdateCoordinator.Status, onPrimary: () -> Unit) {
     val shape = RoundedCornerShape(24.dp)
     val targetVersion = status.latestVersion.ifBlank { status.installedVersion }
     val title = when {
@@ -327,13 +320,6 @@ private fun HeroCard(status: UpdateCoordinator.Status, onPrimary: () -> Unit, on
                     color = Crimson,
                     trackColor = TrackColor
                 )
-            }
-
-            if (status.updateUrl.isNotBlank() && !status.busy) {
-                Spacer(modifier = Modifier.height(6.dp))
-                TextButton(onClick = onOpenRelease) {
-                    Text(stringResource(R.string.update_page_view_release), color = TextMuted, fontSize = 11.sp)
-                }
             }
         }
     }

@@ -21,7 +21,7 @@
     <string name="back">Kembali</string>
     <string name="version">Versi</string>
     <string name="release">Versi terbaru</string>
-    <string name="readme_desc">Periksa repositori GitHub dan README</string>
+ <string name="readme_desc">Periksa repositori dan README</string>
     <string name="credits_desc">Kredit dan software libre</string>
     <string name="custom_command_template">Templat perintah</string>
     <string name="start_execute">Mulai jalankan perintah</string>
@@ -141,8 +141,8 @@
     <string name="custom_command_template_desc">Edit dan kelola templat perintah</string>
     <string name="downloading_indicator_text">Unduhan sedang berlangsung…</string>
     <string name="task_canceled">Unduhan dibatalkan</string>
-    <string name="github_issue">Isu GitHub</string>
-    <string name="github_issue_desc">Kirimkan isu untuk pelaporan masalah atau permintaan fitur</string>
+ <string name="_issue">Isu </string>
+ <string name="_issue_desc">Kirimkan isu untuk pelaporan masalah atau permintaan fitur</string>
     <string name="info_copied">Info disalin ke papan klip</string>
     <string name="status_fetching_video_info">Mengambil informasi</string>
     <string name="open_file">Buka file</string>
@@ -162,7 +162,7 @@
     <string name="template_imported">%1$d Template yang telah diimpor</string>
     <string name="template_exported">%1$d Template yang telah diekspor</string>
     <string name="check_for_updates">Periksa pembaruan</string>
-    <string name="check_for_updates_desc">Periksa secara otomatis untuk versi terbaru di GitHub</string>
+ <string name="check_for_updates_desc">Periksa secara otomatis untuk versi terbaru di </string>
     <string name="app_up_to_date">Versi saat ini adalah yang terbaru</string>
     <string name="app_update_failed">Gagal memperbarui ke versi terbaru</string>
     <string name="update">Pembaruan</string>
@@ -278,8 +278,8 @@
     <string name="minute">menit</string>
     <string name="temporary_directory_desc">Simpan file sementara di direktori internal</string>
     <string name="sponsor">Sponsor</string>
-    <string name="sponsor_desc">Dukung aplikasi ini dengan mensponsori di GitHub</string>
-    <string name="sponsor_msg">Seal akan selalu bebas dan sumber terbuka untuk semuanya. Jika Anda menyukainya, silakan sponsori saya di GitHub!</string>
+ <string name="sponsor_desc">Dukung aplikasi ini dengan mensponsori di </string>
+ <string name="sponsor_msg">Seal akan selalu bebas dan sumber terbuka untuk semuanya. Jika Anda menyukainya, silakan sponsori saya di !</string>
     <string name="feedback">Masukan</string>
     <string name="sponsors">Sponsor</string>
     <string name="no_downloaded_media">Tidak ada media yang terunduh</string>
@@ -291,7 +291,7 @@
     <string name="got_it">Mengerti</string>
     <string name="feature_unavailable">Fitur tidak tersedia</string>
     <string name="auto_update_disabled_msg">Pembaruan otomatis tidak tersedia untuk versi %1$s. Jika Anda belum menginstal %1$s di perangkat Anda, atau ingin melihat pratinjau fitur-fitur baru yang akan datang di Seal, silakan kunjungi %2$s.</string>
-    <string name="switch_to_github_builds">beralih ke build GitHub</string>
+ <string name="switch_to__builds">beralih ke build </string>
     <string name="okay">Oke</string>
     <string name="no_custom_command_tasks">Tidak ada tugas perintah kustom</string>
     <string name="msg_from_developer">Pesan dari pengembang</string>

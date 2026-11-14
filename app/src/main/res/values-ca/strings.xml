@@ -69,7 +69,7 @@
     <string name="dismiss">Cancel·la</string>
     <string name="link_copied">S\'ha copiat l\'enllaç al porta-retalls</string>
     <string name="release">Últim llançament</string>
-    <string name="readme_desc">Comprova el repositori de GitHub i el README</string>
+ <string name="readme_desc">Comprova el repositori de i el README</string>
     <string name="display">Aspecte</string>
     <string name="edit">Edita</string>
     <string name="start_execute">Inicia l\'execució de l\'ordre</string>
@@ -108,15 +108,15 @@
     <string name="additional_settings">Configuració addicional</string>
     <string name="share_fail_msg">No s\'ha pogut obtenir l\'URL del contingut compartit</string>
     <string name="show_more_actions">Mostra més accions</string>
-    <string name="github_issue">Tiquet GitHub</string>
-    <string name="github_issue_desc">Creeu un tiquet per a un informe d\'error o per a una petició de nova funcionalitat</string>
+ <string name="_issue">Tiquet </string>
+ <string name="_issue_desc">Creeu un tiquet per a un informe d\'error o per a una petició de nova funcionalitat</string>
     <string name="info_copied">S\'ha copiat la informació al porta-retalls</string>
     <string name="template_imported">S\'han importat %1$d plantilles</string>
     <string name="download_task_count">%1$d tasques de baixada</string>
     <string name="delete_multiple_items_msg">Voleu eliminar %1$d elements de l\'historial de baixades?</string>
     <string name="sponsorblock_categories">Categories de SponsorBlock</string>
     <string name="check_for_updates">Comprova si hi ha actualitzacions</string>
-    <string name="check_for_updates_desc">Comprova automàticament si hi ha una nova versió a GitHub</string>
+ <string name="check_for_updates_desc">Comprova automàticament si hi ha una nova versió a </string>
     <string name="app_up_to_date">Ja teniu l\'última versió</string>
     <string name="update">Actualitza</string>
     <string name="download_with_cellular_desc">Baixa dades multimèdia també quan estiguis connectat a xarxes amb control de consum</string>
@@ -264,7 +264,7 @@
     <string name="format_sorting_desc">Ordena els formats amb l\'opció -S de yt-dlp</string>
     <string name="temporary_directory_desc">Emmagatzema els fitxers temporals al directori intern</string>
     <string name="sponsor">Patrocina</string>
-    <string name="sponsor_desc">Doneu suport a aquesta aplicació patrocinant-la a GitHub</string>
+ <string name="sponsor_desc">Doneu suport a aquesta aplicació patrocinant-la a </string>
     <string name="feedback">Comentaris</string>
     <string name="sponsors">Patrocinadors</string>
     <string name="no_downloaded_media">No s\'ha baixat cap fitxer multimèdia</string>
@@ -318,7 +318,7 @@
     <string name="allow_always">Permet sempre</string>
     <string name="dont_allow">No permetis</string>
     <string name="copy_and_exit">Copia i surt</string>
-    <string name="sponsor_msg">El Seal serà sempre lliure i de codi obert per a tothom. Si us agrada, considereu patrocinar-me a GitHub!</string>
+ <string name="sponsor_msg">El Seal serà sempre lliure i de codi obert per a tothom. Si us agrada, considereu patrocinar-me a !</string>
     <string name="audio_format">Format d\'àudio</string>
     <string name="enable_experimental_feature">Voleu habilitar la funcionalitat experimental?</string>
     <string name="clip_video_desc">Fes els videoclips a la pàgina de selecció de format</string>
@@ -334,7 +334,7 @@
     <string name="presets">Valors predefinits</string>
     <string name="required">Requerit</string>
     <string name="save">Desa</string>
-    <string name="switch_to_github_builds">s\'està canviant a les versions de GitHub</string>
+ <string name="switch_to__builds">s\'està canviant a les versions de </string>
     <string name="no_custom_command_tasks">No hi ha tasques d\'ordre personalitzades</string>
     <string name="sponsor_msg2">Moltes gràcies!</string>
     <string name="download_video_desc">Baixa els vídeos de l\'URL</string>

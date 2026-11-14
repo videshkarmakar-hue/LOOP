@@ -3,7 +3,7 @@
     <string name="delete_file">Eliminar ficheiro</string>
     <string name="template_imported">Modelo(s) importado(s) %1$d</string>
     <string name="video_resolution">Resolução de vídeo</string>
-    <string name="switch_to_github_builds">mudar para compilações do GitHub</string>
+ <string name="switch_to__builds">mudar para compilações do </string>
     <string name="download_directory_desc">Selecionar onde guardar vídeos e ficheiros de áudio</string>
     <string name="subdirectory">Guardar no subdiretório</string>
     <string name="dismiss">Cancelar</string>
@@ -53,7 +53,7 @@
     <string name="prefer_compatibility_desc">Prefira os formatos MP4 (H.264) para partilhar com outras aplicações</string>
     <string name="download_video_desc">Descarregar vídeos a partir do URL</string>
     <string name="commands">Comandos</string>
-    <string name="readme_desc">Verifique o repositório GitHub e o README</string>
+ <string name="readme_desc">Verifique o repositório e o README</string>
     <string name="video_file_size">Tamanho do ficheiro de vídeo</string>
     <string name="disable_preview">Desativar a pré-visualização</string>
     <string name="from">Iniciar</string>
@@ -153,7 +153,7 @@
     <string name="release">Versão mais recente</string>
     <string name="download_desc">Em seguida, clique em \"Descarregar\" depois de ajustar as definições.</string>
     <string name="audio_directory">Pasta áudio</string>
-    <string name="sponsor_msg">O Seal será sempre gratuito e de código aberto para todos. Se gostar, por favor considere patrocinar-me no GitHub!</string>
+ <string name="sponsor_msg">O Seal será sempre gratuito e de código aberto para todos. Se gostar, por favor considere patrocinar-me no !</string>
     <string name="crop_artwork">Cortar arte</string>
     <string name="subtitle_sponsorblock">As legendas podem ser desfasadas no tempo ao remover segmentos SponsorBlock.</string>
     <string name="start">Iniciar</string>
@@ -161,7 +161,7 @@
     <string name="filesize_gb">%.2f GB</string>
     <string name="sponsor_msg2">Muito obrigado!</string>
     <string name="task_canceled">Descarregar tarefa cancelada</string>
-    <string name="sponsor_desc">Apoie esta aplicação patrocinando-a no GitHub</string>
+ <string name="sponsor_desc">Apoie esta aplicação patrocinando-a no </string>
     <string name="version">Versão</string>
     <string name="yt_dlp_update_fail">Não foi possível instalar a versão mais recente do yt-dlp. Certifique-se de que está ligado à Internet.</string>
     <string name="enable_experimental_feature">Ativar a funcionalidade experimental?</string>
@@ -236,7 +236,7 @@
     <string name="pre_release_channel">Pré-lançamento</string>
     <string name="clear_temp_files">Limpar ficheiros temporários</string>
     <string name="sponsorblock_desc">Remover ou marcar segmentos em vídeos com a API SponsorBlock</string>
-    <string name="github_issue_desc">Apresentar um problema para um relatório de erros ou um pedido de funcionalidades</string>
+ <string name="_issue_desc">Apresentar um problema para um relatório de erros ou um pedido de funcionalidades</string>
     <string name="dark_theme">Tema escuro</string>
     <string name="cancel">Cancelar</string>
     <string name="clear_temp_files_count">Eliminado %1$d ficheiro(s) temporário(s)</string>
@@ -250,7 +250,7 @@
     <string name="use_custom_command">Utilizar comando personalizado</string>
     <string name="close_never_show_again">Não voltar a aparecer</string>
     <string name="settings_before_download">Configurar antes de descarregar</string>
-    <string name="check_for_updates_desc">Verificar automaticamente a versão mais recente no GitHub</string>
+ <string name="check_for_updates_desc">Verificar automaticamente a versão mais recente no </string>
     <string name="file_unavailable">Este ficheiro já não está disponível</string>
     <string name="output_template">Modelo de saída</string>
     <string name="output_template_desc">Especificar o modelo para os nomes dos ficheiros de saída</string>
@@ -313,7 +313,7 @@
     <string name="sponsorblock_categories">Categorias de SponsorBlock</string>
     <string name="subtitle">Legenda</string>
     <string name="download_task_count">%1$d Tarefas de transferência</string>
-    <string name="github_issue">GitHub issue</string>
+ <string name="_issue"> issue</string>
     <string name="msg_from_developer">Mensagem do programador</string>
     <string name="export_to_clipboard">Exportar para a área de transferência</string>
     <string name="create_thumbnail">Guardar a miniatura</string>

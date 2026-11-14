@@ -2,7 +2,7 @@
 <resources>
     <string name="release_desc">Procurar registos de alterações e novas versões</string>
     <string name="release">Versão mais recente</string>
-    <string name="readme_desc">Verifique o repositório GitHub e o README</string>
+ <string name="readme_desc">Verifique o repositório e o README</string>
     <string name="video">Vídeo</string>
     <string name="checked">Verificado</string>
     <string name="credits">Créditos</string>
@@ -163,9 +163,9 @@
     <string name="remove_template">Remover\?</string>
     <string name="video_file_size">Tamanho do ficheiro de vídeo</string>
     <string name="import_from_clipboard">Importar da área de transferência</string>
-    <string name="github_issue_desc">Apresentar um problema para um relatório de erros ou um pedido de funcionalidades</string>
+ <string name="_issue_desc">Apresentar um problema para um relatório de erros ou um pedido de funcionalidades</string>
     <string name="template_imported">Modelo(s) importado(s) %1$d</string>
-    <string name="github_issue">GitHub issue</string>
+ <string name="_issue"> issue</string>
     <string name="info_copied">Informação copiada para a área de transferência</string>
     <string name="template_exported">Modelo(s) exportado(s) %1$d</string>
     <string name="download_task_count">%1$d tarefas de descarga</string>
@@ -223,7 +223,7 @@
     <string name="check_for_updates">Verificar se há actualizações</string>
     <string name="max_rate">Taxa máxima</string>
     <string name="high_contrast">Tema escuro de alto contraste</string>
-    <string name="check_for_updates_desc">Verificar automaticamente a versão mais recente no GitHub</string>
+ <string name="check_for_updates_desc">Verificar automaticamente a versão mais recente no </string>
     <string name="suggested">Sugerido</string>
     <string name="format_selection">Seleção do formato</string>
     <string name="app_up_to_date">A versão atual está actualizada</string>
@@ -270,7 +270,7 @@
     <string name="update_channel">Canal de atualização</string>
     <string name="apply">Aplicar</string>
     <string name="unlimited">Ilimitado</string>
-    <string name="sponsor_msg">O Seal será sempre gratuito e de código aberto para todos. Se gostar, por favor considere patrocinar-me no GitHub!</string>
+ <string name="sponsor_msg">O Seal será sempre gratuito e de código aberto para todos. Se gostar, por favor considere patrocinar-me no !</string>
     <string name="lowest_bitrate">Taxa de bits mais baixa</string>
     <string name="audio_quality">Qualidade do áudio</string>
     <string name="audio_quality_desc">Limitar a taxa de bits de áudio quando estão presentes várias qualidades</string>
@@ -296,12 +296,12 @@
     <string name="second">segundo</string>
     <string name="got_it">Entendi</string>
     <string name="clear_all_cookies">Limpar todos os cookies</string>
-    <string name="switch_to_github_builds">mudar para compilações do GitHub</string>
+ <string name="switch_to__builds">mudar para compilações do </string>
     <string name="clear_all_cookies_desc">Eliminar definitivamente todos os cookies armazenados na aplicação\?</string>
     <string name="temporary_directory_desc">Armazenar ficheiros temporários no diretório interno</string>
     <string name="split_video">Dividir o vídeo</string>
     <string name="sponsor">Patrocinador</string>
-    <string name="sponsor_desc">Apoie esta aplicação patrocinando-a no GitHub</string>
+ <string name="sponsor_desc">Apoie esta aplicação patrocinando-a no </string>
     <string name="split_video_msg">O vídeo será dividido em %1$d capítulos</string>
     <string name="copy_and_exit">Copiar e sair</string>
     <string name="expand">Expandir</string>

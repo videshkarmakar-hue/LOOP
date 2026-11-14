@@ -45,7 +45,7 @@
     <string name="version">កំណែ</string>
     <string name="release_desc">ឆែកកំណត់ហេតុផ្លាស់និងកំណែថ្មី</string>
     <string name="release">ការចេញផ្សាយចុងក្រោយ</string>
-    <string name="readme_desc">ឆែកឃ្លាំងផ្ទុកនៃ GitHub និងអានខ្ញុំ</string>
+ <string name="readme_desc">ឆែកឃ្លាំងផ្ទុកនៃ និងអានខ្ញុំ</string>
     <string name="custom_command">ឃ្លាបញ្ជាផ្ទាល់ខ្លួន</string>
     <string name="custom_command_desc">រត់ឃ្លាបញ្ជ yt-dlp ជាមួយនឹងពុម្ពគំរូផ្ទាល់ខ្លួន</string>
     <string name="custom_command_template">ពុម្ពគំរូឃ្លាបញ្ជា</string>

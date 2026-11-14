@@ -69,7 +69,7 @@
     <string name="sponsorblock_categories_desc">Specificați categoriile SponsorBlock pentru a elimina sau marca în fișierul video</string>
     <string name="check_for_updates">Căutați actualizări</string>
     <string name="cookies">Cookie-uri</string>
-    <string name="check_for_updates_desc">Verificați automat cea mai recentă versiune pe GitHub</string>
+ <string name="check_for_updates_desc">Verificați automat cea mai recentă versiune pe </string>
     <string name="dynamic_color">Culoare dinamică</string>
     <string name="dynamic_color_desc">Aplicați culori din imagini de fundal la tema aplicației</string>
     <string name="download_with_cellular">Descărcați folosind telefonul mobil</string>
@@ -132,7 +132,7 @@
     <string name="private_mode">Incognito</string>
     <string name="download_disabled_with_cellular">Descărcarea cu rețeaua celulară este dezactivată conform setărilor dvs</string>
     <string name="format_selection_desc">Selectați formatul de descărcat înainte de a începe descărcarea</string>
-    <string name="github_issue_desc">Trimiteți o problemă pentru raportul de eroare sau cererea de funcții</string>
+ <string name="_issue_desc">Trimiteți o problemă pentru raportul de eroare sau cererea de funcții</string>
     <string name="remove_template_desc">Eliminați definitiv \"%1$s\" din șabloanele de comandă\?</string>
     <string name="sponsorblock_desc">Eliminați sau marcați segmente în videoclipuri cu SponsorBlock API</string>
     <string name="delete_multiple_items_msg">Eliminați definitiv articolele %1$d din istoricul de descărcare\?</string>
@@ -179,7 +179,7 @@
     <string name="filesize_gb">%.2f G</string>
     <string name="apply">Aplică</string>
     <string name="unlimited">Nelimitat</string>
-    <string name="sponsor_msg">Seal va fi întotdeauna gratuit și open source pentru toată lumea. Dacă îți place, te rog să mă sponsorizezi pe GitHub!</string>
+ <string name="sponsor_msg">Seal va fi întotdeauna gratuit și open source pentru toată lumea. Dacă îți place, te rog să mă sponsorizezi pe !</string>
     <string name="convert_audio_format_desc">Recodificarea fișierelor audio va duce la pierderea calității audio și la creșterea dimensiunii fișierului.</string>
     <string name="clip_video">Clipează video</string>
     <string name="convert_audio_format">Convertiți formatul audio</string>
@@ -200,7 +200,7 @@
     <string name="logs">Jurnal</string>
     <string name="abs_hint">Majoritatea platformelor de streaming video oferă audio și video separat, puteți selecta și îmbina un format numai audio cu un format numai video într-un singur videoclip.</string>
     <string name="auto_update_disabled_msg">Actualizarea automată nu este disponibilă pentru versiunile %1$s. Dacă nu aveți %1$s instalat pe dispozitiv sau doriți să previzualizați funcțiile noi viitoare în Seal, vă rugăm să luați în considerare %2$s.</string>
-    <string name="switch_to_github_builds">trecerea la versiunile GitHub</string>
+ <string name="switch_to__builds">trecerea la versiunile </string>
     <string name="okay">Ok</string>
     <string name="got_it">Am înţeles</string>
     <string name="feature_unavailable">Funcție indisponibilă</string>
@@ -225,7 +225,7 @@
     <string name="edit_template_desc">Calea de ieșire și URL-ul vor fi adăugate de aplicație.</string>
     <string name="battery_configuration_desc">Ignorați optimizarea bateriei pentru ca această aplicație să fie descărcată în fundal</string>
     <string name="matrix_space">Spațiu Matrix</string>
-    <string name="github_issue">Problemă GitHub</string>
+ <string name="_issue">Problemă </string>
     <string name="not_convert">Neconvertit</string>
     <string name="convert_audio">Converti</string>
     <string name="subdirectory">Salvare în subdirector</string>
@@ -235,7 +235,7 @@
     <string name="service_title">Seal se descarcă…</string>
     <string name="language_settings">Setați limba de afișare</string>
     <string name="delete_info_msg">Eliminați definitiv \"%1$s” din istoricul descărcărilor\?</string>
-    <string name="readme_desc">Verificați depozitul GitHub și README</string>
+ <string name="readme_desc">Verificați depozitul și README</string>
     <string name="custom_command">Comandă personalizată</string>
     <string name="start_execute">Începeți să executați comanda</string>
     <string name="share_success_msg">Se citește linkul video din conținutul partajat…</string>
@@ -280,7 +280,7 @@
     <string name="clear_all_cookies">Ștergeți toate cookie-urile</string>
     <string name="clear_all_cookies_desc">Ștergeți definitiv toate cookie-urile stocate în aplicație\?</string>
     <string name="sponsor">Sponsor</string>
-    <string name="sponsor_desc">Sprijină această aplicație prin sponsorizare pe GitHub</string>
+ <string name="sponsor_desc">Sprijină această aplicație prin sponsorizare pe </string>
     <string name="feedback">Părere</string>
     <string name="sponsors">Sponsori</string>
     <string name="temporary_directory_desc">Stocați fișierele temporare în directorul intern</string>

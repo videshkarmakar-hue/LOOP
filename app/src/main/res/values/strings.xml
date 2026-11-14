@@ -43,7 +43,7 @@
     <string name="version">Version</string>
     <string name="release_desc">Look for changelogs and new versions</string>
     <string name="release">Latest release</string>
-    <string name="readme_desc">Check the GitHub repository and the README</string>
+ <string name="readme_desc">Check the repository and the README</string>
     <string name="readme" translatable="false">README</string>
     <string name="video">Video</string>
     <string name="checked">Checked</string>
@@ -148,8 +148,8 @@
     <string name="custom_command_template_desc">Edit and manage command templates</string>
     <string name="downloading_indicator_text">Download in progress…</string>
     <string name="task_canceled">Download task canceled</string>
-    <string name="github_issue">GitHub issue</string>
-    <string name="github_issue_desc">Submit an issue for bug report or feature request</string>
+ <string name="_issue"> issue</string>
+ <string name="_issue_desc">Submit an issue for bug report or feature request</string>
     <string name="info_copied">Info copied to clipboard</string>
 
     <string name="la_nb" translatable="false">Bokmål</string>
@@ -216,7 +216,7 @@
     <string name="sponsorblock_categories_desc">Specify the SponsorBlock categories to remove or mark in the video file</string>
     <string name="sponsorblock_categories">SponsorBlock categories</string>
     <string name="check_for_updates">Check for updates</string>
-    <string name="check_for_updates_desc">Automatically check for the latest version on GitHub</string>
+ <string name="check_for_updates_desc">Automatically check for the latest version on </string>
     <string name="update_section">Update</string>
     <string name="update_section_desc">Check for and install the latest version</string>
     <string name="app_up_to_date">The current version is up to date</string>
@@ -291,7 +291,6 @@
     <string name="update_page_channel_stable">Stable release (Recommended)</string>
     <string name="update_page_channel_beta">Pre-release builds</string>
     <string name="update_page_signature">Crafted by Videsh Karmakar</string>
-    <string name="update_page_view_release">View release on GitHub</string>
     <string name="update_page_installed">Installed %1$s</string>
     <string name="aria2" translatable="false">Aria2</string>
     <string name="aria2_desc">Use aria2c as the external downloader</string>
@@ -399,7 +398,7 @@
     <string name="clear_all_cookies_desc">Delete all the cookies stored in the app for good?</string>
     <string name="temporary_directory_desc">Store temporary files in the internal directory</string>
     <string name="sponsor">Sponsor</string>
-    <string name="sponsor_desc">Support this app by sponsoring on GitHub</string>
+ <string name="sponsor_desc">Support this app by sponsoring on </string>
     <string name="sponsor_msg"> LOOP will remain free &amp; open source forever. If you appreciate it, consider sponsoring the project ⟣⟤</string>
     <string name="feedback">Feedback</string>
     <string name="sponsors">Sponsors</string>
@@ -412,7 +411,7 @@
     <string name="embed_thumbnail" translatable="false">Embed thumbnail</string>
     <string name="embed_thumbnail_desc" translatable="false">Embed thumbnails into videos</string>
     <string name="auto_update_disabled_msg"> Auto-update unavailable for %1$s. Preview upcoming features in ⟣ LOOP  by visiting %2$s</string>
-    <string name="switch_to_github_builds">switching to GitHub builds</string>
+ <string name="switch_to__builds">switching to builds</string>
     <string name="okay">Okay</string>
     <string name="got_it">Got it</string>
     <string name="feature_unavailable">Feature not available</string>

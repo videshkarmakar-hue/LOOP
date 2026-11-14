@@ -37,7 +37,7 @@
     <string name="clip_end">จบ</string>
     <string name="clip_video">คลิปวีดีโอ</string>
     <string name="feature_unavailable">ฟีเจอร์นี้ไม่สามารถใช้งานได้</string>
-    <string name="sponsor_desc">สนับสนุนแอปนี้โดยการสนับสนุนบน GitHub</string>
+ <string name="sponsor_desc">สนับสนุนแอปนี้โดยการสนับสนุนบน </string>
     <string name="format_sorting">การจัดเรียงรูปแบบ</string>
     <string name="audio_quality_desc">จำกัดอัตราการส่งถ่ายบิทเรตของเสียงเมื่อมีคุณภาพหลายชนิดอยู่</string>
     <string name="sponsors">ผู้สนับสนุน</string>
@@ -64,7 +64,7 @@
     <string name="permission_issue">มีปัญหาการเรียกใช้สิทธิ์การเข้าถึงที่เก็บข้อมูล</string>
     <string name="subdirectory_desc">บันทึกไฟล์ในโฟลเดอร์ที่ตั้งชื่อตามที่มาที่เกี่ยวข้อง</string>
     <string name="subdirectory">บันทึกไปยังไดเรกทอรีย่อย</string>
-    <string name="github_issue">แจ้ง GitHib</string>
+ <string name="_issue">แจ้ง </string>
     <string name="task_canceled">ยกเลิกงานดาวน์โหลดแล้ว</string>
     <string name="unknown_error">ข้อผิดพลาดที่ไม่รู้จัก</string>
     <string name="service_title">Seal กำลังดาวน์โหลด…</string>
@@ -80,7 +80,7 @@
     <string name="download_task_count">%1$d งานดาวน์โหลด</string>
     <string name="video_file_size">ขนาดไฟล์วิดีโอ</string>
     <string name="video_resolution">ความละเอียดของวิดีโอ</string>
-    <string name="check_for_updates_desc">ตรวจสอบโดยอัตโนมัติสำหรับเวอร์ชันล่าสุดบน GitHub</string>
+ <string name="check_for_updates_desc">ตรวจสอบโดยอัตโนมัติสำหรับเวอร์ชันล่าสุดบน </string>
     <string name="rate_limit">จำกัดเรท</string>
     <string name="network">เครือข่าย</string>
     <string name="cookies_desc">ใช้คุกกี้ที่จัดรูปแบบโดย Netscape สำหรับการดาวน์โหลด</string>
@@ -165,7 +165,7 @@
     <string name="file_unavailable">ไฟล์นี้ไม่สามารถใช้งานได้อีกต่อไป</string>
     <string name="download_disabled_with_cellular">การดาวน์โหลดด้วยเครือข่ายเซลลูลาร์ถูกปิดการใช้งานตามการตั้งค่าของคุณ</string>
     <string name="got_it">เข้าใจแล้ว</string>
-    <string name="switch_to_github_builds">เปลี่ยนไปใช้ GitHub builds</string>
+ <string name="switch_to__builds">เปลี่ยนไปใช้ builds</string>
     <string name="to">จบ</string>
     <string name="on">เปิด</string>
     <string name="follow_system">ระบบ</string>
@@ -175,7 +175,7 @@
     <string name="remove">ลบ</string>
     <string name="open_url">เปิดลิงก์</string>
     <string name="telegram_channel">ช่อง Telegram</string>
-    <string name="readme_desc">ตรวจสอบที่เก็บข้อมูลใน GitHub และไฟล์ README</string>
+ <string name="readme_desc">ตรวจสอบที่เก็บข้อมูลใน และไฟล์ README</string>
     <string name="ytdlp_version">เวอร์ชั่นของ Yt-dlp</string>
     <string name="delete_multiple_items_msg">ลบ %1$d รายการออกจากประวัติการดาวน์โหลดของคุณอย่างถาวร\?</string>
     <string name="paste_msg">วาง URL จากคลิปบอร์ด</string>
@@ -226,7 +226,7 @@
     <string name="format_settings_desc">รูปแบบไฟล์, คุณภาพวิดีโอ, ซับไตเติ้ล</string>
     <string name="high_contrast">ธีมที่มีความคมชัดสูงและมืด</string>
     <string name="sponsorblock_categories">หมวดหมู่ของ SponsorBlock</string>
-    <string name="github_issue_desc">ส่งปัญหาสำหรับรายงานข้อบกพร่อง หรือร้องขอคุณสมบัติ</string>
+ <string name="_issue_desc">ส่งปัญหาสำหรับรายงานข้อบกพร่อง หรือร้องขอคุณสมบัติ</string>
     <string name="prefix">คำนำหน้า</string>
     <string name="new_template">เทมเพลตใหม่</string>
     <string name="embed_subtitles_desc">ฝังซับไตเติ้ลในไฟล์วิดีโอหากมีมาให้</string>
@@ -282,7 +282,7 @@
     <string name="subtitle">ซับไตเติ้ล</string>
     <string name="video_title_sample_text">ตัวอย่างข้อความของไตเติ้ล</string>
     <string name="running_tasks">กำลังรันงาน</string>
-    <string name="sponsor_msg">Seal จะยังคงเป็นซอร์ตฟรีและเปิดกว้างสำหรับทุกคน ถ้าคุณชอบมัน กรุณาพิจารณาสนับสนุนฉันใน GitHub!</string>
+ <string name="sponsor_msg">Seal จะยังคงเป็นซอร์ตฟรีและเปิดกว้างสำหรับทุกคน ถ้าคุณชอบมัน กรุณาพิจารณาสนับสนุนฉันใน !</string>
     <string name="format_sorting_desc">จัดเรียงรูปแบบด้วยตัวเลือก -S ของ yt-dlp</string>
     <string name="update_channel_desc">ติดตั้งรุ่นก่อนวางจำหน่ายเพื่อดูลักษณะใหม่และการเปลี่ยนแปลง
 \n

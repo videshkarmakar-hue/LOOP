@@ -25,7 +25,7 @@
     <string name="version">Versiya</string>
     <string name="release_desc">O\'zgartirishlarni va yangi versiyalarni qidirish</string>
     <string name="release">Oxirgi nashr</string>
-    <string name="readme_desc">GitHub va README-ni tekshirish</string>
+ <string name="readme_desc"> va README-ni tekshirish</string>
     <string name="video">Video</string>
     <string name="checked">Tekshirildi</string>
     <string name="credits">Ma\'lumotlar</string>

@@ -24,7 +24,7 @@
     <string name="video_format_preference">Preferencia de formato de vídeo</string>
     <string name="link_copied">Enlace copiado ao portapapeis</string>
     <string name="credits_desc">Créditos e software de código aberto</string>
-    <string name="readme_desc">Vexa repositorio de GitHub e README</string>
+ <string name="readme_desc">Vexa repositorio de e README</string>
     <string name="remove">Eliminar</string>
     <string name="custom_command_desc">Executar un comando de yt-dlp cun modelo personalizado</string>
     <string name="ytdlp_update">Fai clic para actualizar a libraría yt-dlp</string>

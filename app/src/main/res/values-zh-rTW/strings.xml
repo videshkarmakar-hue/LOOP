@@ -45,7 +45,7 @@
     <string name="paste_fail_msg">在剪貼簿中沒有相符的 URL</string>
     <string name="delete_info_msg">確定要從下載記錄中移除「%1$s」嗎？</string>
     <string name="link_copied">已複製連結到剪貼簿</string>
-    <string name="readme_desc">查看 GitHub 存放庫和 README</string>
+ <string name="readme_desc">查看 存放庫和 README</string>
     <string name="custom_command_desc">使用自訂的範本來執行 yt-dlp 命令</string>
     <string name="custom_command_template">命令範本</string>
     <string name="edit">編輯</string>
@@ -117,7 +117,7 @@
     <string name="remove_template">確定移除？</string>
     <string name="remove_template_desc">確定要從命令範例中移除「%1$s」嗎？</string>
     <string name="template_selection">範本選取</string>
-    <string name="github_issue_desc">提交錯誤報告或功能請求議題</string>
+ <string name="_issue_desc">提交錯誤報告或功能請求議題</string>
     <string name="info_copied">已複製資訊到剪貼簿</string>
     <string name="status_enqueued">任務佇列</string>
     <string name="status_completed">已完成</string>
@@ -148,7 +148,7 @@
     <string name="subdirectory">儲存到子目錄</string>
     <string name="download_directory_desc">選取影片檔和音訊檔的儲存位置</string>
     <string name="embed_subtitles">內嵌字幕</string>
-    <string name="github_issue">GitHub 議題</string>
+ <string name="_issue"> 議題</string>
     <string name="custom_command_template_desc">編輯和管理命令範本</string>
     <string name="downloading_indicator_text">正在下載…</string>
     <string name="status_canceled">已取消</string>
@@ -176,7 +176,7 @@
     <string name="aria2_desc">使用 aria2c 作為外部下載程式</string>
     <string name="cookies_desc">使用 Netscape 格式的 Cookies 檔案進行下載</string>
     <string name="clear_temp_files">清除暫存檔案</string>
-    <string name="check_for_updates_desc">自動檢查來自 GitHub 提供的更新</string>
+ <string name="check_for_updates_desc">自動檢查來自 提供的更新</string>
     <string name="clear_temp_files_info">暫存檔案可用於繼續已取消的下載。確定要刪除全數暫存檔案嗎？
 \n
 \n您可以在 %1$s 中存取上述檔案</string>
@@ -278,10 +278,10 @@
     <string name="title">標題</string>
     <string name="temporary_directory_desc">在內部目錄儲存暫存檔案</string>
     <string name="sponsor">贊助</string>
-    <string name="sponsor_desc">透過在 GitHub 上贊助以支持此應用程式</string>
+ <string name="sponsor_desc">透過在 上贊助以支持此應用程式</string>
     <string name="feedback">意見反應</string>
     <string name="sponsors">贊助</string>
-    <string name="sponsor_msg">Seal 永遠提供眾人免費使用並開放原始碼。若您悅納，請考慮在 GitHub 上贊助我！</string>
+ <string name="sponsor_msg">Seal 永遠提供眾人免費使用並開放原始碼。若您悅納，請考慮在 上贊助我！</string>
     <string name="no_downloaded_media">沒有已下載的媒體</string>
     <string name="beta_features">Beta</string>
     <string name="enable_experimental_feature">確定要啟用實驗性功能？</string>
@@ -289,7 +289,7 @@
     <string name="audio_format">音訊格式</string>
     <string name="clip_video_dialog_msg">使用此功能以將下載任務—— 選取的影片區段，委派予 FFmpeg。此功能仍在實驗性階段，剪裁並非完全精確且並非支援全部格式，下載速率可能較慢。</string>
     <string name="auto_update_disabled_msg">自動更新不適用於 %1$s 組建。如果您的裝置尚未安裝 %1$s，或想要預覽 Seal 即將推出的新功能，請考慮使用 %2$s。</string>
-    <string name="switch_to_github_builds">切換至 GitHub 組建</string>
+ <string name="switch_to__builds">切換至 組建</string>
     <string name="okay">確定</string>
     <string name="got_it">瞭解</string>
     <string name="feature_unavailable">此功能無法使用</string>

@@ -101,7 +101,7 @@
     <string name="general_settings">Obecné</string>
     <string name="ytdlp_update">Klikněte pro nainstalování nejnovější verze yt-dlp</string>
     <string name="about">O aplikaci</string>
-    <string name="readme_desc">Otevřít repozitář na GitHubu a soubor README</string>
+ <string name="readme_desc">Otevřít repozitář na u a soubor README</string>
     <string name="video">Video</string>
     <string name="credits_desc">Poděkování a svobodný software</string>
     <string name="advanced_settings">Pokročílé</string>
@@ -148,8 +148,8 @@
     <string name="custom_command_template_desc">Upravit a spravovat šablony příkazu</string>
     <string name="downloading_indicator_text">Probíhá stahování…</string>
     <string name="task_canceled">Stahování zrušeno</string>
-    <string name="github_issue">Problém na GitHubu</string>
-    <string name="github_issue_desc">Vytvořit nový problém pro nahlášení chyby nebo žádost o funkci</string>
+ <string name="_issue">Problém na u</string>
+ <string name="_issue_desc">Vytvořit nový problém pro nahlášení chyby nebo žádost o funkci</string>
     <string name="info_copied">Informace zkopírovány do schránky</string>
     <string name="general_settings_desc">Verze yt-dlp, upozornění, playlist</string>
     <string name="check_for_updates">Zkontrolovat aktualizace</string>
@@ -165,7 +165,7 @@
 \n
 \nTyto soubory se nacházejí v %1$s</string>
     <string name="rate_limit_desc">Omezit maximální rychlost stahování</string>
-    <string name="check_for_updates_desc">Automaticky kontrolovat nejnovější verzi na GitHubu</string>
+ <string name="check_for_updates_desc">Automaticky kontrolovat nejnovější verzi na u</string>
     <string name="recently_added">Nedávno přidané</string>
     <string name="template_imported">Importovány %1$d šablony</string>
     <string name="download_task_count">%1$d Naplánovaných stahování</string>
@@ -209,7 +209,7 @@
     <string name="show_all_items">Zobrazit všech %1$d položek</string>
     <string name="edit_file">Upravit soubor</string>
     <string name="embed_metadata_desc">Vložit metadata a miniaturu videa do zvukového souboru</string>
-    <string name="switch_to_github_builds">přechod na sestavení z GitHubu</string>
+ <string name="switch_to__builds">přechod na sestavení z u</string>
     <string name="custom_command_usage_msg">yt-dlp je výkonný nástroj pro příkazový řádek sloužící ke stahování videí. Seal zjednodušuje jeho používání díky intuitivnímu grafickému rozhraní, přednastavením pro časté příkazy a dalším dodatečným funkcím.
 \n
 \nPokročilým uživatelům nástroje yt-dlp umožňuje Seal vytvářet, ukládat a přímo spouštět vlastní šablony příkazů, stejně jako v terminálu.
@@ -278,12 +278,12 @@
     <string name="second">sekunda</string>
     <string name="set_directory_desc">Klikněte pro nastavení adresáře</string>
     <string name="update_channel">Kanál aktualizací</string>
-    <string name="sponsor_msg">Seal bude vždy zdarma a open source pro každého. Pokud se vám aplikace líbí, prosím zvažte sponzorování na GitHubu!</string>
+ <string name="sponsor_msg">Seal bude vždy zdarma a open source pro každého. Pokud se vám aplikace líbí, prosím zvažte sponzorování na u!</string>
     <string name="crop_artwork">Oříznout obrázek</string>
     <string name="subtitle_sponsorblock">Titulky mohou mít špatné časování při odstranění SponsorBlock segmentů.</string>
     <string name="start">Začít</string>
     <string name="sponsor_msg2">Moc vám děkujeme!</string>
-    <string name="sponsor_desc">Podpořte tuto aplikaci sponzorováním na GitHubu</string>
+ <string name="sponsor_desc">Podpořte tuto aplikaci sponzorováním na u</string>
     <string name="enable_experimental_feature">Povolit experimentální funkce?</string>
     <string name="running_tasks">Běžící úlohy</string>
     <string name="ua_header">Hlavička s User-Agentem</string>

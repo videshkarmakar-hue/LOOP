@@ -64,7 +64,7 @@
     <string name="ytdlp_version">Bersyon ng Yt-dlp</string>
     <string name="checked">Sinuri</string>
     <string name="custom_command_template">Template ng command</string>
-    <string name="readme_desc">Suriin ang GitHub repository at ang README</string>
+ <string name="readme_desc">Suriin ang repository at ang README</string>
     <string name="video">Video</string>
     <string name="close_never_show_again">Wag nang ipakita ulit</string>
     <string name="close">cerrar</string>
@@ -148,8 +148,8 @@
     <string name="remove_template_desc">Tanggalin ang \"%1$s\" sa mga template ng command para sa kabutihan\?</string>
     <string name="template_selection">Pagpili ng Template</string>
     <string name="custom_command_template_desc">I-edit at I-manage ang mga template ng command</string>
-    <string name="github_issue">Isyu sa GitHub</string>
-    <string name="github_issue_desc">Mag-submit ng isyu para sa bug report o feature request</string>
+ <string name="_issue">Isyu sa </string>
+ <string name="_issue_desc">Mag-submit ng isyu para sa bug report o feature request</string>
     <string name="info_copied">Kinopya ang impormasyon sa clipboard</string>
     <string name="video_resolution">Resolusyon ng video</string>
     <string name="export_to_clipboard">I-export sa clipboard</string>
@@ -188,7 +188,7 @@
     <string name="app_update_failed">Nabigong i-update sa pinakabagong bersyon</string>
     <string name="sponsorblock_categories_desc">Tukuyin ang kategorya ng SponsorBlock na aalisin o i-marka sa video file</string>
     <string name="sponsorblock_categories">Mga kategorya ng SponsorBlock</string>
-    <string name="check_for_updates_desc">Awtomatikong tingnan ang pinakabagong bersyon sa GitHub</string>
+ <string name="check_for_updates_desc">Awtomatikong tingnan ang pinakabagong bersyon sa </string>
     <string name="check_for_updates">Tingnan kung may update</string>
     <string name="app_up_to_date">Ang bersyon na ito ay up to date</string>
     <string name="clear_temp_files">Tangalin ang Temporary files</string>
@@ -261,7 +261,7 @@
     <string name="sponsor">Isponsor</string>
     <string name="clear_all_cookies_desc">Tanggalin ang lahat ng cookies na nakaimbak sa app para sa kabutihan?</string>
     <string name="auto_update_disabled_msg">Hindi available ang auto-update para sa %1$s na mga build. Kung wala kang %1$s na naka-install sa iyong device, o gusto mong i-preview ang paparating na mga bagong feature sa Seal, mangyaring isaalang-alang ang %2$s.</string>
-    <string name="switch_to_github_builds">Lumipat sa mga build ng GitHub</string>
+ <string name="switch_to__builds">Lumipat sa mga build ng </string>
     <string name="enable_auto_update">Paganahin ang automatic update</string>
     <string name="auto_update">Automatic ang update</string>
     <string name="discard">Itapon</string>
@@ -277,12 +277,12 @@
     <string name="embed_subtitles_mkv_msg">Upang mag-embed ng malambot na mga subtitle, ang mga video ay ire-remux sa mkv container. Maaari mong gamitin ang VLC Media Player o iba pang katugmang app para manood ng mga video na may malambot na subtitle.</string>
     <string name="audio_format_preference">Ginustong format ng audio</string>
     <string name="format_sorting">Pag-uuri ng format</string>
-    <string name="sponsor_desc">Suportahan ang app na ito sa pamamagitan ng pag-sponsor sa GitHub</string>
+ <string name="sponsor_desc">Suportahan ang app na ito sa pamamagitan ng pag-sponsor sa </string>
     <string name="feedback">Puna</string>
     <string name="sponsors">Mga sponsor</string>
     <string name="clip_video_desc">Gumawa ng mga video clip sa pahina ng pagpili ng format</string>
     <string name="add">Idagdag</string>
-    <string name="sponsor_msg">Ang Seal ay palaging libre at open source para sa lahat. Kung gusto mo ito, mangyaring isaalang-alang ang pag-sponsor sa akin sa GitHub!</string>
+ <string name="sponsor_msg">Ang Seal ay palaging libre at open source para sa lahat. Kung gusto mo ito, mangyaring isaalang-alang ang pag-sponsor sa akin sa !</string>
     <string name="subtitle_desc">Mga wika, mag-embed ng mga subtitle, at auto captions</string>
     <string name="stable_channel">Matibay</string>
     <string name="update_channel">I-update ang channel</string>

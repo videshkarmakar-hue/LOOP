@@ -32,7 +32,7 @@
     <string name="version">Inačica</string>
     <string name="release_desc">Potražite bilježnike promjena i nove inačice</string>
     <string name="release">Najnovija inačica</string>
-    <string name="readme_desc">Pregledajte GitHub repozitorij i README</string>
+ <string name="readme_desc">Pregledajte repozitorij i README</string>
     <string name="video">Video</string>
     <string name="custom_command">Prilagođena naredba</string>
     <string name="custom_command_desc">Pokrenite yt-dlp naredbu pomoću prilagođenog predloška</string>
@@ -97,8 +97,8 @@
     <string name="template_label">Oznaka</string>
     <string name="remove_template_desc">Zauvijek ukloniti „%1$s“ iz naredbenih predložaka?</string>
     <string name="template_selection">Odabir predložaka</string>
-    <string name="github_issue">GitHub prijava problema</string>
-    <string name="github_issue_desc">Prijavite nam greške u aplikaciji i predložite slijedeću novu značajku</string>
+ <string name="_issue"> prijava problema</string>
+ <string name="_issue_desc">Prijavite nam greške u aplikaciji i predložite slijedeću novu značajku</string>
     <string name="info_copied">Informacije kopirane u međuspremnik</string>
     <string name="status_canceled">Otkazano</string>
     <string name="restart">Ponovno pokreni</string>
@@ -112,7 +112,7 @@
     <string name="sponsorblock_categories_desc">Odredite koje će kategorije SponsorBlock biti uklonjene ili označene u video datoteci</string>
     <string name="sponsorblock_categories">SponsorBlock kategorije</string>
     <string name="check_for_updates">Potraži ažuriranja</string>
-    <string name="check_for_updates_desc">Automatski potraži najnovija ažuriranja na GitHub-u</string>
+ <string name="check_for_updates_desc">Automatski potraži najnovija ažuriranja na -u</string>
     <string name="aria2_desc">Koristite aria2c kao vanjski program za preuzimanje</string>
     <string name="cookies_desc">Za preuzimanja koristite kolačiće formatirane pomoću Netscape-a</string>
     <string name="clear_temp_files">Čišćenje privremenih datoteka</string>
@@ -268,7 +268,7 @@
     <string name="clear_all_cookies">Očisti sve kolačiće</string>
     <string name="clip_video_dialog_msg">Preuzimanja izvršena ovom značajkom bit će izaslani FFmpeg-u kako bi preuzeo odabrane dijelove videozapisa. Ova značajka je još u razvoju te je moguće da izrezivanje ne bude posve točno uz moguću sporiju brzinu preuzimanja.</string>
     <string name="clip_video_desc">Napravite isječke videozapisa na stranici za odabir oblika</string>
-    <string name="switch_to_github_builds">prebacivanje na GitHub inačice</string>
+ <string name="switch_to__builds">prebacivanje na inačice</string>
     <string name="feature_unavailable">Značajka nije dostupna</string>
     <string name="no_custom_command_tasks">Nema prilagođenih naredbenih radnji</string>
     <string name="download_video_desc">Preuzmite videozapise s URL-a</string>
@@ -288,8 +288,8 @@
     <string name="enable_auto_update">Omogući automatsko ažuriranje</string>
     <string name="unlimited">Neograničeno</string>
     <string name="audio_format_preference">Preferirani oblik zvuka</string>
-    <string name="sponsor_desc">Podržite razvoj ove aplikacije njenim sponzoriranjem na GitHub-u</string>
-    <string name="sponsor_msg">Seal će uvijek biti besplatan i otvorenog koda za sve. Ako vam se sviđa, razmislite o tome da me sponzorirate na GitHub-u!</string>
+ <string name="sponsor_desc">Podržite razvoj ove aplikacije njenim sponzoriranjem na -u</string>
+ <string name="sponsor_msg">Seal će uvijek biti besplatan i otvorenog koda za sve. Ako vam se sviđa, razmislite o tome da me sponzorirate na -u!</string>
     <string name="audio_format">Oblik zvučnog zapisa</string>
     <string name="enable_experimental_feature">Omogućiti eksperimentalne značajke\?</string>
     <string name="auto_update_disabled_msg">Automatsko ažuriranje nije dostupno za %1$s inačice. Ako nemate %1$s instaliran na svom uređaju ili želite pregledati nadolazeće nove značajke u Seal-u, razmislite o %2$s.</string>

@@ -29,7 +29,7 @@
     <string name="version">Version</string>
     <string name="release_desc">Siehe Änderungsprotokolle und neue Versionen</string>
     <string name="release">Neueste Version</string>
-    <string name="readme_desc">Prüfe das GitHub-Repository und die README</string>
+ <string name="readme_desc">Prüfe das -Repository und die README</string>
     <string name="video">Video</string>
     <string name="checked">Geprüft</string>
     <string name="credits">Credits</string>
@@ -141,9 +141,9 @@
     <string name="custom_command_template_desc">Befehlsvorlagen bearbeiten und verwalten</string>
     <string name="downloading_indicator_text">Download läuft…</string>
     <string name="task_canceled">Download-Aufgabe wurde abgebrochen</string>
-    <string name="github_issue">GitHub-Problem</string>
+ <string name="_issue">-Problem</string>
     <string name="info_copied">Informationen in die Zwischenablage kopiert</string>
-    <string name="github_issue_desc">Einreichen eines Fehlerberichts oder einer Funktionsanfrage</string>
+ <string name="_issue_desc">Einreichen eines Fehlerberichts oder einer Funktionsanfrage</string>
     <string name="status_enqueued">Eingereiht</string>
     <string name="status_completed">Abgeschlossen</string>
     <string name="status_downloading">Wird heruntergeladen</string>
@@ -165,7 +165,7 @@
     <string name="delete_multiple_items_msg">%1$d für immer aus deinem Downloadverlauf entfernen\?</string>
     <string name="download_task_count">%1$d Download-Aufgaben</string>
     <string name="check_for_updates">Nach Aktualisierungen suchen</string>
-    <string name="check_for_updates_desc">Automatisch nach der neuesten Version auf GitHub suchen</string>
+ <string name="check_for_updates_desc">Automatisch nach der neuesten Version auf suchen</string>
     <string name="app_up_to_date">Die aktuelle Version ist auf dem neuesten Stand</string>
     <string name="update">Aktualisieren</string>
     <string name="aria2_desc">Aria2c als externen Downloader verwenden</string>
@@ -278,8 +278,8 @@
     <string name="clear_all_cookies">Alle Cookies löschen</string>
     <string name="temporary_directory_desc">Temporäre Dateien im internen Ordner speichern</string>
     <string name="sponsor">Sponsor</string>
-    <string name="sponsor_desc">Unterstütze diese App durch Sponsoring auf GitHub</string>
-    <string name="sponsor_msg">Seal wird immer frei und kostenlos für alle sein. Wenn du es magst, bitte denke bitte darüber nach, mich auf GitHub zu sponsern!</string>
+ <string name="sponsor_desc">Unterstütze diese App durch Sponsoring auf </string>
+ <string name="sponsor_msg">Seal wird immer frei und kostenlos für alle sein. Wenn du es magst, bitte denke bitte darüber nach, mich auf zu sponsern!</string>
     <string name="feedback">Rückmeldung</string>
     <string name="sponsors">Sponsoren</string>
     <string name="no_downloaded_media">Keine heruntergeladenen Medien</string>
@@ -293,7 +293,7 @@
     <string name="auto_update_disabled_msg">Automatische Updates sind für %1$s Builds nicht verfügbar. Wenn du %1$s nicht auf deinem Gerät installiert hast, oder eine Vorschau kommender Funktionen in Seal möchtest, ziehe bitte %2$s in Erwägung.</string>
     <string name="msg_from_developer">Nachricht vom Entwickler</string>
     <string name="sponsor_msg2">Vielen Dank!</string>
-    <string name="switch_to_github_builds">Wechseln zu GitHub-Builds</string>
+ <string name="switch_to__builds">Wechseln zu -Builds</string>
     <string name="no_custom_command_tasks">Keine benutzerdefinierten Befehlsaufgaben</string>
     <string name="got_it">Verstanden</string>
     <string name="download_video_desc">Videos von der URL herunterladen</string>

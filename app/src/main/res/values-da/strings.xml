@@ -68,7 +68,7 @@
     <string name="link_copied">Lænke kopieret til udklipsholderen</string>
     <string name="delete_file">Slet</string>
     <string name="release_desc">Se efter ændringslister og nye versioner</string>
-    <string name="readme_desc">Tjek GitHub depotet og README</string>
+ <string name="readme_desc">Tjek depotet og README</string>
     <string name="checked">Tjekket</string>
     <string name="advanced_settings">Avancered</string>
     <string name="off">Af</string>
@@ -191,7 +191,7 @@
     <string name="status_completed">Afsluttet</string>
     <string name="suggested">Foreslået</string>
     <string name="private_mode">Privat tilstand</string>
-    <string name="github_issue_desc">Indsend problem til fejlrapport eller funktionsanmodning</string>
+ <string name="_issue_desc">Indsend problem til fejlrapport eller funktionsanmodning</string>
     <string name="video_resolution">Videoopløsning</string>
     <string name="how_does_it_work">Hvordan virker det\?</string>
     <string name="info_copied">Info kopieret til udklipsholder</string>
@@ -228,13 +228,13 @@
     <string name="cookies_usage_msg">Download fra nogle websteder kræver kontogodkendelse. Klik på \"Generer nye cookies\", indtast webadressen på hjemmesiden og log derefter ind med din konto på browsersiden; appen genererer den nye cookie for dig.</string>
     <string name="telegram_channel">Telegram-kanal</string>
     <string name="abs_hint">De fleste videostreamingplatforme leverer lyd og video separat, du kan vælge og flette et lydformat med et videoformat til en enkelt video.</string>
-    <string name="github_issue">GitHub-problem</string>
+ <string name="_issue">-problem</string>
     <string name="restart">Genstart</string>
     <string name="copy_error_report">Fejlrapport</string>
     <string name="sponsorblock_desc">Fjern segmenter fra videoer med SponsorBlock API</string>
     <string name="status_error">Fejl</string>
     <string name="sponsorblock_categories">SponsorBlock-kategorier</string>
-    <string name="check_for_updates_desc">Søg automatisk efter den nyeste version på GitHub</string>
+ <string name="check_for_updates_desc">Søg automatisk efter den nyeste version på </string>
     <string name="update">Opdater</string>
     <string name="clear_temp_files">Ryd midlertidige filer</string>
     <string name="clear_temp_files_desc">Slet alle midlertidige filer fra download-mappen</string>

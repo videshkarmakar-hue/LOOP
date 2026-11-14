@@ -30,7 +30,7 @@
     <string name="version">संस्करण</string>
     <string name="release_desc">चैंज और नए संस्करणों की तलाश करें</string>
     <string name="release">नवीनतम रिलीज़</string>
-    <string name="readme_desc">GitHub रिपॉजिटरी और README की जाँच करें</string>
+ <string name="readme_desc"> रिपॉजिटरी और README की जाँच करें</string>
     <string name="video">वीडियो</string>
     <string name="edit">संपादित करें</string>
     <string name="start_execute">कमांड निष्पादित करना शुरू करें</string>
@@ -142,8 +142,8 @@
     <string name="custom_command_template_desc">कमांड टेम्प्लेट संपादित और प्रबंधित करें</string>
     <string name="downloading_indicator_text">डाउनलोड प्रगति पर है…</string>
     <string name="task_canceled">डाउनलोड कार्य रद्द किया गया</string>
-    <string name="github_issue_desc">बग रिपोर्ट या सुविधा अनुरोध के लिए कोई समस्या सबमिट करें</string>
-    <string name="github_issue">गिटहब अनुरोध</string>
+ <string name="_issue_desc">बग रिपोर्ट या सुविधा अनुरोध के लिए कोई समस्या सबमिट करें</string>
+ <string name="_issue">गिटहब अनुरोध</string>
     <string name="info_copied">जानकारी क्लिपबोर्ड पर कॉपी की गई</string>
     <string name="status_enqueued">कतारबद्ध हुआ</string>
     <string name="status_completed">पूरा हुआ</string>
@@ -281,8 +281,8 @@
     <string name="no_downloaded_media">कोई डाउनलोड मीडिया नहीं</string>
     <string name="enable_experimental_feature">प्रयोगात्मक सुविधा सक्षम करें\?</string>
     <string name="clip_video_desc">प्रारूप चयन पृष्ठ में वीडियो क्लिप बनाएं</string>
-    <string name="switch_to_github_builds">GitHub बिल्ड पर स्विच करना</string>
-    <string name="sponsor_msg">सील हमेशा सभी के लिए स्वतंत्र और खुला स्रोत होगा। यदि आप इसे पसंद करते हैं, तो कृपया मुझे GitHub पर प्रायोजित करने पर विचार करें!</string>
+ <string name="switch_to__builds"> बिल्ड पर स्विच करना</string>
+ <string name="sponsor_msg">सील हमेशा सभी के लिए स्वतंत्र और खुला स्रोत होगा। यदि आप इसे पसंद करते हैं, तो कृपया मुझे पर प्रायोजित करने पर विचार करें!</string>
     <string name="got_it">समझ गया</string>
     <string name="sponsors">प्रायोजक</string>
     <string name="auto_update_disabled_msg">%1$s बिल्ड के लिए ऑटो-अपडेट उपलब्ध नहीं है। यदि आपके डिवाइस पर %1$s स्थापित नहीं है, या सील में आने वाली नई सुविधाओं का पूर्वावलोकन करना चाहते हैं, तो कृपया %2$s पर विचार करें।</string>
@@ -292,7 +292,7 @@
     <string name="sponsor">प्रायोजक</string>
     <string name="beta_features">बीटा</string>
     <string name="no_custom_command_tasks">कोई कस्टम कमांड कार्य नहीं</string>
-    <string name="sponsor_desc">GitHub पर प्रायोजित करके इस ऐप का समर्थन करें</string>
+ <string name="sponsor_desc"> पर प्रायोजित करके इस ऐप का समर्थन करें</string>
     <string name="feedback">प्रतिक्रिया</string>
     <string name="msg_from_developer">डेवलपर से संदेश</string>
     <string name="sponsor_msg2">आपका बहुत-बहुत धन्यवाद!</string>

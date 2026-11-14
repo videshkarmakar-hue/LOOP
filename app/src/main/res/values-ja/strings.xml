@@ -62,7 +62,7 @@
     <string name="link_copied">リンクをクリップボードにコピーしました</string>
     <string name="open_url">リンクを開く</string>
     <string name="back">戻る</string>
-    <string name="readme_desc">GitHubリポジトリとREADMEを確認する</string>
+ <string name="readme_desc">リポジトリとREADMEを確認する</string>
     <string name="delete_info_msg">ダウンロード履歴から「%1$s」を除去しますか？</string>
     <string name="confirm">確認</string>
     <string name="audio">音声</string>
@@ -133,8 +133,8 @@
     <string name="template_selection">テンプレート選択</string>
     <string name="custom_command_template_desc">コマンドテンプレートを編集・管理する</string>
     <string name="task_canceled">ダウンロードタスクがキャンセルされました</string>
-    <string name="github_issue">GitHubの問題報告場所</string>
-    <string name="github_issue_desc">バグ報告や機能要望</string>
+ <string name="_issue">の問題報告場所</string>
+ <string name="_issue_desc">バグ報告や機能要望</string>
     <string name="info_copied">情報がクリップボードにコピーされました</string>
     <string name="remove_template">削除しますか？</string>
     <string name="service_title">Seal でダウンロード中…</string>
@@ -191,7 +191,7 @@
     <string name="format_settings_desc">ファイル形式、画質、字幕</string>
     <string name="general_settings_desc">yt-dlpのバージョン、通知、再生リスト</string>
     <string name="private_mode_desc">ダウンロード履歴を無効にする</string>
-    <string name="check_for_updates_desc">GitHubに最新版があるか自動的に確認する</string>
+ <string name="check_for_updates_desc">に最新版があるか自動的に確認する</string>
     <string name="app_up_to_date">最新版です</string>
     <string name="clear_temp_files_desc">一時ディレクトリ内の一時ファイルをすべて削除</string>
     <string name="clear_temp_files_count">%1$d個の一時ファイルを削除しました</string>
@@ -266,7 +266,7 @@
     <string name="enable_experimental_feature">実験的な機能を有効にしますか？</string>
     <string name="clip_video_desc">形式の選択ページでクリップ動画を作成する</string>
     <string name="sponsor_msg2">ありがとうございます！</string>
-    <string name="switch_to_github_builds">GitHubビルドに切り替える</string>
+ <string name="switch_to__builds">ビルドに切り替える</string>
     <string name="okay">了解</string>
     <string name="got_it">わかった</string>
     <string name="feature_unavailable">機能を利用できません</string>
@@ -293,8 +293,8 @@
     <string name="audio_quality">音質</string>
     <string name="clear_all_cookies">すべてのクッキーを消去</string>
     <string name="sponsor">スポンサー</string>
-    <string name="sponsor_desc">GitHubでスポンサーになって本アプリを支援する</string>
-    <string name="sponsor_msg">Sealはいつでも無料で、誰でも使えるオープンソースです。もし気に入っていただけたなら、GitHubで私のスポンサーになることを検討してください！</string>
+ <string name="sponsor_desc">でスポンサーになって本アプリを支援する</string>
+ <string name="sponsor_msg">Sealはいつでも無料で、誰でも使えるオープンソースです。もし気に入っていただけたなら、で私のスポンサーになることを検討してください！</string>
     <string name="temporary_directory_desc">内部ディレクトリーに一時ファイルを保存する</string>
     <string name="ytdlp_update_action">yt-dlp を更新</string>
     <string name="commands">コマンド</string>

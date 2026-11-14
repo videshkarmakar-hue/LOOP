@@ -87,7 +87,7 @@
     <string name="task_running">ئەرکێکی دابەزاندنی هەبوو لە ئێستاوە کاردەکات</string>
     <string name="delete_info_msg">\"%1$s\" لە مێژووی دابەزاندنەکەت بۆ هەمیشە لاببە؟</string>
     <string name="ytdlp_version">وەشانی Yt-dlp</string>
-    <string name="readme_desc">کۆگای GitHub و README بپشکنە</string>
+ <string name="readme_desc">کۆگای و README بپشکنە</string>
     <string name="video">ڤیدیۆ</string>
     <string name="about_page">وەشان، فیدباک، نوێکردنەوەی ئۆتۆماتیکی</string>
     <string name="checked">پشکنرا</string>
@@ -145,8 +145,8 @@
     <string name="template_selection">هەڵبژاردنی قاڵب</string>
     <string name="custom_command_template_desc">دەستکاریکردن و بەڕێوەبردنی قاڵبی فەرمانەکان</string>
     <string name="downloading_indicator_text">داگرتن لە قۆناغی جێبەجێکردندایە…</string>
-    <string name="github_issue">کێشەی GitHub</string>
-    <string name="github_issue_desc">کێشەیەک پێشکەش بکە بۆ ڕاپۆرتی هەڵە یان داواکاری تایبەتمەندی</string>
+ <string name="_issue">کێشەی </string>
+ <string name="_issue_desc">کێشەیەک پێشکەش بکە بۆ ڕاپۆرتی هەڵە یان داواکاری تایبەتمەندی</string>
     <string name="info_copied">زانیاری کۆپی کراوە بۆ کلیپبۆرد</string>
     <string name="status_enqueued">ڕیزبەندی کراوە</string>
     <string name="status_completed">تەواو بووە</string>

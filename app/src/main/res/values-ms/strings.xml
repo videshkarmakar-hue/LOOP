@@ -21,7 +21,7 @@
     <string name="about">Perihal</string>
     <string name="about_page">Versi,maklum balas,kemas kini automatik</string>
     <string name="back">Kembali</string>
-    <string name="readme_desc">Periksa repositori GitHub dan README</string>
+ <string name="readme_desc">Periksa repositori dan README</string>
     <string name="video">Video</string>
     <string name="checked">Ditanda</string>
     <string name="credits">Penghargaan</string>
@@ -126,8 +126,8 @@
     <string name="remove_template_desc">Buang \"%1$s\" daripada templat arahan untuk selama-lamanya\?</string>
     <string name="template_selection">Pilihan templat</string>
     <string name="task_canceled">Tugas muat turun dibatalkan</string>
-    <string name="github_issue">Isu Github</string>
-    <string name="github_issue_desc">Laporkan isu bermasalah atau minta ciri-ciri tertentu</string>
+ <string name="_issue">Isu </string>
+ <string name="_issue_desc">Laporkan isu bermasalah atau minta ciri-ciri tertentu</string>
     <string name="open_file">Buka fail</string>
     <string name="status_completed">Selesai</string>
     <string name="restart">Mula semula</string>
@@ -169,7 +169,7 @@
     <string name="multiselect_item_count">%1$d video, %2$d audio</string>
     <string name="select_all">Pilih semua</string>
     <string name="selected_item_count">%1$d dipilih</string>
-    <string name="check_for_updates_desc">Semak versi terkini di GitHub secara automatik</string>
+ <string name="check_for_updates_desc">Semak versi terkini di secara automatik</string>
     <string name="high_contrast">Tema gelap berkontras tinggi</string>
     <string name="invalid_input">Input tidak sah</string>
     <string name="lowest_quality">Kualiti terendah</string>
@@ -274,7 +274,7 @@
     <string name="enable_experimental_feature">Membenarkan ciri percubaan\?</string>
     <string name="clip_video_desc">Buat klip video dalam muka surat pilihan format</string>
     <string name="auto_update_disabled_msg">Kemas kini automatik tidak ada untuk binaan %1$s. Jika anda tiada %1$s dipasang pada peranti anda, atau anda ingin pratonton ciri baharu yang akan datang dalam Seal, sila pertimbangkan %2$s.</string>
-    <string name="switch_to_github_builds">bertukar kepada binaan GitHub</string>
+ <string name="switch_to__builds">bertukar kepada binaan </string>
     <string name="okay">Baik</string>
     <string name="got_it">Faham</string>
     <string name="feature_unavailable">Ciri tidak ada</string>
@@ -283,12 +283,12 @@
     <string name="unlimited">Tidak terhad</string>
     <string name="audio_quality">Kualiti audio</string>
     <string name="audio_quality_desc">Hadkan kadar bit audio apabila terdapat pelbagai kualiti</string>
-    <string name="sponsor_desc">Sokong aplikasi ini dengan menaja di Github</string>
+ <string name="sponsor_desc">Sokong aplikasi ini dengan menaja di </string>
     <string name="clip_video_dialog_msg">Muat turun mengguna ciri ini akan diwakilkan kepada FFmpeg untuk memuat turun bahagian video yang dipilih, ciri ini masih dalam percubaan dan pemotongan tidak akan menjadi tepat sepenuhnya, tidak semua formag sokong ciri ini dan anda mungkin akan mengalami kelajuan muat turun yang lebih perlahan.</string>
     <string name="clip_video">Video klip</string>
     <string name="temporary_directory_desc">Simpan fail sementara dalam direktori dalaman</string>
     <string name="sponsor">Taja</string>
     <string name="feedback">Maklum balas</string>
     <string name="sponsors">Penaja</string>
-    <string name="sponsor_msg">Seal akan sentiasa menjadi percuma dan sumber terbuka untuk semua orang. Jika anda suka, sila pertimbangkan untuk menaja saya di GitHub!</string>
+ <string name="sponsor_msg">Seal akan sentiasa menjadi percuma dan sumber terbuka untuk semua orang. Jika anda suka, sila pertimbangkan untuk menaja saya di !</string>
 </resources>
