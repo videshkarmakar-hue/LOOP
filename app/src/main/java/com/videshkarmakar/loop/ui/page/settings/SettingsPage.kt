@@ -35,6 +35,7 @@ import androidx.compose.material.icons.rounded.SettingsApplications
 import androidx.compose.material.icons.rounded.SignalCellular4Bar
 import androidx.compose.material.icons.rounded.SignalWifi4Bar
 import androidx.compose.material.icons.rounded.Terminal
+import androidx.compose.material.icons.rounded.Update
 import androidx.compose.material.icons.rounded.VideoFile
 import androidx.compose.material.icons.rounded.ViewComfy
 import androidx.compose.material.icons.rounded.VolunteerActivism
@@ -323,6 +324,15 @@ fun SettingsPage(
                     icon = Icons.Rounded.Info,
                     selected = lastVisited == Route.ABOUT,
                     onClick = { open(Route.ABOUT) }
+                )
+            }
+
+            item {
+                SettingsNavRow(
+                    title = stringResource(id = R.string.update_section),
+                    icon = Icons.Rounded.Update,
+                    selected = lastVisited == Route.UPDATE,
+                    onClick = { open(Route.UPDATE) }
                 )
             }
 

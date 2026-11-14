@@ -29,6 +29,7 @@ import com.videshkarmakar.loop.util.PreferenceUtil
 import com.videshkarmakar.loop.util.PreferenceUtil.getString
 import com.videshkarmakar.loop.util.PreferenceUtil.updateString
 import com.videshkarmakar.loop.util.SDCARD_URI
+import com.videshkarmakar.loop.util.UpdateCoordinator
 import com.videshkarmakar.loop.util.UpdateUtil
 import com.videshkarmakar.loop.util.VIDEO_DIRECTORY
 import com.videshkarmakar.loop.util.YT_DLP_VERSION
@@ -56,6 +57,9 @@ class App : Application() {
             ) else getPackageInfo(packageName, 0)
         }
         applicationScope = CoroutineScope(SupervisorJob())
+        // Mandatory update checks run for the whole process lifetime, not only while a screen is
+        // composed, so a version published while the app sits in the background is still caught.
+        UpdateCoordinator.start()
         DynamicColors.applyToActivitiesIfAvailable(this)
 
         clipboard = getSystemService()!!

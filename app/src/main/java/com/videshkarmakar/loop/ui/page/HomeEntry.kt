@@ -54,6 +54,7 @@ import com.videshkarmakar.loop.ui.page.download.PlaylistSelectionPage
 import com.videshkarmakar.loop.ui.page.settings.SettingsPage
 import com.videshkarmakar.loop.ui.page.settings.about.AboutPage
 import com.videshkarmakar.loop.ui.page.settings.about.DeveloperCreditsPage
+import com.videshkarmakar.loop.ui.page.settings.about.UpdatePage
 import com.videshkarmakar.loop.ui.page.WelcomeScreen
 import com.videshkarmakar.loop.ui.page.creator.CreatorPage
 import com.videshkarmakar.loop.ui.page.feedback.ReportFeedbackPage
@@ -85,6 +86,7 @@ import com.videshkarmakar.loop.util.PreferenceUtil.getLong
 import com.videshkarmakar.loop.util.PreferenceUtil.getString
 import com.videshkarmakar.loop.util.PreferenceUtil.updateBoolean
 import com.videshkarmakar.loop.util.ToastUtil
+import com.videshkarmakar.loop.util.UpdateCoordinator
 import com.videshkarmakar.loop.util.UpdateUtil
 import com.videshkarmakar.loop.util.YT_DLP_AUTO_UPDATE
 import com.videshkarmakar.loop.util.YT_DLP_UPDATE_INTERVAL
@@ -105,35 +107,6 @@ fun HomeEntry(
     isUrlShared: Boolean
 ) {
     val navController = rememberNavController()
-    val context = LocalContext.current
-    var showUpdateDialog by rememberSaveable { mutableStateOf(false) }
-    var currentDownloadStatus by remember { mutableStateOf(UpdateUtil.DownloadStatus.NotYet as UpdateUtil.DownloadStatus) }
-    val scope = rememberCoroutineScope()
-    var updateJob: Job? = null
-    var latestRelease by remember { mutableStateOf(UpdateUtil.LatestRelease()) }
-    val settings =
-        rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            UpdateUtil.installLatestApk()
-        }
-    val launcher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { result ->
-        if (result) {
-            UpdateUtil.installLatestApk()
-        } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                if (!context.packageManager.canRequestPackageInstalls())
-                    settings.launch(
-                        Intent(
-                            Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
-                            Uri.parse("package:${context.packageName}"),
-                        )
-                    )
-                else
-                    UpdateUtil.installLatestApk()
-            }
-        }
-    }
 
     val onNavigateBack: () -> Unit = {
         with(navController) {
@@ -157,6 +130,12 @@ fun HomeEntry(
     val currentRoute = navBackStackEntry?.destination?.route ?: startRoute
     val showBottomBar = currentRoute in mainRoutes
 
+    // Section changes are another verification point; UpdateCoordinator throttles these so moving
+    // between tabs cannot hammer the update endpoint.
+    LaunchedEffect(currentRoute) {
+        UpdateCoordinator.onNavigation()
+    }
+
     Scaffold(
         modifier = Modifier
             .fillMaxSize()
@@ -164,6 +143,7 @@ fun HomeEntry(
         bottomBar = {
             if (showBottomBar) {
                 LoopBottomNavigation(
+                    activeRoute = currentRoute,
                     onNavigate = { route ->
                         navController.navigate(route) {
                             popUpTo(navController.graph.startDestinationId) {
@@ -299,53 +279,8 @@ fun HomeEntry(
             Downloader.updateState(state = Downloader.State.Idle)
         }
 
-        LaunchedEffect(Unit) {
-            if (!PreferenceUtil.isNetworkAvailableForDownload() || !PreferenceUtil.isAutoUpdateEnabled()
-            )
-                return@LaunchedEffect
-            launch(Dispatchers.IO) {
-                runCatching {
-                    UpdateUtil.checkForUpdate()?.let {
-                        latestRelease = it
-                        showUpdateDialog = true
-                    }
-                }.onFailure {
-                    it.printStackTrace()
-                }
-            }
-        }
-
-        if (showUpdateDialog) {
-            UpdateDialogImpl(
-                onDismissRequest = {
-                    showUpdateDialog = false
-                    updateJob?.cancel()
-                },
-                title = latestRelease.name.toString(),
-                onConfirmUpdate = {
-                    updateJob = scope.launch(Dispatchers.IO) {
-                        runCatching {
-                            UpdateUtil.downloadApk(latestRelease = latestRelease)
-                                .collect { downloadStatus ->
-                                    currentDownloadStatus = downloadStatus
-                                    if (downloadStatus is UpdateUtil.DownloadStatus.Finished) {
-                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                            launcher.launch(Manifest.permission.REQUEST_INSTALL_PACKAGES)
-                                        }
-                                    }
-                                }
-                        }.onFailure {
-                            it.printStackTrace()
-                            currentDownloadStatus = UpdateUtil.DownloadStatus.NotYet
-                            ToastUtil.makeToastSuspend(context.getString(R.string.app_update_failed))
-                            return@launch
-                        }
-                    }
-                },
-                releaseNote = latestRelease.body.toString(),
-                downloadStatus = currentDownloadStatus
-            )
-        }
+        // App update checks live in UpdateCoordinator and are handled by MandatoryUpdateGate,
+        // which blocks this screen entirely until the new version is installed.
     }
 }
 
@@ -381,7 +316,8 @@ fun NavGraphBuilder.settingsGraph(
                 onNavigateToCredits = { onNavigateTo(Route.DEVELOPER_CREDITS) }
             )
         }
-        animatedComposable(Route.DEVELOPER_CREDITS) { DeveloperCreditsPage(onNavigateBack) }
+                        animatedComposable(Route.DEVELOPER_CREDITS) { DeveloperCreditsPage(onNavigateBack) }
+                animatedComposable(Route.UPDATE) { UpdatePage(onNavigateBack) }
 
         animatedComposable(Route.APPEARANCE) {
             AppearancePreferences(

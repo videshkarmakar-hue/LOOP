@@ -33,6 +33,7 @@ object Route {
     const val SUBTITLE_PREFERENCES = "subtitle_preferences"
     const val ABOUT = "about"
     const val DEVELOPER_CREDITS = "developer_credits"
+    const val UPDATE = "update"
 
     const val TASK_HASHCODE = "task_hashcode"
     const val TEMPLATE_ID = "template_id"

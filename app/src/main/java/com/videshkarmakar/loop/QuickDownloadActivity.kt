@@ -24,6 +24,7 @@ import com.videshkarmakar.loop.ui.common.LocalDynamicColorSwitch
 import com.videshkarmakar.loop.ui.common.LocalWindowWidthState
 import com.videshkarmakar.loop.ui.common.SettingsProvider
 import com.videshkarmakar.loop.ui.page.download.DownloadSettingDialog
+import com.videshkarmakar.loop.ui.page.update.MandatoryUpdateGate
 import com.videshkarmakar.loop.ui.theme.LoopTheme
 import com.videshkarmakar.loop.util.CONFIGURE
 import com.videshkarmakar.loop.util.CUSTOM_COMMAND
@@ -119,21 +120,25 @@ class QuickDownloadActivity : ComponentActivity() {
                 ) {
 
 
-                    var showDialog by remember { mutableStateOf(true) }
+                    // Share-sheet downloads are part of using the app, so a pending mandatory
+                    // update replaces this dialog too.
+                    MandatoryUpdateGate {
+                        var showDialog by remember { mutableStateOf(true) }
 
-                    val useDialog = LocalWindowWidthState.current != WindowWidthSizeClass.Compact
-                    DownloadSettingDialog(
-                        useDialog = useDialog,
-                        showDialog = showDialog,
-                        isQuickDownload = true,
-                        onDownloadConfirm = {
-                            onDownloadStarted(PreferenceUtil.getValue(CUSTOM_COMMAND))
-                        },
-                        onDismissRequest = {
-                            showDialog = false
-                            this@QuickDownloadActivity.finish()
-                        },
-                    )
+                        val useDialog = LocalWindowWidthState.current != WindowWidthSizeClass.Compact
+                        DownloadSettingDialog(
+                            useDialog = useDialog,
+                            showDialog = showDialog,
+                            isQuickDownload = true,
+                            onDownloadConfirm = {
+                                onDownloadStarted(PreferenceUtil.getValue(CUSTOM_COMMAND))
+                            },
+                            onDismissRequest = {
+                                showDialog = false
+                                this@QuickDownloadActivity.finish()
+                            },
+                        )
+                    }
                 }
             }
         }

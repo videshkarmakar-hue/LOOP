@@ -3,6 +3,7 @@ package com.videshkarmakar.loop.ui.component
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
@@ -31,11 +32,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.videshkarmakar.loop.ui.theme.Matte
 import com.videshkarmakar.loop.ui.theme.Neu
 
 data class BottomNavItem(
@@ -54,22 +57,21 @@ val bottomNavItems = listOf(
 private val PressSpec = tween<Float>(durationMillis = 110)
 
 /**
- * Bottom navigation with no active-slot presentation.
+ * Bottom navigation: four equally weighted slots on a floating matte bar.
  *
- * Every slot is drawn identically -- same icon, same tint, same size -- and nothing is marked as
- * current. The bar is a launcher for the four top-level sections rather than a position
- * indicator, so the screen you land on is the only thing that tells you where you are. Keeping a
- * moving pill here also meant tracking the current destination purely to drive an animation.
+ * The current section is stated with colour only -- the active slot turns coral, the rest stay in
+ * the muted ink tone -- so nothing moves between tabs and no sliding pill has to be animated. It
+ * is a launcher for the four top-level sections, not a second progress indicator.
  *
- * Press feedback is the one piece of state that remains: it is feedback for the finger, not a
- * statement about navigation, and without it the bar feels unresponsive.
+ * Press feedback is the one piece of transient state: it is feedback for the finger, and without
+ * it the bar feels unresponsive.
  */
 @Composable
 fun LoopBottomNavigation(
     onNavigate: (String) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    activeRoute: String? = null
 ) {
-    val contentColor = MaterialTheme.colorScheme.onSurfaceVariant
 
     Box(
         modifier = modifier
@@ -79,12 +81,13 @@ fun LoopBottomNavigation(
             .height(64.dp)
             .shadow(
                 elevation = 10.dp,
-                shape = RoundedCornerShape(32.dp),
+                shape = RoundedCornerShape(26.dp),
                 ambientColor = Neu.shadow,
                 spotColor = Neu.shadow
             )
-            .clip(RoundedCornerShape(32.dp))
-            .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.94f)),
+            .clip(RoundedCornerShape(26.dp))
+            .background(Matte.Surface.copy(alpha = 0.94f))
+            .border(1.dp, Color.White.copy(alpha = 0.10f), RoundedCornerShape(26.dp)),
         contentAlignment = Alignment.Center
     ) {
         Row(
@@ -120,6 +123,8 @@ fun LoopBottomNavigation(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
+                    val contentColor = if (item.route == activeRoute) Matte.Coral else Matte.TextMuted
+
                     Icon(
                         imageVector = item.icon,
                         contentDescription = item.label,

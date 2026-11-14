@@ -21,11 +21,13 @@ import com.videshkarmakar.loop.ui.common.LocalDynamicColorSwitch
 import com.videshkarmakar.loop.ui.common.SettingsProvider
 import com.videshkarmakar.loop.ui.page.HomeEntry
 import com.videshkarmakar.loop.ui.page.download.DownloadViewModel
+import com.videshkarmakar.loop.ui.page.update.MandatoryUpdateGate
 import com.videshkarmakar.loop.ui.page.settings.network.CookiesViewModel
 import com.videshkarmakar.loop.ui.theme.LoopTheme
 import com.videshkarmakar.loop.util.HAS_SHOWN_WELCOME
 import com.videshkarmakar.loop.util.PreferenceUtil
 import com.videshkarmakar.loop.util.PreferenceUtil.getBoolean
+import com.videshkarmakar.loop.util.UpdateCoordinator
 import com.videshkarmakar.loop.util.matchUrlFromSharedText
 import com.videshkarmakar.loop.util.setLanguage
 import dagger.hilt.android.AndroidEntryPoint
@@ -69,11 +71,15 @@ class MainActivity : AppCompatActivity() {
                     isHighContrastModeEnabled = LocalDarkTheme.current.isHighContrastModeEnabled,
                     isDynamicColorEnabled = LocalDynamicColorSwitch.current,
                 ) {
-                    HomeEntry(
-                        downloadViewModel = downloadViewModel,
-                        cookiesViewModel = cookiesViewModel,
-                        isUrlShared = isUrlSharingTriggered
-                    )
+                    // The gate replaces the entire UI while an update is pending; HomeEntry is
+                    // only composed once the installed version is current.
+                    MandatoryUpdateGate {
+                        HomeEntry(
+                            downloadViewModel = downloadViewModel,
+                            cookiesViewModel = cookiesViewModel,
+                            isUrlShared = isUrlSharingTriggered
+                        )
+                    }
                 }
             }
 
@@ -88,6 +94,13 @@ class MainActivity : AppCompatActivity() {
                 holdSplash = false
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Returning from the package installer: either the app now reports the new version (gate
+        // clears) or the install was abandoned and the gate stays up.
+        UpdateCoordinator.refreshAfterResume(this)
     }
 
     override fun onNewIntent(intent: Intent) {
