@@ -54,7 +54,7 @@ sealed class Version(
 val currentVersion: Version = Version.Stable(
     versionMajor = 1,
     versionMinor = 2,
-    versionPatch = 2,
+    versionPatch = 3,
     versionBuild = 0,
 )
 
@@ -114,7 +114,7 @@ android {
         applicationId = "com.videshkarmakar.loop"
         minSdk = 21
         targetSdk = 34
-        versionCode = 10219
+        versionCode = 10220
 
         if (splitApks) {
             splits {
